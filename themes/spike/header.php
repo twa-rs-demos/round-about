@@ -51,13 +51,10 @@
                                 }, ARRAY_FILTER_USE_BOTH);
 
                                 foreach ($menus as $menu) {
-//                                    echo '<pre>';
-//                                    var_dump($menu);
-//                                    echo '</pre>';
-
                                     ?>
                                     <div class="menu-list">
-                                        <div class="first-menu "><a href="<?php echo get_category_link($menu->cat_ID); ?>">
+                                        <div class="first-menu "><a
+                                                    href="<?php echo get_category_link($menu->cat_ID); ?>">
                                                 <?php echo $menu->name ?>
                                                 <span class="triangle">
                                             </span></a>
@@ -90,78 +87,79 @@
 
                                 <!-- react-text: 240 --><!-- /react-text -->
                             </div>
-                            <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
-                                <div class="search"><input type="text" placeholder="搜索本站">
-                                    <button><img
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
-                                                alt="search"></button>
-                                </div>
+                        </div>
+                        <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
+                            <div class="search"><input type="text" placeholder="搜索本站">
+                                <button><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
+                                            alt="search"></button>
                             </div>
                         </div>
-                        <div class="row no-margin responsive-menu">
-                            <div class="col-md-2 col-xs-3">
-                                <button class="menu-icon"><i class="fa fa-bars"></i></button>
-                            </div>
-                            <div class="col-md-10 col-xs-9 text-right no-padding header-search-box">
-                                <div class="search"><input type="text" placeholder="搜索本站">
-                                    <button><img
-                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
-                                                alt="search"></button>
-                                </div>
+                    </div>
+                    <div class="row no-margin responsive-menu">
+                        <div class="col-md-2 col-xs-3">
+                            <button class="menu-icon"><i class="fa fa-bars"></i></button>
+                        </div>
+                        <div class="col-md-10 col-xs-9 text-right no-padding header-search-box">
+                            <div class="search"><input type="text" placeholder="搜索本站">
+                                <button><img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
+                                            alt="search"></button>
                             </div>
                         </div>
-                        <div class="menu-list2">
-                            <div class="sidebar-wrapper"></div>
-                            <div class="nav-bar">
-                                <div>
-                                    <ul class="nav-item">
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link" href="/tw-ra/donate">捐赠</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 199 --><!-- /react-text --></li>
-                                        </div>
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link"
-                                                                           href="/tw-ra/ourwork">我们的工作</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 205 --><!-- /react-text --></li>
-                                        </div>
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link"
-                                                                           href="/tw-ra/getinvolved">参与我们</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 211 --><!-- /react-text --></li>
-                                        </div>
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link"
-                                                                           href="/tw-ra/store">众爱商店</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 217 --><!-- /react-text --></li>
-                                        </div>
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link"
-                                                                           href="/tw-ra/newsandevent">新闻与活动中心</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 223 --><!-- /react-text --></li>
-                                        </div>
-                                        <div>
-                                            <li class="menu-item">
-                                                <div class="nav-brand "><a class="menu-link"
-                                                                           href="/tw-ra/aboutus">关于我们</a><i
-                                                            class="dropdown-icon fa fa-chevron-down"></i></div>
-                                                <!-- react-text: 229 --><!-- /react-text --></li>
-                                        </div>
-                                    </ul>
-                                </div>
+                    </div>
+                    <div class="menu-list2">
+                        <div class="sidebar-wrapper"></div>
+                        <div class="nav-bar">
+                            <div>
+                                <ul class="nav-item">
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link" href="/tw-ra/donate">捐赠</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 199 --><!-- /react-text --></li>
+                                    </div>
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link"
+                                                                       href="/tw-ra/ourwork">我们的工作</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 205 --><!-- /react-text --></li>
+                                    </div>
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link"
+                                                                       href="/tw-ra/getinvolved">参与我们</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 211 --><!-- /react-text --></li>
+                                    </div>
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link"
+                                                                       href="/tw-ra/store">众爱商店</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 217 --><!-- /react-text --></li>
+                                    </div>
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link"
+                                                                       href="/tw-ra/newsandevent">新闻与活动中心</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 223 --><!-- /react-text --></li>
+                                    </div>
+                                    <div>
+                                        <li class="menu-item">
+                                            <div class="nav-brand "><a class="menu-link"
+                                                                       href="/tw-ra/aboutus">关于我们</a><i
+                                                        class="dropdown-icon fa fa-chevron-down"></i></div>
+                                            <!-- react-text: 229 --><!-- /react-text --></li>
+                                    </div>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
+        </div>
