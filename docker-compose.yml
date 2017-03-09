@@ -10,6 +10,7 @@ services:
       - mysql:mysql
     volumes:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
+      - ./themes/spike:/var/www/html/wp-content/themes/spike
   mysql:
     image: mysql:5.7
     environment:
