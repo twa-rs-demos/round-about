@@ -98,9 +98,14 @@
               </div>
             </div>
           </div>
+
+
           <div class="row no-margin responsive-menu">
             <div class="col-md-2 col-xs-3">
-              <button class="menu-icon"><i class="fa fa-bars"></i></button>
+              <button class="menu-icon">
+                jagio'gsl
+                <i class="fa fa-bars"></i>
+              </button>
             </div>
             <div class="col-md-10 col-xs-9 text-right no-padding header-search-box">
               <div class="search"><input type="text" placeholder="搜索本站">
