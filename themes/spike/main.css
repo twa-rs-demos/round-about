@@ -1446,7 +1446,7 @@ img {
 }
 
 #donate-page-index .donate-img {
-  background: url(/tw-ra/build/hero_donate.png);
+  /*background: url(/tw-ra/build/hero_donate.png);*/
   position: relative;
 }
 
@@ -3398,7 +3398,7 @@ body {
 
 #contact-us #content-address .wechat {
   font-size: 2rem;
-  color: 2rem;
+  /*color: 2rem;*/
   margin-top: 5px;
   margin-bottom: 30px;
 }

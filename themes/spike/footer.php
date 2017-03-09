@@ -30,16 +30,18 @@
           <img
             src="data:image/png;base64,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"><span
             class="information-theme">Roundabout</span></div>
-        <div class="roundabout-info"><p>Roundabout is a social enterprise headed by volunteers. We provide a
+        <div class="roundabout-info">
+          <p>Roundabout is a social enterprise headed by volunteers. We provide a
             free service connecting those who wish to give,be that monetary or otherwise, to those in
-            need.</p>
+            need.
+          </p>
           <div class="footer-list">
             <div>
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAALtJREFUGBljYEAC379/T/j69euCHz9+qCMJMzCCOP///xf89u1bByMj4xcgVwWInwDF3nNxcYHFGIG67YECGf/+/QOqYQwHaQLS35iYmKYAxSSB9BImoAJJoLgBTAFIEVCM6+/fv2VA5gt2dvZzTEAjVwA5iiBJLIAbqPkNE7IE0OhUZmZmX6DYJRRxZA5Q12EODo4tQLEXyOIwk/5DBf9B6b9QGiYOdigrMAikgQ5mBUkCaQkgFoAqZAAAMatL9yhOq8QAAAAASUVORK5CYII=">
-              <p class="follow-icon"><!-- react-text: 110 --> Address:Yuyang Road West, Off An Hua Road
-                (Behind<!-- /react-text --><br><!-- react-text: 112 --> Yosemite Villa Compound), Shunyi
-                District.<!-- /react-text --></p></div>
+              <p class="follow-icon">Address:Yuyang Road West, Off An Hua Road
+                (Behind<br>Yosemite Villa Compound), Shunyi
+                District.</p></div>
             <div>
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAANtJREFUGBk1TzsKwkAU3I0IScQLWFhZBBRiY2dlYRlsvYBnEGs7tfMWVh4haGcl6hUkIFgIu/mQjzO6eTC782Zmd99KYSpNU68oiinaDnB1HOcopdS0LS5xHC/zPD+ANmF8sI+11pcsy3z6QikVQDgnSdJjX1VVw+gzeHf0rkAgxFMDGiwYiz8T9PbA3ELSK8tS0QDHa3KC4Ig9eITN50wv27bfRkSu2rmu+2APzsGfvHKLwVdAl0ZdGHqIG2/8NdMtDgiswdsUgT4On/jr+tAvCHFjwhF4CB7UgS+0p50PlZr9/AAAAABJRU5ErkJggg==">
@@ -47,13 +49,13 @@
             <div>
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAALpJREFUGBljYMAB/v//zwzErHDpb9++mQPxIiAuBgmCFADZK4B4GYjP9PXrV1MgvYqRkfE6EL8CKfj+/ftSIB0OxJFAtgITUEE6UHI6kJbn4ODY+ePHD2kgWxKIQeAVUOwVA1DQBajDDIjFIOIMDL9+/dIHWvUYiC1gYmA3ABW7gQSgCu5iKAAKgBz5BWi/E5BGVQDSCRRcAnT8fyh+D+QjrAApAAKQw9cB8Qug428CsTsXF9cJkAQyAABht4SC5tjF9QAAAABJRU5ErkJggg==">
-              <p class="follow-icon"><!-- react-text: 119 --> Mobile Phone:137 1877 7761 (English), 137
-                1805 3814<!-- /react-text --><br><!-- react-text: 121 -->(Chinese only)
-                <!-- /react-text --></p></div>
+              <p class="follow-icon"> Mobile Phone:137 1877 7761 (English), 137
+                1805 3814<br>(Chinese only)
+              </p></div>
             <div>
               <img
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAABGdBTUEAALGPC/xhBQAAAIBJREFUGBljYCACMH79+rUNnzpGRsbNLExMTD///fuXCVQojqwYKPkPyN/CzMy8hOn////6QIXRQBwHFDwLxB+BCiawsLBYAOkzf//+1QVZ9x9qwkWgwklATTeBOAWoIBJIswPpPGRFULWoFEgRE6oQdh4LUOVB7FJw0SdwFj4GAOQMK8XbH8WbAAAAAElFTkSuQmCC">
-              <p class="follow-icon"><!-- react-text: 125 --> Email: <!-- /react-text --><span
+              <p class="follow-icon"> Email: <span
                   class="email-text">roundaboutvolunteer@yahoo.co.uk</span></p></div>
           </div>
         </div>
@@ -64,7 +66,8 @@
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
           <p class="red-text"> Apply To Volunteer Today &gt; </p>
           <p class="col-two-text">Have an enquiry?</p>
-          <p class="red-text">Contact Us Now &gt; </p></div><!-- react-empty: 134 --></div>
+          <p class="red-text">Contact Us Now &gt; </p></div>
+      </div>
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">
       <div>
@@ -84,9 +87,9 @@
     </div>
   </div>
   <div class="col-sm-offset-6 col-sm-6 col-xs-12">
-    <div class="footer-bottom-text"><!-- react-text: 154 -->@2016 Roundabout China<!-- /react-text --><a
-        class="footBottom-info" href="/tw-ra/legal">&nbsp; Legal</a><!-- react-text: 156 --> |
-      <!-- /react-text --><a class="footBottom-info" href="/tw-ra/privacypolicy"> Privacy Policy</a></div>
+    <div class="footer-bottom-text">@2016 Roundabout China<a
+        class="footBottom-info" href="/tw-ra/legal">&nbsp; Legal</a>|
+      <a class="footBottom-info" href="/tw-ra/privacypolicy"> Privacy Policy</a></div>
   </div>
 </div>
 
