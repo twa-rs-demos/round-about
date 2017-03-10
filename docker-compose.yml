@@ -6,8 +6,7 @@ services:
       - 8080:80
     environment:
       - WORDPRESS_DB_PASSWORD=thoughtworks
-    links:
-      - mysql:mysql
+      - WORDPRESS_DB_HOST=${DB_HOST}
     volumes:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
       - ./themes/spike:/var/www/html/wp-content/themes/spike
