@@ -61,10 +61,9 @@
 
                 foreach ($menus as $menu) {
                   ?>
-                  <?php echo get_category_link($menu->cat_ID); ?>
                   <div class="menu-list">
                     <div class="first-menu "><a
-                        href="<?php echo esc_url(get_permalink(get_page_by_title($menu->name))); ?>">
+                        href="<?php echo esc_url(get_permalink(get_page_by_title($menu->slug))); ?>">
                         <?php echo $menu->name ?>
                         <span class="triangle">
                                             </span></a>
