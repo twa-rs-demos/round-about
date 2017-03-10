@@ -26,6 +26,7 @@
                 月报中心
               </a>
               <a href="#" class="top-right-word no-padding">月报申领</a>
+              <?php pll_the_languages(); ?>
               <a href="#" class="no-padding top-right-word">English</a>
               <a class="no-padding top-left-icon ">
                 <img class="icon"
@@ -60,9 +61,10 @@
 
                 foreach ($menus as $menu) {
                   ?>
+                  <?php echo get_category_link($menu->cat_ID); ?>
                   <div class="menu-list">
                     <div class="first-menu "><a
-                        href="<?php echo get_category_link($menu->cat_ID); ?>">
+                        href="<?php echo esc_url(get_permalink(get_page_by_title($menu->name))); ?>">
                         <?php echo $menu->name ?>
                         <span class="triangle">
                                             </span></a>
