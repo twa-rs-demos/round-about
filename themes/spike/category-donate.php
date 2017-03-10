@@ -28,7 +28,7 @@
                         <div class="col-sm-4 col-xs-12  donate-item">
                             <div id="donatemoney" class="donate"><h3 class="text-center">捐款</h3>
                                 <div class="row donate-money-margin">
-                                    <div class="col-xs-offset-1 col-xs-5"><img src="/tw-ra/build/wechat01.png"
+                                    <div class="col-xs-offset-1 col-xs-5"><img src="<?php bloginfo('template_url') ?>/images/wechat01.png"
                                                                                class="img-center">
                                         <div class="span">Wechat</div>
                                     </div>
@@ -61,7 +61,7 @@
                         <div class="col-sm-4 col-xs-12  donate-item">
                             <div id="donateProjects" class="donate"><h3>募捐项目</h3>
                                 <p class="middle-describe donate-projects-tect">直接通过乐捐捐款</p>
-                                <div class="wechat-image"><img src="/tw-ra/build/wechat01.png"
+                                <div class="wechat-image"><img src="<?php bloginfo('template_url') ?>/images/wechat01.png"
                                                                class="donateProjects-wechat">
                                     <div class="span">腾讯</div>
                                 </div>
@@ -79,7 +79,7 @@
         <div class="item-donation" id="item-donation">
             <div class="item-donation-title"><h2 class="middle-title">物品捐赠</h2></div>
             <div class="row">
-                <div><img class="item-donation-img" src="/tw-ra/build/Item donation.png"></div>
+                <div><img class="item-donation-img" src="<?php bloginfo('template_url') ?>/images/Item donation.png"></div>
             </div>
             <div class="row" id="donate-guide-hash">
                 <div class="donate-guide col-sm-offset-2 col-xs-offset-0 col-sm-8 col-xs-12 no-padding"><h3

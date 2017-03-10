@@ -132,9 +132,7 @@
                       <div>
                         <li class="menu-item">
                           <div class="nav-brand ">
-                            <a class="menu-link" href="/tw-ra/donate">
                               <?php echo $menu->name ?>
-                            </a>
                             <i class="dropdown-icon fa fa-chevron-down"></i>
                           </div>
                         </li>
