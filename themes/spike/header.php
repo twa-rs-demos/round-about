@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 <div id="page">
@@ -103,7 +104,6 @@
           <div class="row no-margin responsive-menu">
             <div class="col-md-2 col-xs-3">
               <button class="menu-icon">
-                jagio'gsl
                 <i class="fa fa-bars"></i>
               </button>
             </div>
