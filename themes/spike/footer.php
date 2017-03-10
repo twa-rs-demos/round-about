@@ -77,11 +77,11 @@
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 no-padding footer-item">
       <div class="col-md-offset-1 col-md-10 col-xs-12 no-padding icon-imgs">
-        <div class="icon-img"><img src="/wp-content/themes/spike/images/taobao store.png">
+        <div class="icon-img"><img src="<?php bloginfo('template_url'); ?>/images/taobao store.png">
           <p>淘宝</p></div>
-        <div class="icon-img"><img src="/wp-content/themes/spike/images/wechatStore.png">
+        <div class="icon-img"><img src="<?php bloginfo('template_url'); ?>/images/wechatStore.png">
           <p>微信</p></div>
-        <div class="icon-img"><img src="/wp-content/themes/spike/images/Weibo01.png">
+        <div class="icon-img"><img src="<?php bloginfo('template_url'); ?>/images/Weibo01.png">
           <p>微博</p></div>
       </div>
     </div>
