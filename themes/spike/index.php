@@ -44,5 +44,14 @@
     <div class="ourwork-know-more"><a class="know-more-text" href="/tw-ra/ourWork">了解更多 &gt;</a></div>
   </div>
 </div>
+
+
+
+<?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
+  <aside id="secondary" class="sidebar widget-area" role="complementary">
+    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+  </aside><!-- .sidebar .widget-area -->
+<?php endif; ?>
+
 <?php get_footer(); ?>
 
