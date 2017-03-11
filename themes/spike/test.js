@@ -1,1 +1,3 @@
-console.log('hhhhhhhh');
+$('body').ready(function () {
+    // alert('666')
+});
