@@ -1082,7 +1082,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -41px;
+  top: -30px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -1110,18 +1110,18 @@ img {
   padding-bottom: 120px;
 }
 
-#aboutUs-years-events {
+#aboutUs #aboutUs-footer .about-years-events {
   border-left: 1px solid #ec4c9a;
   padding-left: 10px;
   width: 200px;
   font-size: 18px;
 }
 
-#aboutUs-years-events .fist-event {
+#aboutUs #aboutUs-footer .about-years-events .fist-event  {
   padding-top: 63px;
 }
 
-#aboutUs-years-events .second-event {
+#aboutUs #aboutUs-footer .about-years-events .second-event{
   padding-top: 50px;
 }
 
