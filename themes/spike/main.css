@@ -1117,11 +1117,11 @@ img {
   font-size: 18px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .fist-event  {
+#aboutUs #aboutUs-footer .about-years-events .fist-event {
   padding-top: 63px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .second-event{
+#aboutUs #aboutUs-footer .about-years-events .second-event {
   padding-top: 50px;
 }
 
@@ -2560,6 +2560,7 @@ img {
 #round-store .store-taobao .taobao-statement {
   font-size: 2rem;
   line-height: 2.8rem;
+  margin-bottom: 4rem;
 }
 
 #round-store .shopping-for-children {
@@ -2573,7 +2574,7 @@ img {
 
 #round-store .shopping-for-children .shopping-statement {
   font-size: 2rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 
 #round-store .shopping-for-children .two-dimension-code .inline {

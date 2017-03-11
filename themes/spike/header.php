@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
+  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/jquery.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
