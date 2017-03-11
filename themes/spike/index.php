@@ -1,4 +1,16 @@
 <?php get_header(); ?>
+<?php
+function wpjam_add_styles() {
+    wp_register_script('test',get_template_directory_uri() .'/test.js',array( 'jquery' ), '1.0', true );
+    wp_enqueue_script('test');
+}
+
+add_action( 'wp_enqueue_scripts', 'wpjam_add_styles' );
+?>
+
+
+
+
 <div id="home" class="container-fluid no-padding">
   <div class="picture-max"
        style="background-repeat: no-repeat; background-size: cover; background-image: url(&quot;/wp-content/themes/spike/images/hero_index.png&quot;); background-position: center center;">
