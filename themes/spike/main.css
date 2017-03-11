@@ -72,7 +72,7 @@ pre {
   position: relative;
   marign: 0;
   padding: 0;
-  height: 37rem;
+  height: 43.5rem;
 }
 
 /*--------------------------what we do five icons-------------------------------------*/
@@ -1343,10 +1343,13 @@ img {
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
   font-size: 1.8rem;
+  line-height:3rem;
+  color:#575757;
 }
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content p {
   margin: 0;
+
 }
 
 #donate-page-index #item-donation .donate-items-title {
@@ -1367,13 +1370,14 @@ img {
 #donate-page-index #item-donation .contact-content {
   background-color: #f8f9fb;
   padding: 4px;
-  height: 135px;
+  height: 150px;
   margin-bottom: 10px;
 }
 
 #donate-page-index #item-donation .contact-content .item-title {
   font-size: 1.5rem;
   color: #EC4C9A;
+  line-height:2rem;
 }
 
 #donate-page-index #item-donation .contact-content .content-icon {
@@ -1382,7 +1386,9 @@ img {
 }
 
 #donate-page-index #item-donation .contact-content .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #262626
 }
 
 #donate-page-index .donate-guide-apply .apply-collect-items {
