@@ -5,14 +5,11 @@ services:
     ports:
       - 8080:80
     environment:
-      - WORDPRESS_DB_PASSWORD=thoughtworks
-      - WORDPRESS_DB_HOST=${DB_HOST}
+      - WORDPRESS_DB_NAME=round_about
+      - WORDPRESS_DB_USER=${db_user}
+      - WORDPRESS_DB_PASSWORD=${db_password}
+      - WORDPRESS_DB_HOST=${db_host}
     volumes:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
       - ./themes/spike:/var/www/html/wp-content/themes/spike
-  mysql:
-    image: mysql:5.7
-    ports:
-      - 3306:3306
-    environment:
-      - MYSQL_ROOT_PASSWORD=thoughtworks
+
