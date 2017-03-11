@@ -133,7 +133,7 @@
                       <div>
                         <li class="menu-item">
                           <div class="nav-brand ">
-                              <?php echo $menu->name ?>
+                            <?php echo $menu->name ?>
                             <i class="dropdown-icon fa fa-chevron-down"></i>
                           </div>
                         </li>

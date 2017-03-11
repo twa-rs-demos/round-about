@@ -2550,7 +2550,7 @@ img {
 #round-store .round-store-title {
   font-size: 4.2rem;
   color: #EC4C9A;
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 0 0;
 }
 
 #round-store .store-taobao .store-taobao-title {
@@ -2559,11 +2559,12 @@ img {
 
 #round-store .store-taobao .taobao-statement {
   font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 #round-store .shopping-for-children {
   background-color: #F8F9FB;
-  padding: 4rem 0 7rem 0;
+  padding: 4rem 0;
 }
 
 #round-store .shopping-for-children .shopping-title span {
@@ -2572,7 +2573,7 @@ img {
 
 #round-store .shopping-for-children .shopping-statement {
   font-size: 2rem;
-  margin: 2rem 0 4rem 0;
+  margin-bottom: 4rem;
 }
 
 #round-store .shopping-for-children .two-dimension-code .inline {
@@ -2601,6 +2602,11 @@ img {
   margin: 0.5rem 0 1rem 0;
   height: 4rem;
   font-size: 2rem;
+
+}
+
+#round-store .shopping-for-children .donate-button .store-donate-info {
+  font-size: 1.5rem;
 }
 
 #round-store .physical-store {
@@ -2610,6 +2616,7 @@ img {
 #round-store .physical-store .store-info {
   font-size: 2rem;
   margin-bottom: 6rem;
+  line-height: 2.8rem;
 }
 
 #round-store .physical-store .round-about-place {
@@ -2624,6 +2631,7 @@ img {
 #round-store .physical-store .round-about .round-about-store {
   font-size: 2rem;
   margin-bottom: 2rem;
+  line-height: 2.8rem;
 }
 
 #round-store .physical-store .round-about .round-about-store .title {
