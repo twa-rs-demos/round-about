@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="grid_12 caption clearfix"> //wordpress中page
+<div class="grid_12 caption clearfix">
   <?php
   remove_filter('the_content', 'wpautop');
   while (have_posts()):
