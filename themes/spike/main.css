@@ -1074,6 +1074,10 @@ img {
   padding-right: 0;
 }
 
+#aboutUs #aboutUs-footer .no-padding {
+  padding: 0;
+}
+
 #aboutUs #aboutUs-footer .time-line {
   margin-top: 71px;
   border-top: 2px solid #c2c2c2;
