@@ -1816,6 +1816,17 @@ img {
   display: inline-block;
 }
 
+#header .top-info .right-topinfo .lang-item {
+  list-style: none;
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+#header .top-info .right-topinfo .lang-item a {
+  color: #8a7676;
+  font-size: 1.1rem;
+}
+
 #header .top-info .top-right-word {
   color: #8a7676;
   margin-right: 3rem;

@@ -4,10 +4,14 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
-  <!--  <script type="text/javascript" src="--><?php //bloginfo('template_url'); ?><!--/jquery.min.js"></script>-->
-  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--  <link rel="stylesheet" href="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
+<!--        media="screen"/>-->
+<!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/jquery.min.js"></script>-->
+<!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
@@ -31,7 +35,6 @@
               </a>
               <a href="#" class="top-right-word no-padding">月报申领</a>
               <?php pll_the_languages(); ?>
-              <a href="#" class="no-padding top-right-word">English</a>
               <a class="no-padding top-left-icon ">
                 <img class="icon"
                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAWCAYAAADeiIy1AAAABGdBTUEAALGPC/xhBQAAA09JREFUSA21VH1ojWEUP+d57V4f8zFKwvgDkWIrSvkIZa5tmDJv4W4UsvIX/0iSf8gfRFKSJGxj3W0NcTck5SMUbUb846N8DBki1rjuc/yeu73vfe/1ukN56n2fc37nd57zPM8552FKGyKiquobF5OQ+abDPEyYerPQeyJpZeYLAelzxLbnfklzzaiy11pd3zRP6/hBERrnxX+Rmd/Dca8MsPaXh0Jff7H7AG6gE7XntzDxTpzIxXz4KRD4tzibQuGios8pBh8lsWhlbeN6EX3Ix94jxEy3gxII2XbBp0xk5CM6kkT2uCSmDmXxzKxg1gjk46WLG4H5gNV3wGDgLh/XPK2TY7tTeD6K0nGqEJJs1yb8dWBgaPPykvlt2MBbF4fAJM0rF876iEAPvDh4a06duTg8BUtTuDISbUWgSak4v8OdvknHgcWF6C5CTsaVBbtkalbE7SxWZKU9vyV1naTGKILPKOP+SSizhNPgtuhIUFlV33S8FGU/R1hy4RVg4Tac+roidXiFXXjTuxICRdtx9CFe8Lcy8kekVmOxKfDZiIABP25iMyJVbFmby5YueG04Ck6P/ch+mFLWOha9FS2w+XdBjF93i5SR1i0n6y5MMBgCcY0RehrYZY3oeAkC5CW5/AT4j6RuCpOeIpffDYaAQ+M6fjoajQYV9aOjCNbmJfvKzGeRHNuxYbF75XbRWPR3hYshSLi0aCwpq8zBUFDj2ztkLfhE6KUZKPMr2EOWQ0idUYUs5mnansS5UxHt0kyLsPWpBjdVid8OiAXgmncyMYBfTQQyWmXkfAGotdjBwC6z5898B8SHuIpyD/o34itsqmuU2cWXunfjQMlZpB9a4I8ez6STR8Ij3MujGnGBKU1cYS1O9wzHz8dJcgH0EmI0KqR/GFjxhhsoEmka3En6gxLJC9vF99PXa2i4MuhLrGM3QuWk2zLrHENx73VzlJncZa2qa1yltT72J1yHo1htCC8rPOjmyDFkmsOlhcdJqU1olm+ZeMZmUoCnaIsJktB7cvCz1zREx8RitA8VusjP3o09KreLJzr2v7o6x8mZq+sujhP6MQd9NAp5sIj1c/xu44mfrYW2ZQWs/OVLQi8c/n+Zq89dy6muvzzaWfwnVbowPNKF2QkAAAAASUVORK5CYII="></a>
