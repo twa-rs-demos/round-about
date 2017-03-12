@@ -1,7 +1,9 @@
-$(document).ready(function () {
-    $(".circle").hover(function () {
-        document.querySelector('div.select-events').setAttribute("class", 'select-events');
-    }, function () {
-        document.querySelector('div.select-events').setAttribute("class", 'select-events hidden');
-    });
-});
+function show(year) {
+    if ($(".select" + year).find('.fist-event').text().trim() != '') {
+        document.querySelector('div' + '.select' + year).setAttribute("class", 'select' + year);
+    }
+}
+
+function hide(year) {
+    document.querySelector('div' + '.select' + year).setAttribute("class", 'select' + year + " " + "hidden");
+}
