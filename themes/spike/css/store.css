@@ -1,0 +1,128 @@
+#round-store .buy {
+  background-color: #F0F0F0;
+}
+
+#round-store .buy .buy-image img {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 37rem;
+}
+
+#round-store .round-store-title {
+  font-size: 4.2rem;
+  color: #EC4C9A;
+  margin: 1rem 0 0 0;
+}
+
+#round-store .store-taobao .store-taobao-title {
+  margin: 5rem 0 3.5rem 0;
+}
+
+#round-store .store-taobao .taobao-statement {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 4rem;
+}
+
+#round-store .shopping-for-children {
+  background-color: #F8F9FB;
+  padding: 4rem 0;
+}
+
+#round-store .shopping-for-children .shopping-title span {
+  display: block;
+}
+
+#round-store .shopping-for-children .shopping-statement {
+  font-size: 2rem;
+  margin: 4rem 0;
+}
+
+#round-store .shopping-for-children .two-dimension-code .inline {
+  display: inline-block;
+}
+
+#round-store .shopping-for-children .two-dimension-code .store-picture {
+  width: 12rem;
+}
+
+#round-store .shopping-for-children .two-dimension-code .store-name {
+  display: block;
+  position: absolute;
+  right: 2.5rem;
+  font-size: 2rem;
+}
+
+#round-store .shopping-for-children .donate-button .donate-type {
+  display: inline-block;
+  width: 19rem;
+  outline: none;
+  background-color: #EC4C9A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0 1rem 0;
+  height: 4rem;
+  font-size: 2rem;
+
+}
+
+#round-store .shopping-for-children .donate-button .store-donate-info {
+  font-size: 1.5rem;
+}
+
+#round-store .physical-store {
+  margin-bottom: 10rem;
+}
+
+#round-store .physical-store .store-info {
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  line-height: 2.8rem;
+}
+
+#round-store .physical-store .round-about-place {
+  padding-left: 0;
+}
+
+#round-store .physical-store .round-about-place img {
+  max-width: 100%;
+  min-height: 36.3rem;
+}
+
+#round-store .physical-store .round-about .round-about-store {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 2.8rem;
+}
+
+#round-store .physical-store .round-about .round-about-store .title {
+  color: #EC4C9A;
+}
+
+#round-store .physical-store .round-about .store-position img {
+  max-width: 100%;
+}
+
+#round-store .physical-store .physical-store-title {
+  margin: 6rem 0 2rem 0;
+}
+
+#moneytary-donation .moneytary-donation {
+  width: 70%;
+  left: 14%;
+}
+
+#moneytary-donation .moneytary-donation .modal-header {
+  border-bottom: none;
+}
+
+#moneytary-donation .moneytary-donation .modal-header .moneytary-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #ec4c9a;
+}
+
+#moneytary-donation .moneytary-donation .modal-body .donate-way {
+  height: 130px;
+}
