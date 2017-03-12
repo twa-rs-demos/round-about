@@ -4,16 +4,19 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
-  <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/jquery.min.js"></script>
+  <!--  <script type="text/javascript" src="--><?php //bloginfo('template_url'); ?><!--/jquery.min.js"></script>-->
+  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
 <div id="page">
-  <div class="container-fluid  no-padding">
-    <!--        header  -->
-    <div id="header">
+  <div class="container-fluid no-padding page-container">
+    <!--    header-->
+    <div id="header" class="row">
       <div class="top-info">
-        <div class="row no-margin">
+        <div>
           <div class="col-md-6 col-sm-4 col-xs-3">
             <div class="row logo"><a href="/tw-ra/">
                 <img
@@ -50,7 +53,7 @@
 
       <div class="nav-menu">
         <div>
-          <div class="row no-margin menu-list1">
+          <div class="no-margin menu-list1">
             <div class="col-md-10 col-xs-7">
               <div class="menu">
                 <?php
