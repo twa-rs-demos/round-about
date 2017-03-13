@@ -1378,6 +1378,7 @@ img {
   font-size: 1.5rem;
   color: #EC4C9A;
   line-height:2rem;
+  margin-bottom:1rem;
 }
 
 #donate-page-index #item-donation .contact-content .content-icon {
@@ -1587,6 +1588,8 @@ img {
   cursor: pointer;
   display: block;
   opacity: 0.5;
+  font-size:1.2rem;
+  color:#fff;
 }
 
 .child-profile:hover p {
