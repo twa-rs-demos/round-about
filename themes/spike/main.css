@@ -72,7 +72,7 @@ pre {
   position: relative;
   marign: 0;
   padding: 0;
-  height: 37rem;
+  height: 40rem;
 }
 
 /*--------------------------what we do five icons-------------------------------------*/
@@ -743,13 +743,8 @@ pre {
 }
 
 /*--------------------------picture-max-------------------------------------*/
-.picture-max {
-  position: relative;
-  marign: 0;
-  padding: 0;
-  height: 37rem;
-
-}
+/*
+*/
 
 /*--------------------------what we do five icons-------------------------------------*/
 .icon-container {
@@ -1751,45 +1746,6 @@ img {
   color: #eb67a7;
   font-size: 1.6rem;
   margin-left: 1.6rem;
-}
-
-#get-involved .get-involved-welcome {
-  color: #ec4c9a;
-  margin: 0 auto;
-}
-
-#get-involved .get-involved-welcome h2 {
-  margin: 4rem 0 5rem 0;
-}
-
-#get-involved .get-involved-welcome a {
-  font-size: 2rem;
-  line-height: 3.2rem;
-  float: left;
-  overflow: hidden;
-  margin-left: 2.4rem;
-  margin-top: 3.9rem;
-  color: #ec4c9a;
-}
-
-#get-involved .get-involved-welcome a:hover,
-#get-involved .get-involved-welcome a:focus {
-  text-decoration: none;
-}
-
-#get-involved .get-involved-welcome .get-involved-item {
-  padding-left: 4rem;
-}
-
-#get-involved .get-involved-welcome .get-involved-item .child {
-  overflow: hidden;
-  display: inline-block;
-}
-
-#get-involved .get-involved-welcome img {
-  float: left;
-  width: 11rem;
-  height: 11rem;
 }
 
 #header {

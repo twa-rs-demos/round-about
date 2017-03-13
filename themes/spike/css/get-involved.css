@@ -1,0 +1,45 @@
+#get-involved .picture-max .get-involved-img {
+  width: 100%;
+  height: 100%;
+}
+
+#get-involved .get-involved-welcome {
+  color: #ec4c9a;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+#get-involved .get-involved-welcome h2 {
+  margin: 4rem 0 5rem 0;
+}
+
+#get-involved .get-involved-welcome a {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  float: left;
+  overflow: hidden;
+  margin-left: 2.4rem;
+  margin-top: 3.9rem;
+  color: #ec4c9a;
+}
+
+#get-involved .get-involved-welcome a:hover,
+#get-involved .get-involved-welcome a:focus {
+  text-decoration: none;
+}
+
+#get-involved .get-involved-welcome .get-involved-item {
+  padding-left: 4rem;
+  margin-bottom: 20px;
+}
+
+#get-involved .get-involved-welcome .get-involved-item .child {
+  overflow: hidden;
+  display: inline-block;
+}
+
+#get-involved .get-involved-welcome img {
+  float: left;
+  width: 11rem;
+  height: 11rem;
+}
