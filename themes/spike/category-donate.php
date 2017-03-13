@@ -86,8 +86,21 @@
                               src="<?php bloginfo('template_url') ?>/images/Item donation.png"></div>
                 </div>
                 <div class="row" id="donate-guide-hash">
-                    <div class="donate-guide col-sm-offset-2 col-xs-offset-0 col-sm-8 col-xs-12 no-padding"><h3
-                                class="donate-items-title"><a class="donate-guide-title">捐赠指南</a></h3>
+                    <div class="donate-guide col-sm-offset-2 col-xs-offset-0 col-sm-8 col-xs-12 no-padding">
+                        <h3 class="donate-items-title"><a class="donate-guide-title">捐赠指南</a></h3>
+                        <div class="rules hide">
+                            <button class="close">x</button>
+                            <div><h2 class="title">我们不接受的物品</h2></div>
+                            <div class="content">
+                                <ul>
+                                    <li>Open, prescription and out of date medicines.</li>
+                                    <li>Used underwear, including socks.</li>
+                                    <li>Anything previously used by an animal – such as a dog’s bed</li>
+                                    <li>Copies of magazines over 6 months old.</li>
+                                    <li>Computers, monitors and printers over 4 years old.</li>
+                                </ul>
+                            </div>
+                        </div>
 
                         <div class="col-md-offset-2 col-xs-offset-1 col-md-8 col-xs-10 donate-guide-content"><p>Open,
                                 prescription and out of date medicines.</p>

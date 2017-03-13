@@ -1295,6 +1295,25 @@ img {
 
 #donate-page-index #donate-way #donatemoney .image-border {
   border: 0.1rem #bcbcbc solid;
+  position: relative;
+}
+#donate-page-index #donate-way #donatemoney .image-border .hide{
+  display: none;
+}
+#donate-page-index #donate-way #donatemoney .image-border .paypal-box {
+  position: absolute;
+  top: 6rem;
+  left: 11rem;
+  border: solid 1px #ccc;
+  padding: 2rem 4rem;
+  background: white;
+  z-index: 100;
+  border-radius: 10px;
+}
+#donate-page-index #donate-way #donatemoney .image-border .paypal-close{
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
 }
 
 #donate-page-index #donate-way #donatemoney .donate-money-margin {
@@ -1338,7 +1357,36 @@ img {
 
 #donate-page-index #item-donation .donate-guide .donate-guide-title {
   color: #EC4C9A;
+  cursor: pointer;
 }
+#donate-page-index .hide {
+   display: none;
+ }
+
+#donate-page-index .donate-rules {
+  position: absolute;
+  top: 0;
+  right: -20rem;
+  border: solid 1px #ccc;
+  padding: 2rem;
+  background: white;
+  z-index: 100;
+}
+#donate-page-index .donate-rules .rules ul{
+  list-style: none;
+  margin-left:-3.5rem;
+}
+
+#donate-page-index .donate-guide {
+  position: relative;
+}
+#donate-page-index .close{
+  position:absolute;
+  right:2rem;
+  top:2rem;
+}
+
+
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
@@ -1591,13 +1639,7 @@ img {
 #footer {
   font-family: Microsoft YaHei;
   background-color: #3A383F;
-  width: 100%;
-  padding: 3.3rem 1rem 0 4.5rem;
-  /*-------------------------------------footer-top-col-one------------------------------------------*/
-  /*-------------------------------------footer-top-col-two------------------------------------------*/
-  /*-------------------------------------footer-top-col-three------------------------------------------*/
-  /*-------------------------------------footer-top-col-four------------------------------------------*/
-  /*-------------------------------------footer-bottom------------------------------------------*/
+  padding: 3.3rem 1rem 0 3rem;
 }
 
 #footer .footer-item {
