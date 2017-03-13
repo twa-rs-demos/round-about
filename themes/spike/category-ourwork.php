@@ -7,7 +7,6 @@ pll_the_languages();
 
 $args = array();
 
-
 $pages = get_pages();
 foreach ($pages as $page) {
   $option = '<option value="' . get_page_link($page->ID) . '">';
@@ -18,5 +17,4 @@ foreach ($pages as $page) {
 ?>
 
 <?php get_footer() ?>
-
 
