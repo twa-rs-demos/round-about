@@ -17,6 +17,7 @@
 </head>
 <body>
 <div id="page">
+
     <div class="container-fluid no-padding page-container">
         <!--    header-->
         <div id="header" class="row">
@@ -157,12 +158,5 @@
                 </div>
             </div>
         </div>
-
-
-
-<?php
-//$category = get_category_by_slug('newsandevents_zh');
-//var_dump($category);
-//echo $category->name;
-//?>
+        
 
