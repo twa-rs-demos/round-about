@@ -292,7 +292,7 @@
                         $args = array(
                             'post_type' => 'post',
                             'numberposts' => 8,
-                            'category_name' => 'donatecurrent_zh', // returns all posts,
+                            'category_name' => 'donatecurrent_zh'
                         );
                         $posts = get_posts($args);
                         ?>

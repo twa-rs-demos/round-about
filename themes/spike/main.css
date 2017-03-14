@@ -3176,6 +3176,7 @@ img {
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
+  line-height:3.5rem;
 }
 
 #directory .charities-list .charities .charity-info .fa {
@@ -3186,6 +3187,24 @@ img {
 
 #directory .charities-list .charities .charity-info .span {
   font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
+}
+#directory .charities-list .charities .charity-info p{
+  position: relative;
+  overflow: hidden;
+  line-height:3.5rem;
+  height:7rem;
+}
+
+
+#directory .charities-list .charities .charity-info p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 2rem 1px 3rem;
+  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
 }
 
 #directory .charities-list .charities .charity-info .tag {
