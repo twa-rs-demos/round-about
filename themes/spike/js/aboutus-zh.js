@@ -7,3 +7,6 @@ function show(year) {
 function hide(year) {
     document.querySelector('div' + '.select' + year).setAttribute("class", 'select' + year + " " + "hidden");
 }
+
+
+
