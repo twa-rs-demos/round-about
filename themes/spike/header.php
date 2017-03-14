@@ -1,20 +1,92 @@
+<?php
+$categories = get_categories();
+$menus = array_filter($categories, function ($cat, $key) {
+  return $cat->parent === 0 && $cat->name !== 'Uncategorized';
+}, ARRAY_FILTER_USE_BOTH);
+
+$sub_menus = array();
+foreach ($menus as $menu) {
+
+  $tax_terms = get_terms('category', array('child_of' => $menu->cat_ID, "hide_empty" => false));
+  foreach ($tax_terms as $tax_term) {
+
+    array_push($sub_menus, $tax_term);
+  }
+}
+?>
+
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Tutorial theme</title>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
-<!--  <link rel="stylesheet" href="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
-<!--        media="screen"/>-->
-<!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/jquery.min.js"></script>-->
-<!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.js"></script>-->
+  <!--  <link rel="stylesheet" href="-->
+  <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
+  <!--        media="screen"/>-->
+  <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
+  <!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.js"></script>-->
 
-    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!--  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+  <!--  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <!--  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+
+  <script type="text/javascript">
+
+      var __injectedVars = {
+          menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
+          subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>')
+      };
+  </script>
+  <script type="text/x-jquery-tmpl" id="menuTemplate">
+    <div class="menu-list">
+      <div class="first-menu">
+        <a>
+          ${name}
+          <span class="triangle"/>
+        </a>
+      </div>
+      <div class="dropdown">
+        <div class='triangle-tip-up'></div>
+        <div class='dropdown-list'>
+          <ul class='dropdown-items'>
+            {{each subMenus}}
+              <li>${$value.name}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </script>
+
+  <script>
+      $(function () {
+
+          let menus = __injectedVars.menus.map((menu) => {
+              let subMenus = __injectedVars.subMenus.filter((subMenu) => {
+                  return subMenu.parent === menu.cat_ID;
+              });
+              return Object.assign({}, menu, {
+                  subMenus
+              })
+          });
+
+          console.log(menus);
+
+          $("#menuTemplate").tmpl(menus)
+              .appendTo("#menu");
+      })
+  </script>
+
 </head>
 <body>
+
+
 <div id="page">
   <div class="container-fluid no-padding page-container">
     <!--    header-->
@@ -58,47 +130,10 @@
         <div>
           <div class="no-margin menu-list1">
             <div class="col-md-10 col-xs-7">
-              <div class="menu">
-                <?php
-                $categories = get_categories();
-
-                $menus = array_filter($categories, function ($cat, $key) {
-                  return $cat->parent === 0 && $cat->name !== 'Uncategorized';
-                }, ARRAY_FILTER_USE_BOTH);
-
-                foreach ($menus as $menu) {
-                  ?>
-                  <div class="menu-list">
-                    <div class="first-menu "><a
-                        href="<?php echo esc_url(get_permalink(get_page_by_title($menu->slug))); ?>">
-                        <?php echo $menu->name ?>
-                        <span class="triangle">
-                                            </span></a>
-                    </div>
-                  </div>
-                  <?php
-                }
-                ?>
-
-
-                <!---->
-                <!--                                    <div class="dropdown">-->
-                <!--                                        <div class="triangle-tip-up"></div>-->
-                <!--                                        <div class="dropdown-list">-->
-                <!--                                            <ul class="dropdown-items">-->
-                <!--                                                <li class="dropdown-item"><a href="/tw-ra/donate#donatemoney" class="">捐款</a>-->
-                <!--                                                </li>-->
-                <!--                                                <li class="dropdown-item"><a href="/tw-ra/donate#donatethings" class="">捐物</a>-->
-                <!--                                                </li>-->
-                <!--                                                <li class="dropdown-item"><a class=""-->
-                <!--                                                                             href="/tw-ra/donate/donatecurrent">募捐项目</a>-->
-                <!--                                                </li>-->
-                <!--                                            </ul>-->
-                <!--                                        </div>-->
-                <!--                                    </div>-->
-                <!---->
+              <div class="menu" id="menu">
               </div>
             </div>
+
             <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
               <div class="search"><input type="text" placeholder="搜索本站">
                 <button><img
@@ -156,3 +191,5 @@
         </div>
       </div>
     </div>
+
+
