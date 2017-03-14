@@ -1872,6 +1872,22 @@ img {
   height: 1.8rem;
 }
 
+
+
+
+#header .top-info .right-topinfo .lang-item {
+  list-style: none;
+  display: inline-block;
+  margin-right: 3rem;
+}
+
+#header .top-info .right-topinfo .lang-item a {
+  color: #8a7676;
+  font-size: 1.1rem;
+}
+
+
+
 #header .nav-menu .menu-list1 .menu:last-child {
   margin-right: 0;
 }
