@@ -111,7 +111,7 @@
                     </div>
 
 
-                    <div class="row no-margin responsive-menu">
+                    <div class="responsive-menu">
                         <div class="col-md-2 col-xs-3">
                             <button class="menu-icon">
                                 <i class="fa fa-bars"></i>
