@@ -27,12 +27,14 @@ foreach ($menus as $menu) {
   <!--        media="screen"/>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
+
   <!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.js"></script>-->
 
   <!--  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <!--  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
   <!--  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <!--  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+  <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
 
   <script type="text/javascript">
 
@@ -60,35 +62,10 @@ foreach ($menus as $menu) {
         </div>
       </div>
     </div>
-
-  </script>
-
-  <script>
-      $(function () {
-
-          let menus = __injectedVars.menus.map((menu) => {
-              let subMenus = __injectedVars.subMenus.filter((subMenu) => {
-                  return subMenu.parent === menu.cat_ID;
-              });
-              return Object.assign({}, menu, {
-                  subMenus
-              })
-          });
-
-          $("#menuTemplate").tmpl(menus)
-              .appendTo("#menu");
-
-          $('.first-menu').hover(function () {
-              $(this).next('.dropdown').css('display','block');
-          },function () {
-              $(this).next('.dropdown').css('display','none');
-          })
-      })
   </script>
 
 </head>
 <body>
-
 
 <div id="page">
   <div class="container-fluid no-padding page-container">
