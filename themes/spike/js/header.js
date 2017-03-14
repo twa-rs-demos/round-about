@@ -1,6 +1,8 @@
 
 $(function () {
     let menus = __injectedVars.menus.map((menu) => {
+        console.log(menu);
+
         let subMenus = __injectedVars.subMenus.filter((subMenu) => {
             return subMenu.parent === menu.cat_ID;
         });
@@ -12,9 +14,9 @@ $(function () {
     $("#menuTemplate").tmpl(menus)
         .appendTo("#menu");
 
-    $('.first-menu').hover(function () {
-        $(this).next('.dropdown').css('display','block');
+    $('.menu-list').hover(function () {
+        $(this).find('.dropdown').css('display','block');
     },function () {
-        $(this).next('.dropdown').css('display','none');
+        $(this).find('.dropdown').css('display','none');
     })
-})
+});

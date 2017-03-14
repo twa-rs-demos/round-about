@@ -6,10 +6,10 @@ $menus = array_filter($categories, function ($cat, $key) {
 
 $sub_menus = array();
 foreach ($menus as $menu) {
-
+  $menu->link = esc_url(get_permalink(get_page_by_title($menu->slug)));
   $tax_terms = get_terms('category', array('child_of' => $menu->cat_ID, "hide_empty" => false));
   foreach ($tax_terms as $tax_term) {
-
+   $tax_term->link=esc_url(get_permalink(get_page_by_title($tax_term->slug)));
     array_push($sub_menus, $tax_term);
   }
 }
@@ -22,7 +22,6 @@ foreach ($menus as $menu) {
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
-  <!--  <link rel="stylesheet" href="-->
   <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
   <!--        media="screen"/>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
@@ -44,10 +43,11 @@ foreach ($menus as $menu) {
       };
   </script>
   <script type="text/x-jquery-tmpl" id="menuTemplate">
+
     <div class="menu-list">
       <div class="first-menu">
-        <a>
-          ${name}
+        <a href="${link}">
+         ${name}
           <span class="triangle"/>
         </a>
       </div>
@@ -56,12 +56,13 @@ foreach ($menus as $menu) {
         <div class='dropdown-list'>
           <ul class='dropdown-items'>
             {{each subMenus}}
-              <li>${$value.name}</li>
+              <li><a href="${$value.link}">${$value.name}</a></li>
             {{/each}}
           </ul>
         </div>
       </div>
     </div>
+
   </script>
 
 </head>
