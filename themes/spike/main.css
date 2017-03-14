@@ -72,7 +72,7 @@ pre {
   position: relative;
   marign: 0;
   padding: 0;
-  height: 37rem;
+  height: 44rem;
 }
 
 /*--------------------------what we do five icons-------------------------------------*/
@@ -1074,10 +1074,6 @@ img {
   padding-right: 0;
 }
 
-#aboutUs #aboutUs-footer .no-padding {
-  padding: 0;
-}
-
 #aboutUs #aboutUs-footer .time-line {
   margin-top: 71px;
   border-top: 2px solid #c2c2c2;
@@ -1086,7 +1082,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -38px;
+  top: -30px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -1121,11 +1117,11 @@ img {
   font-size: 18px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .fist-event {
+#aboutUs #aboutUs-footer .about-years-events .fist-event  {
   padding-top: 63px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .second-event {
+#aboutUs #aboutUs-footer .about-years-events .second-event{
   padding-top: 50px;
 }
 
@@ -1299,6 +1295,25 @@ img {
 
 #donate-page-index #donate-way #donatemoney .image-border {
   border: 0.1rem #bcbcbc solid;
+  position: relative;
+}
+#donate-page-index #donate-way #donatemoney .image-border .hide{
+  display: none;
+}
+#donate-page-index #donate-way #donatemoney .image-border .paypal-box {
+  position: absolute;
+  top: 6rem;
+  left: 11rem;
+  border: solid 1px #ccc;
+  padding: 2rem 4rem;
+  background: white;
+  z-index: 100;
+  border-radius: 10px;
+}
+#donate-page-index #donate-way #donatemoney .image-border .paypal-close{
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
 }
 
 #donate-page-index #donate-way #donatemoney .donate-money-margin {
@@ -1342,7 +1357,36 @@ img {
 
 #donate-page-index #item-donation .donate-guide .donate-guide-title {
   color: #EC4C9A;
+  cursor: pointer;
 }
+#donate-page-index .hide {
+   display: none;
+ }
+
+#donate-page-index .donate-rules {
+  position: absolute;
+  top: 0;
+  right: -20rem;
+  border: solid 1px #ccc;
+  padding: 2rem;
+  background: white;
+  z-index: 100;
+}
+#donate-page-index .donate-rules .rules ul{
+  list-style: none;
+  margin-left:-3.5rem;
+}
+
+#donate-page-index .donate-guide {
+  position: relative;
+}
+#donate-page-index .close{
+  position:absolute;
+  right:2rem;
+  top:2rem;
+}
+
+
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
@@ -1595,12 +1639,7 @@ img {
 #footer {
   font-family: Microsoft YaHei;
   background-color: #3A383F;
-  padding: 3.3rem 1rem 0 4.5rem;
-  /*-------------------------------------footer-top-col-one------------------------------------------*/
-  /*-------------------------------------footer-top-col-two------------------------------------------*/
-  /*-------------------------------------footer-top-col-three------------------------------------------*/
-  /*-------------------------------------footer-top-col-four------------------------------------------*/
-  /*-------------------------------------footer-bottom------------------------------------------*/
+  padding: 3.3rem 1rem 0 3rem;
 }
 
 #footer .footer-item {
@@ -1814,17 +1853,6 @@ img {
   margin-top: 2.8rem;
   font-size: 1.1rem;
   display: inline-block;
-}
-
-#header .top-info .right-topinfo .lang-item {
-  list-style: none;
-  display: inline-block;
-  margin-right: 3rem;
-}
-
-#header .top-info .right-topinfo .lang-item a {
-  color: #8a7676;
-  font-size: 1.1rem;
 }
 
 #header .top-info .top-right-word {
@@ -2430,33 +2458,8 @@ img {
 }
 
 #ourwork .icons-margin-bottom {
-  margin-bottom: 6.5rem;
-  margin-top: -2rem;
-}
-
-#ourwork .icon-bottom {
-  padding-bottom: 3.5rem;
-}
-
-#ourwork .ourwork-title {
-  margin-top: 56px;
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-#ourwork .ourwork-title .title {
-  color: #ec4c9a;
-  font-size: 48px
-}
-
-#ourwork .describe {
-  text-align: center;
-  font-size: 22px;
-  margin-bottom: 91px;
-}
-
-#ourwork .video {
-  background: #F0F0F0;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
 }
 
 #ourwork-assistance {
@@ -2574,6 +2577,153 @@ img {
 
 .row {
   margin: 0;
+}
+
+#round-store .buy {
+  margin-top: 5px;
+  background-color: #F0F0F0;
+}
+
+#round-store .buy .buy-image img {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 37rem;
+}
+
+#round-store .round-store-title {
+  font-size: 4.2rem;
+  color: #EC4C9A;
+  margin: 1rem 0 0 0;
+}
+
+#round-store .store-taobao .store-taobao-title {
+  margin: 5rem 0 3.5rem 0;
+}
+
+#round-store .store-taobao .taobao-statement {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+#round-store .shopping-for-children {
+  background-color: #F8F9FB;
+  padding: 4rem 0;
+}
+
+#round-store .shopping-for-children .shopping-title span {
+  display: block;
+}
+
+#round-store .shopping-for-children .shopping-statement {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+#round-store .shopping-for-children .two-dimension-code .inline {
+  display: inline-block;
+}
+
+#round-store .shopping-for-children .two-dimension-code .store-picture {
+  width: 12rem;
+}
+
+#round-store .shopping-for-children .two-dimension-code .store-name {
+  display: block;
+  position: absolute;
+  right: 2.5rem;
+  font-size: 2rem;
+}
+
+#round-store .shopping-for-children .donate-button .donate-type {
+  display: inline-block;
+  width: 19rem;
+  outline: none;
+  background-color: #EC4C9A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0 1rem 0;
+  height: 4rem;
+  font-size: 2rem;
+
+}
+
+#round-store .shopping-for-children .donate-button .store-donate-info {
+  font-size: 1.5rem;
+}
+
+#round-store .physical-store {
+  margin-bottom: 10rem;
+}
+
+#round-store .physical-store .store-info {
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  line-height: 2.8rem;
+}
+
+#round-store .physical-store .round-about-place {
+  padding-left: 0;
+}
+
+#round-store .physical-store .round-about-place img {
+  max-width: 100%;
+  min-height: 36.3rem;
+}
+
+#round-store .physical-store .round-about .round-about-store {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 2.8rem;
+}
+
+#round-store .physical-store .round-about .round-about-store .title {
+  color: #EC4C9A;
+}
+
+#round-store .physical-store .round-about .store-position img {
+  max-width: 100%;
+}
+
+#round-store .physical-store .physical-store-title {
+  margin: 6rem 0 2rem 0;
+}
+
+#donate-way-modal .modal-content {
+  width: 335px;
+}
+
+#donate-way-modal .modal-content .modal-header {
+  padding-top: 7px;
+}
+
+#donate-way-modal .modal-content .modal-header .close-modal {
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+
+#donate-way-modal .modal-content .modal-header .close-modal:hover,
+#donate-way-modal .modal-content .modal-header .close-modal:focus {
+  background-color: #FFFFFF;
+}
+
+#donate-way-modal .modal-content .modal-header .modal-title .title {
+  font-size: 3rem;
+  color: #ec4c9a;
+}
+
+#donate-way-modal .modal-content .modal-body .donate-way {
+  height: 120px;
+}
+
+#donate-way-modal .modal-content .modal-body .donate-way .donate-img {
+  height: 65px;
+}
+
+#donate-way-modal .modal-content .modal-body .donate-way .border {
+  border: 1px #D8D8D8 solid;
 }
 
 #get-involved-volunteer .involved-volunteer {
