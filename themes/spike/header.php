@@ -61,7 +61,6 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
-
   </script>
 
   <script>
@@ -76,10 +75,14 @@ foreach ($menus as $menu) {
               })
           });
 
-          console.log(menus);
-
           $("#menuTemplate").tmpl(menus)
               .appendTo("#menu");
+
+          $('.first-menu').hover(function () {
+              $(this).next('.dropdown').css('display','block');
+          },function () {
+              $(this).next('.dropdown').css('display','none');
+          })
       })
   </script>
 
