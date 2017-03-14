@@ -304,10 +304,10 @@
                             $disease = $custom_fields['disease'][0];
                             $profile = $custom_fields['profile'][0];
                             $money = $custom_fields['money'][0];
+                            $img = get_field( "img", $post->ID );
                             if ($name != null && $age != null && $disease != null && $profile != null && $money != null) :
                                 ?>
-                                <div class="col-md-3 col-sm-4 col-xs-6 donating-project"><img
-                                            src="http://127.0.0.1/wp-content/uploads/2016/11/b73c2e887eefdca6327835131a4b8e93.jpg">
+                                <div class="col-md-3 col-sm-4 col-xs-6 donating-project"><img src="<?php echo $img['url']; ?>" alt="img" />
                                     <div class="child-profile"><p><?php echo $profile; ?></p></div>
                                     <div class="child-profile-text">
                                         <h4><?php echo $name; ?>，<?php echo $age; ?>岁</h4>
