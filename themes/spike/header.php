@@ -56,7 +56,7 @@ foreach ($menus as $menu) {
         <div class='dropdown-list'>
           <ul class='dropdown-items'>
             {{each subMenus}}
-              <li><a href="${$value.link}">${$value.name}</a></li>
+              <li class='dropdown-item'><a href="${$value.link}">${$value.name}</a></li>
             {{/each}}
           </ul>
         </div>
