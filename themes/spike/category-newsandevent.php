@@ -41,12 +41,13 @@
                             $content = $result->post_content;
                             $custom_fields = get_post_custom($result->ID);
                             $name = $custom_fields['name_news'];
+                            $image = get_field('img', $result->ID);
                             ?>
 
                             <div class="row row-margin-bottom">
                                 <div class="col-md-9 col-xs-12">
                                     <div id="events" class="row">
-                                        <div class="col-md-5 col-sm-4 col-xs-4"><img src="<?php bloginfo('template_url') ?>/images/events.png"></div>
+                                        <div class="col-md-5 col-sm-4 col-xs-4"><img src="<?php echo $image['url']; ?>" alt="img" /></div>
                                         <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a href="<?php  the_permalink($result->ID); ?>"><?php
                                                     echo $title; ?></a><br><?php
                                                 echo '@ '.$name[0] ?></h3>
