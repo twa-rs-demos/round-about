@@ -11,8 +11,8 @@
                 construction,slated to open soon. We can't wait to share with you!</p>
             <p class="second-par">Meanwhile you can ...</p>
             <ul>
-                <li><!-- react-text: 2450 -->Stay posted on developments,warp to <!-- /react-text --><a class="gotoPage"
-                                                                                                        href="/tw-ra/getinvolved">get
+                <li><!-- react-text: 2450 -->Stay posted on developments,warp to <!-- /react-text -->
+                    <a class="gotoPage"   href="/tw-ra/getinvolved">get
                         Involved</a></li>
                 <li class="li-second">Follow us on Wechat</li>
             </ul>

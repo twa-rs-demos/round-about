@@ -379,6 +379,7 @@ img {
 
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
+  /*display: none;*/
 }
 
 #modal-volunteer-content .modal-content {
