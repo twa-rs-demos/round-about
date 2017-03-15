@@ -65,6 +65,7 @@ pre {
   color: #575757;
   font-size: 2rem;
   text-align: center;
+  cursor: default;
 }
 
 /*--------------------------picture-max-------------------------------------*/
@@ -1117,11 +1118,11 @@ img {
   font-size: 18px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .fist-event  {
+#aboutUs #aboutUs-footer .about-years-events .fist-event {
   padding-top: 63px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .second-event{
+#aboutUs #aboutUs-footer .about-years-events .second-event {
   padding-top: 50px;
 }
 
@@ -1297,9 +1298,11 @@ img {
   border: 0.1rem #bcbcbc solid;
   position: relative;
 }
-#donate-page-index #donate-way #donatemoney .image-border .hide{
+
+#donate-page-index #donate-way #donatemoney .image-border .hide {
   display: none;
 }
+
 #donate-page-index #donate-way #donatemoney .image-border .paypal-box {
   position: absolute;
   top: 6rem;
@@ -1310,7 +1313,8 @@ img {
   z-index: 100;
   border-radius: 10px;
 }
-#donate-page-index #donate-way #donatemoney .image-border .paypal-close{
+
+#donate-page-index #donate-way #donatemoney .image-border .paypal-close {
   position: absolute;
   right: 1.5rem;
   top: 1rem;
@@ -1359,9 +1363,10 @@ img {
   color: #EC4C9A;
   cursor: pointer;
 }
+
 #donate-page-index .hide {
-   display: none;
- }
+  display: none;
+}
 
 #donate-page-index .donate-rules {
   position: absolute;
@@ -1372,21 +1377,21 @@ img {
   background: white;
   z-index: 100;
 }
-#donate-page-index .donate-rules .rules ul{
+
+#donate-page-index .donate-rules .rules ul {
   list-style: none;
-  margin-left:-3.5rem;
+  margin-left: -3.5rem;
 }
 
 #donate-page-index .donate-guide {
   position: relative;
 }
-#donate-page-index .close{
-  position:absolute;
-  right:2rem;
-  top:2rem;
+
+#donate-page-index .close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
-
-
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
@@ -1790,6 +1795,7 @@ img {
   color: #eb67a7;
   font-size: 1.6rem;
   margin-left: 1.6rem;
+  outline: none;
 }
 
 #get-involved .get-involved-welcome {
@@ -1872,9 +1878,6 @@ img {
   height: 1.8rem;
 }
 
-
-
-
 #header .top-info .right-topinfo .lang-item {
   list-style: none;
   display: inline-block;
@@ -1885,8 +1888,6 @@ img {
   color: #8a7676;
   font-size: 1.1rem;
 }
-
-
 
 #header .nav-menu .menu-list1 .menu:last-child {
   margin-right: 0;
@@ -2137,11 +2138,11 @@ img {
 
 #home .know-more-text {
   color: #ec4c9a;
+  text-decoration: none;
 }
 
 #home .know-more-text:hover {
   color: #ec4c9a;
-  text-decoration: none;
 }
 
 #home .ourwork-item {
@@ -2471,6 +2472,7 @@ img {
   color: #ec4c9a;
   outline: none;
   text-decoration: none;
+  cursor:pointer;
 }
 
 #ourwork .icons-margin-bottom {
@@ -3141,6 +3143,13 @@ img {
   color: #ec4c9a;
 }
 
+#media-report .event-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://localhost:8080/wp-content/themes/spike/images/newsAndEvent/events.png");
+  background-position: center center;
+}
+
 #media-report .ra-in-media .media-data-content {
   margin: 5rem 0 5rem 0;
 }
@@ -3193,6 +3202,7 @@ img {
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
+  line-height:3.5rem;
 }
 
 #directory .charities-list .charities .charity-info .fa {
@@ -3203,6 +3213,24 @@ img {
 
 #directory .charities-list .charities .charity-info .span {
   font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
+}
+#directory .charities-list .charities .charity-info p{
+  position: relative;
+  overflow: hidden;
+  line-height:3.5rem;
+  height:7rem;
+}
+
+
+#directory .charities-list .charities .charity-info p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 2rem 1px 3rem;
+  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
 }
 
 #directory .charities-list .charities .charity-info .tag {
