@@ -2505,6 +2505,11 @@ img {
   text-align: center;
 }
 
+#ourwork-assistance .save-life-situation .no-decoration {
+  color: white;
+  text-decoration: none;
+}
+
 #ourwork-assistance .rescue-situation-img {
   text-align: center;
 }
@@ -2567,6 +2572,12 @@ img {
   margin: 0;
 }
 
+#ourwork-assistance .ourWorkAssistence-picture-text .span {
+  font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
+}
+
 #ourwork-assistance .ourWorkAssistence-picture-text div {
   margin-top: 2.7rem;
   background-color: #ec4c9a;
@@ -2592,7 +2603,7 @@ img {
   font-size: 2rem;
   color: #ffffff;
   background: #ec4c9a;
-  line-height: 4rem;
+  line-height: 4.9rem;
   border: none;
 }
 
