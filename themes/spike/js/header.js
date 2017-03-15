@@ -34,6 +34,4 @@ $(function () {
     $('.dropdown-icon').click(function () {
         $(this).parent('.nav-brand').next('.sub-menu').toggle();
     })
-
-
 });
