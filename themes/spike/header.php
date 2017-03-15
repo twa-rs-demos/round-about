@@ -38,7 +38,8 @@ foreach ($menus as $menu) {
   <script type="text/javascript">
       var __injectedVars = {
           menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
-          subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>')
+          subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
+          searchFile:'<?php echo $_SERVER['PHP_SELF']; ?>'
       };
   </script>
   <script type="text/x-jquery-tmpl" id="menuTemplate">
@@ -62,6 +63,8 @@ foreach ($menus as $menu) {
     </div>
 
 
+
+
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -77,6 +80,8 @@ foreach ($menus as $menu) {
         </ul>
    </li>
 
+
+
   </script>
 </head>
 <body>
@@ -84,8 +89,8 @@ foreach ($menus as $menu) {
 <div id="page">
   <div class="container-fluid no-padding page-container">
     <!--    header-->
-    <div id="header" class="row">
-      <div class="top-info">
+    <div id="header">
+      <div class="top-info row">
         <div>
           <div class="col-md-6 col-sm-4 col-xs-3">
             <div class="row logo"><a href="http://localhost:8080/">
@@ -120,7 +125,7 @@ foreach ($menus as $menu) {
       </div>
 
 
-      <div class="nav-menu">
+      <div class="nav-menu row">
         <div>
           <div class="no-margin menu-list1">
             <div class="col-md-10 col-xs-7">
@@ -129,11 +134,16 @@ foreach ($menus as $menu) {
             </div>
 
             <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
-              <div class="search"><input type="text" placeholder="搜索本站">
-                <button><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
-                    alt="search"></button>
-              </div>
+
+              <div class="search">
+                <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                  <input type="text" placeholder="搜索本站" name="s" id="s">
+                  <button><img id="searchsubmit" class="submit"
+                               src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
+                               alt="search">
+                  </button>
+                </form>
+              </div>  
             </div>
           </div>
 
@@ -144,12 +154,18 @@ foreach ($menus as $menu) {
                 <i class="fa fa-bars"></i>
               </button>
             </div>
-            <div class="col-md-10 col-xs-offset-3 col-xs-9 text-right no-padding header-search-box">
-              <div class="search"><input type="text" placeholder="搜索本站">
-                <button><img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAZBJREFUKBWNkr0vQ1EUwO+5r9GEWlq2ilCTpRZmFhL9GDr5A9AYRYL/gZDUVFJmiWiCLhZiMJRFYrXVRLVpRPL0vXucc/NO8xIDJ3nvfP56Pl5BBYK5cv+7gS0Fag4Q0xRuKIBHjXonXlt+ljrRwEYrW0l7yj9TiBOSEA0A3wC4nbgs7kuMNdhOCE8CAahXCtcpl0TEaSnWWi0QfN3z7XhBJ4JOEmMjqaGr1QI9M46jsjRSl4vRwKFArDXvxAZ3ImgNDhZd9lniF8UaaFViGxWOtjPH42yz6OAQZEI9DNksvYyBO7E9x58SWxNAO1lJSjCsqWMvDmg+JcejPrDDh/jIlzOSYP2WrwyiwY0g5jomZmvZj2gHd40PSwT2GV9Vm7lyicfjTuh7DAV7QcePfg2Q32LQfkcqXjdG7XHgD3nRUT2bOF9pWJCLCZ7nk/P1QjBdGDq0yHAoZuEeKAk+OV+PD8E7+RE3ZrzuDeVTUgMK7n+BkgzrZuEoaVxzSzEL09+w/S+Qf4RhdPGUrjJJ0OYPDAGdnSUm6coAAAAASUVORK5CYII="
-                    alt="search"></button>
+            <div class="col-md-10  col-xs-9 text-right no-padding header-search-box">
+
+              <div class="search">
+                <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                  <input type="text" placeholder="搜索本站" name="s" id="s">
+                  <button><img id="searchsubmit" class="submit"
+                               src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
+                               alt="search">
+                  </button>
+                </form>
               </div>
+
             </div>
           </div>
           <div class="menu-list2">
