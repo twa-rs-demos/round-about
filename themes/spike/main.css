@@ -164,6 +164,9 @@ img {
   font-weight: 700;
   margin-bottom: 2rem;
 }
+#news-event #events .text h3 a{
+  color:#000;
+}
 
 #news-event #events .text p {
   font-size: 2rem;
@@ -742,15 +745,6 @@ pre {
   color: #575757;
   font-size: 2rem;
   text-align: center;
-}
-
-/*--------------------------picture-max-------------------------------------*/
-.picture-max {
-  position: relative;
-  marign: 0;
-  padding: 0;
-  height: 37rem;
-
 }
 
 /*--------------------------what we do five icons-------------------------------------*/
@@ -1397,7 +1391,8 @@ img {
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content p {
@@ -1422,12 +1417,15 @@ img {
 #donate-page-index #item-donation .contact-content {
   background-color: #f8f9fb;
   padding: 4px;
-  height: 135px;
+  height: 16rem;
   margin-bottom: 10px;
+  line-height: 2rem;
+  font-size: 1.8rem;
 }
 
 #donate-page-index #item-donation .contact-content .item-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
   color: #EC4C9A;
 }
 
@@ -1437,7 +1435,7 @@ img {
 }
 
 #donate-page-index #item-donation .contact-content .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #donate-page-index .donate-guide-apply .apply-collect-items {
@@ -1556,6 +1554,9 @@ img {
 .donating-projects h2 {
   margin-top: 7.6rem;
   margin-bottom: 1.4rem;
+}
+.donating-projects .disease{
+  margin-bottom: 0;
 }
 
 .donating-projects .container {
@@ -2999,6 +3000,7 @@ img {
   border-bottom-color: white;
 }
 
+
 #partners {
   margin-bottom: 50px;
 }
@@ -3016,18 +3018,20 @@ img {
 }
 
 #partners .content-on-picture .statement {
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-size: 2rem;
 }
 
 #partners .content-on-picture .read-more {
   background-color: #ec4c9a;
   outline: none;
-  width: 14rem;
+  width: 18rem;
   display: inline-block;
   border: none;
-  height: 3rem;
+  height: 5rem;
+  line-height: 5rem;
   border-radius: 0.4rem;
+  font-size: 2.5rem;
 }
 
 #partners .main-content .more-stories {
@@ -3045,6 +3049,12 @@ img {
   background-color: #F8F9FB;
 }
 
+#partners .main-content .same-family .partners-logo .logo-name{
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
 #partners .main-content .same-family .partners-logo .image-border {
   border: 1px #E1E1E1 solid;
 }
@@ -3060,14 +3070,17 @@ img {
 #partners .main-content .same-family .partners-logo .second-row .logo .logo-name {
   font-size: 1.7rem;
 }
+#partners .main-content .become-partner .partner-form{
+  margin-top:6rem;
+}
 
 #partners .main-content .become-partner .partner-form .margin-bottom {
-  margin-bottom: 15px;
+  margin-bottom: 3rem;
 }
 
 #partners .main-content .become-partner .partner-form .label-name {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
@@ -3100,6 +3113,7 @@ img {
   font-size: 1.9rem;
   color: #ec4c9a;
 }
+
 
 #book-market {
   /*----------------------------------book-change-life------------------------------------*/
