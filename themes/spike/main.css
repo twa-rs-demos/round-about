@@ -1117,11 +1117,11 @@ img {
   font-size: 18px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .fist-event  {
+#aboutUs #aboutUs-footer .about-years-events .fist-event {
   padding-top: 63px;
 }
 
-#aboutUs #aboutUs-footer .about-years-events .second-event{
+#aboutUs #aboutUs-footer .about-years-events .second-event {
   padding-top: 50px;
 }
 
@@ -1297,9 +1297,11 @@ img {
   border: 0.1rem #bcbcbc solid;
   position: relative;
 }
-#donate-page-index #donate-way #donatemoney .image-border .hide{
+
+#donate-page-index #donate-way #donatemoney .image-border .hide {
   display: none;
 }
+
 #donate-page-index #donate-way #donatemoney .image-border .paypal-box {
   position: absolute;
   top: 6rem;
@@ -1310,7 +1312,8 @@ img {
   z-index: 100;
   border-radius: 10px;
 }
-#donate-page-index #donate-way #donatemoney .image-border .paypal-close{
+
+#donate-page-index #donate-way #donatemoney .image-border .paypal-close {
   position: absolute;
   right: 1.5rem;
   top: 1rem;
@@ -1359,9 +1362,10 @@ img {
   color: #EC4C9A;
   cursor: pointer;
 }
+
 #donate-page-index .hide {
-   display: none;
- }
+  display: none;
+}
 
 #donate-page-index .donate-rules {
   position: absolute;
@@ -1372,21 +1376,21 @@ img {
   background: white;
   z-index: 100;
 }
-#donate-page-index .donate-rules .rules ul{
+
+#donate-page-index .donate-rules .rules ul {
   list-style: none;
-  margin-left:-3.5rem;
+  margin-left: -3.5rem;
 }
 
 #donate-page-index .donate-guide {
   position: relative;
 }
-#donate-page-index .close{
-  position:absolute;
-  right:2rem;
-  top:2rem;
+
+#donate-page-index .close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
-
-
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
@@ -1872,9 +1876,6 @@ img {
   height: 1.8rem;
 }
 
-
-
-
 #header .top-info .right-topinfo .lang-item {
   list-style: none;
   display: inline-block;
@@ -1885,8 +1886,6 @@ img {
   color: #8a7676;
   font-size: 1.1rem;
 }
-
-
 
 #header .nav-menu .menu-list1 .menu:last-child {
   margin-right: 0;
@@ -3139,6 +3138,13 @@ img {
 #book-market .bookfair-review .bookfair-news .words .learn-more {
   font-size: 2.2rem;
   color: #ec4c9a;
+}
+
+#media-report .event-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://localhost:8080/wp-content/themes/spike/images/newsAndEvent/events.png");
+  background-position: center center;
 }
 
 #media-report .ra-in-media .media-data-content {
