@@ -88,16 +88,17 @@ pre {
 .job-icons-container {
   height: 15rem;
   position: relative;
-  margin-bottom: 1.2rem;
+  /*margin-bottom: 1.2rem;*/
+  margin-top: 2rem;
 }
 
-.job-icons img {
-  vertical-align: middle;
-  position: absolute;
-  transform: translate3d(-50%, -50%, 0);
-  top: 50%;
-  left: 50%;
-}
+/*.job-icons img {*/
+  /*vertical-align: middle;*/
+  /*position: absolute;*/
+  /*transform: translate3d(-50%, -50%, 0);*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+/*}*/
 
 /*--------------------------center-center-------------------------------------*/
 .button-style {
@@ -773,6 +774,7 @@ pre {
   transform: translate3d(-50%, -50%, 0);
   top: 50%;
   left: 50%;
+  cursor:pointer;
 }
 
 /*--------------------------center-center-------------------------------------*/
@@ -2447,8 +2449,12 @@ img {
 }
 
 #ourwork .middle-text {
-  margin-top: 5.7rem;
-  margin-bottom: 6.5rem;
+  margin-top: 5.5rem;
+}
+
+#ourwork .ourwork-title{
+  margin-top: 50px;
+  margin-bottom: 85px;
 }
 
 #ourwork .control {
@@ -2458,8 +2464,12 @@ img {
   text-align: center;
 }
 
+#ourwork .ourwork-icons{
+  margin-bottom:11rem;
+}
+
 #ourwork .job-icons a {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #575757;
   white-space: nowrap;
   margin-top: 1.5rem;
