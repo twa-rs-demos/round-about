@@ -65,6 +65,7 @@ pre {
   color: #575757;
   font-size: 2rem;
   text-align: center;
+  cursor: default;
 }
 
 /*--------------------------picture-max-------------------------------------*/
@@ -1794,6 +1795,7 @@ img {
   color: #eb67a7;
   font-size: 1.6rem;
   margin-left: 1.6rem;
+  outline: none;
 }
 
 #get-involved .get-involved-welcome {
@@ -2136,11 +2138,11 @@ img {
 
 #home .know-more-text {
   color: #ec4c9a;
+  text-decoration: none;
 }
 
 #home .know-more-text:hover {
   color: #ec4c9a;
-  text-decoration: none;
 }
 
 #home .ourwork-item {
@@ -2470,6 +2472,7 @@ img {
   color: #ec4c9a;
   outline: none;
   text-decoration: none;
+  cursor:pointer;
 }
 
 #ourwork .icons-margin-bottom {

@@ -1,4 +1,13 @@
 <?php get_header(); ?>
+<?php
+
+?>
+
+
+
+
+
+
 
     <div id="donate-page-index">
         <div class="picture-max"
