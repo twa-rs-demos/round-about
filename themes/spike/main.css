@@ -744,15 +744,6 @@ pre {
   text-align: center;
 }
 
-/*--------------------------picture-max-------------------------------------*/
-.picture-max {
-  position: relative;
-  marign: 0;
-  padding: 0;
-  height: 37rem;
-
-}
-
 /*--------------------------what we do five icons-------------------------------------*/
 .icon-container {
   text-align: center;
@@ -1397,7 +1388,8 @@ img {
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content p {
@@ -1422,12 +1414,15 @@ img {
 #donate-page-index #item-donation .contact-content {
   background-color: #f8f9fb;
   padding: 4px;
-  height: 135px;
+  height: 16rem;
   margin-bottom: 10px;
+  line-height: 2rem;
+  font-size: 1.8rem;
 }
 
 #donate-page-index #item-donation .contact-content .item-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
   color: #EC4C9A;
 }
 
@@ -1437,7 +1432,7 @@ img {
 }
 
 #donate-page-index #item-donation .contact-content .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #donate-page-index .donate-guide-apply .apply-collect-items {
@@ -1556,6 +1551,9 @@ img {
 .donating-projects h2 {
   margin-top: 7.6rem;
   margin-bottom: 1.4rem;
+}
+.donating-projects .disease{
+  margin-bottom: 0;
 }
 
 .donating-projects .container {
