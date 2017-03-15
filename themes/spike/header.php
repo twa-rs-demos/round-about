@@ -9,7 +9,7 @@ foreach ($menus as $menu) {
   $menu->link = esc_url(get_permalink(get_page_by_title($menu->slug)));
   $tax_terms = get_terms('category', array('child_of' => $menu->cat_ID, "hide_empty" => false));
   foreach ($tax_terms as $tax_term) {
-   $tax_term->link=esc_url(get_permalink(get_page_by_title($tax_term->slug)));
+    $tax_term->link = esc_url(get_permalink(get_page_by_title($tax_term->slug)));
     array_push($sub_menus, $tax_term);
   }
 }
@@ -32,7 +32,7 @@ foreach ($menus as $menu) {
   <!--  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <!--  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
   <!--  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-  <!--  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
 
   <script type="text/javascript">
@@ -43,7 +43,6 @@ foreach ($menus as $menu) {
       };
   </script>
   <script type="text/x-jquery-tmpl" id="menuTemplate">
-
     <div class="menu-list">
       <div class="first-menu">
         <a href="${link}">
@@ -63,8 +62,23 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
+
   </script>
 
+  <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
+      <li class="menu-item">
+        <div class='nav-brand'>
+            <a class="menu-link" href="${link}">${name}</a>
+            <i class="dropdown-icon fa fa-chevron-down"></i>
+        </div>
+        <ul class='sub-menu'>
+         {{each subMenus}}
+              <li class='sub-item'><a href="${$value.link}" class='menu-link'>${$value.name}</a></li>
+            {{/each}}
+        </ul>
+   </li>
+
+  </script>
 </head>
 <body>
 
@@ -143,28 +157,7 @@ foreach ($menus as $menu) {
             <div class="sidebar-wrapper"></div>
             <div class="nav-bar">
               <div>
-                <ul class="nav-item">
-                  <div>
-                    <?php
-                    $categories = get_categories();
-                    $menus = array_filter($categories, function ($cat, $key) {
-                      return $cat->parent === 0 && $cat->name !== 'Uncategorized';
-                    }, ARRAY_FILTER_USE_BOTH);
-
-                    foreach ($menus as $menu) {
-                      ?>
-                      <div>
-                        <li class="menu-item">
-                          <div class="nav-brand ">
-                            <?php echo $menu->name ?>
-                            <i class="dropdown-icon fa fa-chevron-down"></i>
-                          </div>
-                        </li>
-                      </div>
-                      <?php
-                    }
-                    ?>
-                  </div>
+                <ul class="nav-item" id="drawerMenu">
                 </ul>
               </div>
             </div>

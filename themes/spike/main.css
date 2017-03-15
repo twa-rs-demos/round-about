@@ -3305,6 +3305,7 @@ body {
 #header .nav-menu .menu-list2 .nav-bar .nav-item .menu-item .sub-menu {
   background-color: #FFFFFF;
   padding: 0;
+  display: none;
 }
 
 #header .nav-menu .menu-list2 .nav-bar .nav-item .menu-item .sub-menu .sub-item {
