@@ -1803,6 +1803,8 @@ img {
 #get-involved .get-involved-welcome {
   color: #ec4c9a;
   margin: 0 auto;
+  margin-bottom: 4.5rem;
+  margin-top: 5rem;
 }
 
 #get-involved .get-involved-welcome h2 {
