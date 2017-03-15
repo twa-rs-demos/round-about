@@ -10,7 +10,7 @@
                             src="<?php bloginfo('template_url'); ?>/images/gallery/carousel_arrowsmall_right.png">
                 </div>
             </div>
-            <div class="picture-background">
+            <div class="picture-background row">
                 <div class="container">
                     <div class="col-xs-offset-1 col-xs-10 picture-carousel"><img class="img col-xs-12 no-padding"
                                                                                  src="<?php bloginfo('template_url'); ?>/images/gallery/gallery_4.jpg">
