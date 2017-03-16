@@ -2510,15 +2510,20 @@ img {
   text-decoration: none;
 }
 
-#ourwork-assistance .donate-box {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 5);
-  width: 50rem;
-  height: 40rem;
-  margin: 0 auto;
+#ourwork-assistance .donate-box #donatemoney .span{
+  color:#575757;
 }
-
-#ourwork-assistance .donate-box .donate-content .donate-money-margin{
-  margin-top: 2rem;
+#ourwork-assistance .donate-box #donatemoney .donate-x-close{
+  cursor: pointer;
+  color: #575757;
+}
+#ourwork-assistance .donate-box #donatemoney .text-center{
+  color:#575757;
+  margin-top:0;
+  margin-bottom: 2rem;
+}
+#ourwork-assistance .donate-box .modal-body{
+  padding-top:0;
 }
 
 #ourwork-assistance .rescue-situation-img {
