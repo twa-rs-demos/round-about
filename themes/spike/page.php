@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php the_breadcrumb(); ?>
 
 <?php the_breadcrumb(); ?>
 
