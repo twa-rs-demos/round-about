@@ -39,7 +39,6 @@ foreach ($menus as $menu) {
     var __injectedVars = {
       menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
       subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
-      searchFile: '<?php echo $_SERVER['PHP_SELF']; ?>'
     };
   </script>
 
@@ -54,18 +53,7 @@ foreach ($menus as $menu) {
     });
 
   </script>
-
-  <script type="text/x-jquery-tmpl" id="menuTemplate">
-  <script type="text/javascript">
-      var __injectedVars = {
-          menus: Object.values(JSON.parse('<?php echo json_encode($menus) ?>')),
-          subMenus: JSON.parse('<?php echo json_encode($sub_menus) ?>'),
-      };
   
-    
-    
-    
-  </script>
   <script type="text/x-jquery-tmpl" id="menuTemplate">
     <div class="menu-list">
       <div class="first-menu">
