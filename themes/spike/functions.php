@@ -24,7 +24,7 @@ function the_breadcrumb()
       $current_category = get_category_by_slug(get_query_var('pagename'));
       if ($current_category->category_parent !== 0):
         $parent_category = get_category($current_category->category_parent);
-        echo '<div class="breadcrumbs">';
+        echo '<div class="breadcrumb">';
         echo "<a href=" . get_permalink(get_page_by_title($parent_category->slug)) . ">";
         echo get_cat_name($current_category->category_parent);
         echo "</a>";
