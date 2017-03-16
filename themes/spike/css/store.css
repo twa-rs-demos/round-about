@@ -22,7 +22,7 @@
 #round-store .store-taobao .taobao-statement {
   font-size: 2rem;
   line-height: 2.8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 #round-store .shopping-for-children {
@@ -69,7 +69,8 @@
 }
 
 #round-store .shopping-for-children .donate-button .store-donate-info {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-top:20px;
 }
 
 #round-store .physical-store {

@@ -65,6 +65,7 @@ pre {
   color: #575757;
   font-size: 2rem;
   text-align: center;
+  cursor: default;
 }
 
 /*--------------------------picture-max-------------------------------------*/
@@ -87,16 +88,17 @@ pre {
 .job-icons-container {
   height: 15rem;
   position: relative;
-  margin-bottom: 1.2rem;
+  /*margin-bottom: 1.2rem;*/
+  margin-top: 2rem;
 }
 
-.job-icons img {
-  vertical-align: middle;
-  position: absolute;
-  transform: translate3d(-50%, -50%, 0);
-  top: 50%;
-  left: 50%;
-}
+/*.job-icons img {*/
+  /*vertical-align: middle;*/
+  /*position: absolute;*/
+  /*transform: translate3d(-50%, -50%, 0);*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+/*}*/
 
 /*--------------------------center-center-------------------------------------*/
 .button-style {
@@ -161,6 +163,9 @@ img {
   line-height: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+}
+#news-event #events .text h3 a{
+  color:#000;
 }
 
 #news-event #events .text p {
@@ -732,15 +737,6 @@ pre {
   text-align: center;
 }
 
-/*--------------------------picture-max-------------------------------------*/
-.picture-max {
-  position: relative;
-  marign: 0;
-  padding: 0;
-  height: 37rem;
-
-}
-
 /*--------------------------what we do five icons-------------------------------------*/
 .icon-container {
   text-align: center;
@@ -762,6 +758,7 @@ pre {
   transform: translate3d(-50%, -50%, 0);
   top: 50%;
   left: 50%;
+  cursor:pointer;
 }
 
 /*--------------------------center-center-------------------------------------*/
@@ -1362,7 +1359,8 @@ img {
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content {
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 #donate-page-index #item-donation .donate-guide .donate-guide-content p {
@@ -1387,12 +1385,15 @@ img {
 #donate-page-index #item-donation .contact-content {
   background-color: #f8f9fb;
   padding: 4px;
-  height: 135px;
+  height: 16rem;
   margin-bottom: 10px;
+  line-height: 2rem;
+  font-size: 1.8rem;
 }
 
 #donate-page-index #item-donation .contact-content .item-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
   color: #EC4C9A;
 }
 
@@ -1402,7 +1403,7 @@ img {
 }
 
 #donate-page-index #item-donation .contact-content .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 #donate-page-index .donate-guide-apply .apply-collect-items {
@@ -1521,6 +1522,9 @@ img {
 .donating-projects h2 {
   margin-top: 7.6rem;
   margin-bottom: 1.4rem;
+}
+.donating-projects .disease{
+  margin-bottom: 0;
 }
 
 .donating-projects .container {
@@ -1762,11 +1766,14 @@ img {
   color: #eb67a7;
   font-size: 1.6rem;
   margin-left: 1.6rem;
+  outline: none;
 }
 
 #get-involved .get-involved-welcome {
   color: #ec4c9a;
   margin: 0 auto;
+  margin-bottom: 4.5rem;
+  margin-top: 5rem;
 }
 
 #get-involved .get-involved-welcome h2 {
@@ -2104,11 +2111,11 @@ img {
 
 #home .know-more-text {
   color: #ec4c9a;
+  text-decoration: none;
 }
 
 #home .know-more-text:hover {
   color: #ec4c9a;
-  text-decoration: none;
 }
 
 #home .ourwork-item {
@@ -2413,8 +2420,12 @@ img {
 }
 
 #ourwork .middle-text {
-  margin-top: 5.7rem;
-  margin-bottom: 6.5rem;
+  margin-top: 5.5rem;
+}
+
+#ourwork .ourwork-title{
+  margin-top: 50px;
+  margin-bottom: 85px;
 }
 
 #ourwork .control {
@@ -2424,8 +2435,12 @@ img {
   text-align: center;
 }
 
+#ourwork .ourwork-icons{
+  margin-bottom:11rem;
+}
+
 #ourwork .job-icons a {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #575757;
   white-space: nowrap;
   margin-top: 1.5rem;
@@ -2438,6 +2453,7 @@ img {
   color: #ec4c9a;
   outline: none;
   text-decoration: none;
+  cursor:pointer;
 }
 
 #ourwork .icons-margin-bottom {
@@ -2455,6 +2471,22 @@ img {
   background-size: cover;
   background: #f6f6f6;
   text-align: center;
+}
+
+#ourwork-assistance .save-life-situation .no-decoration {
+  color: white;
+  text-decoration: none;
+}
+
+#ourwork-assistance .donate-box {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 5);
+  width: 50rem;
+  height: 40rem;
+  margin: 0 auto;
+}
+
+#ourwork-assistance .donate-box .donate-content .donate-money-margin{
+  margin-top: 2rem;
 }
 
 #ourwork-assistance .rescue-situation-img {
@@ -2488,13 +2520,43 @@ img {
   color: #ec4c9a;
 }
 
-#ourwork-assistance .fact-situation-graph img {
+#ourwork-assistance .fact-situation-graph .button-style{
+  position: relative;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box {
+  position: absolute;
+  top: -8rem;
+  right: -14rem;
+  z-index: 100;
+  background: white;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content{
+  color: black;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content h3{
+  color: #ec4c9a;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content .donate-money-margin{
+  margin-top: 2rem;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content .image-close {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+}
+
+#ourwork-assistance .fact-situation-graph .donate-img {
   display: block;
   margin: 0 auto;
   margin-top: 5.0rem;
 }
 
-#ourwork-assistance .fact-situation-graph div {
+#ourwork-assistance .fact-situation-graph .button-style {
   margin: 0 auto;
   margin-top: 5.0rem;
   width: 22.5rem;
@@ -2517,6 +2579,12 @@ img {
 
 #ourwork-assistance .ourWorkAssistence-picture-text p {
   margin: 0;
+}
+
+#ourwork-assistance .ourWorkAssistence-picture-text .span {
+  font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
 }
 
 #ourwork-assistance .ourWorkAssistence-picture-text div {
@@ -2544,8 +2612,9 @@ img {
   font-size: 2rem;
   color: #ffffff;
   background: #ec4c9a;
-  line-height: 4rem;
+  line-height: 4.9rem;
   border: none;
+  outline: none;
 }
 
 #ourwork-assistance .picture-max .read-more:hover {
@@ -2586,6 +2655,7 @@ img {
 #round-store .store-taobao .taobao-statement {
   font-size: 2rem;
   line-height: 2.8rem;
+  margin-bottom: 6rem;
 }
 
 #round-store .shopping-for-children {
@@ -2951,6 +3021,7 @@ img {
   border-bottom-color: white;
 }
 
+
 #partners {
   margin-bottom: 50px;
 }
@@ -2968,18 +3039,20 @@ img {
 }
 
 #partners .content-on-picture .statement {
-  margin-top: 5rem;
+  margin-top: 3rem;
   font-size: 2rem;
 }
 
 #partners .content-on-picture .read-more {
   background-color: #ec4c9a;
   outline: none;
-  width: 14rem;
+  width: 18rem;
   display: inline-block;
   border: none;
-  height: 3rem;
+  height: 5rem;
+  line-height: 5rem;
   border-radius: 0.4rem;
+  font-size: 2.5rem;
 }
 
 #partners .main-content .more-stories {
@@ -2997,6 +3070,12 @@ img {
   background-color: #F8F9FB;
 }
 
+#partners .main-content .same-family .partners-logo .logo-name{
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
 #partners .main-content .same-family .partners-logo .image-border {
   border: 1px #E1E1E1 solid;
 }
@@ -3012,14 +3091,17 @@ img {
 #partners .main-content .same-family .partners-logo .second-row .logo .logo-name {
   font-size: 1.7rem;
 }
+#partners .main-content .become-partner .partner-form{
+  margin-top:6rem;
+}
 
 #partners .main-content .become-partner .partner-form .margin-bottom {
-  margin-bottom: 15px;
+  margin-bottom: 3rem;
 }
 
 #partners .main-content .become-partner .partner-form .label-name {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 100;
 }
 
@@ -3052,6 +3134,7 @@ img {
   font-size: 1.9rem;
   color: #ec4c9a;
 }
+
 
 #book-market {
   /*----------------------------------book-change-life------------------------------------*/
@@ -3167,6 +3250,7 @@ img {
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
+  line-height:3.5rem;
 }
 
 #directory .charities-list .charities .charity-info .fa {
@@ -3177,6 +3261,24 @@ img {
 
 #directory .charities-list .charities .charity-info .span {
   font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
+}
+#directory .charities-list .charities .charity-info p{
+  position: relative;
+  overflow: hidden;
+  line-height:3.5rem;
+  height:7rem;
+}
+
+
+#directory .charities-list .charities .charity-info p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 2rem 1px 3rem;
+  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
 }
 
 #directory .charities-list .charities .charity-info .tag {
@@ -3279,6 +3381,7 @@ body {
 #header .nav-menu .menu-list2 .nav-bar .nav-item .menu-item .sub-menu {
   background-color: #FFFFFF;
   padding: 0;
+  display: none;
 }
 
 #header .nav-menu .menu-list2 .nav-bar .nav-item .menu-item .sub-menu .sub-item {
