@@ -25,8 +25,8 @@ foreach ($menus as $menu) {
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/search.css" type="text/css" media="screen"/>
   <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
   <!--        media="screen"/>-->
-  <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
 
   <!--  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
@@ -121,7 +121,7 @@ foreach ($menus as $menu) {
 
       <div class="nav-menu">
         <div>
-          <div class="no-margin menu-list1">
+          <div class="no-margin menu-list1 row">
             <div class="col-md-10 col-xs-7">
               <div class="menu" id="menu">
               </div>
