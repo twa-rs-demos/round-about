@@ -46,102 +46,63 @@
                     <div class="row news-event-switch text-right">
                         <div><span class="">列表</span><span class="">&nbsp; |&nbsp;日历</span></div>
                     </div>
-                    <div id="news-event" class="hidden">
+                    <div id="news-event" class="">
                         <div>
-                            <div class="row row-margin-bottom">
-                                <div class="col-md-9 col-xs-12">
-                                    <div id="events" class="row">
-                                        <div class="col-md-5 col-sm-4 col-xs-4"><img
-                                                    src="http://localhost/tw-ra/public/images/newsAndEvent/events.png">
-                                        </div>
-                                        <div class="col-md-7 col-sm-8 col-xs-8 text"><h3>
-                                                VOLUNTEEER STORY<br>@
-                                                Mr Raj
-                                            </h3>
-                                            <p>Roundabout is a social enterprise headed by volunteers. We provide a free
-                                                service connecting those who wish to give, be that monetary or
-                                                otherwise, to those in need. Started in 2008, we were the first charity
-                                                store in mainland China. We now give support to 48 charitable
-                                                organizations in the Beijing area and many more throughout China, Inner
-                                                Mongolia and Mongolia.</p></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-12 no-display">
-                                    <div id="date-list" class="row">
-                                        <div class="col-md-12 col-xs-6 margin-bottom ">
-                                            <div class="row">
-                                                <div class="col-xs-2">
-                                                    <div class="box-border">
-                                                        <div class="num-box">13</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-10"><h4>Fri, 13 March
-                                                        <br>10:00am-14:00pm
-                                                    </h4></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-xs-6 margin-bottom">
-                                            <div class="row">
-                                                <div class="col-xs-2">
-                                                    <div class="box-border">
-                                                        <div class="num-box">13</div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-10"><h4>Fri, 13 March
-                                                        <br>10:00am-14:00pm
-                                                    </h4></div>
-                                            </div>
+                            <?php
+                            $newsandevent_cat = get_category_by_slug('newsandevents_zh');
+                            $posts = get_posts(array('posts_per_page' => 4,
+                                'category__in' => array($newsandevent_cat->cat_ID)));
+                            foreach ($posts as $post){
+                                $title = $post->post_title;
+                                $content = $post->post_content;
+                                $custom_fields = get_post_custom($post->ID);
+                                $name = $custom_fields['name_news'];
+                                $image = get_field('img', $post->ID);
+                                ?>
+
+                                <div class="row row-margin-bottom">
+                                    <div class="col-md-9 col-xs-12">
+                                        <div id="events" class="row">
+                                            <div class="col-md-5 col-sm-4 col-xs-4"><img src="<?php echo $image['url']; ?>" alt="img" /></div>
+                                            <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a href="<?php  the_permalink($post->ID); ?>"><?php
+                                                        echo $title; ?></a><br><?php
+                                                    echo '@ '.$name[0] ?></h3>
+                                                <p><?php
+                                                    echo $content; ?></p></div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row row-margin-bottom">
-                                <div class="col-md-9 col-xs-12">
-                                    <div id="events" class="row">
-                                        <div class="col-md-5 col-sm-4 col-xs-4"><img
-                                                    src="http://localhost/tw-ra/public/images/newsAndEvent/events.png">
-                                        </div>
-                                        <div class="col-md-7 col-sm-8 col-xs-8 text"><h3>
-                                                VOLUNTEEER STORY<br>@
-                                                Mr Raj
-                                            </h3>
-                                            <p>Roundabout is a social enterprise headed by volunteers. We provide a free
-                                                service connecting those who wish to give, be that monetary or
-                                                otherwise, to those in need. Started in 2008, we were the first charity
-                                                store in mainland China. We now give support to 48 charitable
-                                                organizations in the Beijing area and many more throughout China, Inner
-                                                Mongolia and Mongolia.</p></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-xs-12 no-display">
-                                    <div id="date-list" class="row">
-                                        <div class="col-md-12 col-xs-6 margin-bottom ">
-                                            <div class="row">
-                                                <div class="col-xs-2">
-                                                    <div class="box-border">
-                                                        <div class="num-box">13</div>
+                                    <div class="col-md-3 col-xs-12 no-display">
+                                        <div id="date-list" class="row">
+                                            <div class="col-md-12 col-xs-6 margin-bottom ">
+                                                <div class="row">
+                                                    <div class="col-xs-2">
+                                                        <div class="box-border">
+                                                            <div class="num-box">28</div>
+                                                        </div>
                                                     </div>
+                                                    <div class="col-xs-10"><h4>Fri, 13 March
+                                                            <br>10:00am-14:00pm
+                                                        </h4></div>
                                                 </div>
-                                                <div class="col-xs-10"><h4>Fri, 13 March
-                                                        <br>10:00am-14:00pm
-                                                    </h4></div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-12 col-xs-6 margin-bottom">
-                                            <div class="row">
-                                                <div class="col-xs-2">
-                                                    <div class="box-border">
-                                                        <div class="num-box">13</div>
+                                            <div class="col-md-12 col-xs-6 margin-bottom">
+                                                <div class="row">
+                                                    <div class="col-xs-2">
+                                                        <div class="box-border">
+                                                            <div class="num-box">28</div>
+                                                        </div>
                                                     </div>
+                                                    <div class="col-xs-10"><h4>Fri, 13 March
+                                                            <br>10:00am-14:00pm
+                                                        </h4></div>
                                                 </div>
-                                                <div class="col-xs-10"><h4>Fri, 13 March
-                                                        <br>10:00am-14:00pm
-                                                    </h4></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                            <?php } ?>
+
                             <div class="pagination-project">
                                 <ul class="pagination">
                                     <li class=""><a><i class="fa fa-chevron-left"></i></a></li>
@@ -156,6 +117,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="hidden">
                         <div id="calendar">
                             <div id="calendar-header">

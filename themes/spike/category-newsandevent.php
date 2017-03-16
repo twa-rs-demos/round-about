@@ -2,7 +2,7 @@
 
 <div id="news-and-event">
     <div class="picture-max"
-         style="background-repeat: no-repeat; background-size: cover; background-image: url(&quot;/wp-content/themes/spike/images/hero_news&events.png&quot;); background-position: center center;"></div>
+         style="background-repeat: no-repeat; background-size: cover; background-image: url(<?php bloginfo('template_url'); ?>/images/newsAndEvent/hero_news&events.png); background-position: center center;"></div>
     <div class="container news-event-title"><h2 class="middle-title">众爱新闻</h2>
         <div class="news_event_category row">
             <div class="col-md-offset-1 col-md-10">
@@ -29,27 +29,21 @@
                     <div>
                         <?php
                         $newsandevent_cat = get_category_by_slug('newsandevents_zh');
-//                        $args = array(
-//                            'post_type' => 'post',
-//                            'numberposts' => 4,
-//                            'category_name' => 'newsandevents_zh',
-//                        );
-//                        $arr = get_posts($args);
-                        $posts = query_posts(array('category__in' => array($newsandevent_cat->cat_ID)));
-
-                        foreach ($posts as $result){
-                            $title = $result->post_title;
-                            $content = $result->post_content;
-                            $custom_fields = get_post_custom($result->ID);
+                        $posts = get_posts(array('posts_per_page' => 4,
+                            'category__in' => array($newsandevent_cat->cat_ID)));
+                        foreach ($posts as $post){
+                            $title = $post->post_title;
+                            $content = $post->post_content;
+                            $custom_fields = get_post_custom($post->ID);
                             $name = $custom_fields['name_news'];
-                            $image = get_field('img', $result->ID);
+                            $image = get_field('img', $post->ID);
                             ?>
 
                             <div class="row row-margin-bottom">
                                 <div class="col-md-9 col-xs-12">
                                     <div id="events" class="row">
                                         <div class="col-md-5 col-sm-4 col-xs-4"><img src="<?php echo $image['url']; ?>" alt="img" /></div>
-                                        <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a href="<?php  the_permalink($result->ID); ?>"><?php
+                                        <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a href="<?php  the_permalink($post->ID); ?>"><?php
                                                     echo $title; ?></a><br><?php
                                                 echo '@ '.$name[0] ?></h3>
                                             <p><?php
