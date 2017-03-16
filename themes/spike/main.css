@@ -1881,6 +1881,18 @@ img {
   display: inline-block;
 }
 
+#header .wechat-box {
+  display: block;
+}
+
+#header .wechat-box .modal-content {
+  margin: 0 auto;
+}
+
+#header .hide {
+  display: none;
+}
+
 #header .top-info .top-right-word {
   color: #8a7676;
   margin-right: 3rem;
