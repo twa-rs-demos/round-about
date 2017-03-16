@@ -1,3 +1,6 @@
+#search-result{
+  margin: 0 30px;
+}
 #search-result .search {
   color: #ec4c9a;
   font-size: 4.2rem;

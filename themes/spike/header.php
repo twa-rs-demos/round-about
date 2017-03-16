@@ -36,12 +36,24 @@ foreach ($menus as $menu) {
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
 
   <script type="text/javascript">
-      var __injectedVars = {
-          menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
-          subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
-          searchFile: '<?php echo $_SERVER['PHP_SELF']; ?>'
-      };
+    var __injectedVars = {
+      menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
+      subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
+    };
   </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".wechat").click(function () {
+        $('.wechat-box').attr("class", "wechat-box modal");
+      });
+      $(".close").click(function () {
+        $('.wechat-box').attr("class", "hide wechat-box modal");
+      });
+    });
+
+  </script>
+  
   <script type="text/x-jquery-tmpl" id="menuTemplate">
     <div class="menu-list">
       <div class="first-menu">
@@ -62,6 +74,10 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
+  
+    
+    
+    
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -77,9 +93,13 @@ foreach ($menus as $menu) {
         </ul>
    </li>
 
+  
+    
+    
+    
   </script>
 
-    <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
 
 </head>
 <body>
@@ -105,7 +125,7 @@ foreach ($menus as $menu) {
               <a href="#" class="top-right-word no-padding">月报申领</a>
               <?php pll_the_languages(); ?>
               <a class="no-padding top-left-icon ">
-                <img class="icon"
+                <img class="icon wechat"
                      src="<?php bloginfo('template_url'); ?>/images/icon_wechat.png" alt="wechat"></a>
               <a href="http://weibo.com/Rooundabout666?sudaref=www.so.com&amp;is_all=1"
                  class="no-padding top-left-icon" target="_blank">
@@ -117,6 +137,21 @@ foreach ($menus as $menu) {
                      src="<?php bloginfo('template_url'); ?>/images/icon_taobao.png"
                      alt="taobao">
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="static-modal" id="wechatModal">
+        <div tabindex="-1" role="dialog" class="modal hide wechat-box">
+          <div class="modal-dialog">
+            <div class="modal-content" role="document">
+              <div class="modal-body">
+                <div class="col-xs-offset-11 col-xs-1">
+                  <span class="close">X</span>
+                </div>
+                <img src="<?php bloginfo('template_url'); ?>/images/wechat01.png">
+              </div>
             </div>
           </div>
         </div>

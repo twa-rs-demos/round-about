@@ -1,11 +1,8 @@
 <?php
 function the_breadcrumb()
 {
-
   $sep = ' > ';
-
   if (!is_front_page()) {
-
     if (is_category() || is_single()) {
       the_category('title_li=');
     } elseif (is_archive() || is_single()) {
@@ -19,7 +16,6 @@ function the_breadcrumb()
         _e('Blog Archives', 'text_domain');
       }
     }
-
     if (is_page()) {
       $current_category = get_category_by_slug(get_query_var('pagename'));
       if ($current_category->category_parent !== 0):
@@ -36,16 +32,13 @@ function the_breadcrumb()
   }
 }
 
-add_filter('posts_orderby_request', 'wpjam_search_orderby_filter');
-function wpjam_search_orderby_filter($orderby = '')
+function wpshock_search_filter($query)
 {
-  if (is_search()) {
-    global $wpdb;
-    $keyword = $wpdb->prepare($_REQUEST['s'], '');
-    return "((CASE WHEN {$wpdb->posts}.post_title LIKE '%{$keyword}%' THEN 2 ELSE 0 END) + (CASE WHEN {$wpdb->posts}.post_content LIKE '%{$keyword}%' THEN 1 ELSE 0 END)) DESC, {$wpdb->posts}.post_modified DESC, {$wpdb->posts}.ID ASC";
-  } else {
-    return $orderby;
+  if ($query->is_search) {
+    $query->set('post_type', array('post'));
   }
+  return $query;
 }
 
+add_filter('pre_get_posts', 'wpshock_search_filter');
 ?>
