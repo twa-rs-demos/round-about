@@ -184,30 +184,30 @@
                                     <div class="">
                                         <div id="modal-volunteer-content">
                                             <div class="row">
-                                                <div class="col-md-11 col-xs-11 ">
+                                                <div class="col-md-12 col-xs-11 ">
                                                     <div class="modal-title-info"><span>VOLUNTEERS APPLICATION FORM</span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-3 col-xs-4  info-right info-margin"><span><!-- react-text: 19 --> FistName
                                                                 <!-- /react-text --><span class="pink">*</span></span></div>
-                                                        <div class="col-md-3 col-xs-8 info-margin"><input type="text"
+                                                        <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
                                                                                                           required=""></div>
                                                         <div class="col-md-3 col-xs-4 info-right info-margin"><span><!-- react-text: 25 --> LastName
                                                                 <!-- /react-text --><span class="pink">*</span></span></div>
-                                                        <div class="col-md-3 col-xs-8 info-margin"><input type="text"
+                                                        <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
                                                                                                           required=""></div>
                                                     </div>
                                                     <div class="row ">
                                                         <div class="col-md-3 col-xs-4 info-right info-margin"><span><!-- react-text: 32 --> Age
                                                                 <!-- /react-text --><span class="pink">*</span></span></div>
-                                                        <div class="col-md-3 col-xs-8 info-margin"><input type="text"
+                                                        <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
                                                                                                           required=""></div>
                                                         <div class="col-md-3  col-xs-4 info-right info-margin"><span><!-- react-text: 38 -->Telephone Number
                                                                 <!-- /react-text --><span class="pink">*</span></span></div>
-                                                        <div class="col-md-3 col-xs-8 info-margin"><input type="text"
+                                                        <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
                                                                                                           required=""></div>
                                                     </div>
@@ -252,6 +252,7 @@
                     </div>
                 </div>
             </div>
+
 
 
 
