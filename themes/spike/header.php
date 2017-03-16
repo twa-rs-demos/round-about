@@ -78,6 +78,9 @@ foreach ($menus as $menu) {
    </li>
 
   </script>
+
+    <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
+
 </head>
 <body>
 

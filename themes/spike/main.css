@@ -316,6 +316,13 @@ img {
   margin: 0 auto;
 }
 
+.people-page img{
+  width:100%;
+  hight:100px;
+  display: block;
+  margin: 0 auto;
+}
+
 .assistance-top .assistance-describe {
   margin-top: 2rem;
 }
@@ -372,6 +379,7 @@ img {
 
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
+  /*display: none;*/
 }
 
 #modal-volunteer-content .modal-content {
