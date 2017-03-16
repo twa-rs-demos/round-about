@@ -12,7 +12,6 @@
         </button>
 
 
-
         <div class="hidden volunteer-form">
             <div data-reactroot="" role="dialog">
                 <div class="modal-backdrop fade in"></div>
@@ -104,8 +103,10 @@
             <div class="col-md-6 col-xs-12 leader">
                 <img class="center-block"
                      src='<?php bloginfo('template_url'); ?>/images/people/volunteerPicture.png'>
-                <div class="leader-picture"><p>Jake Tomas,Chief</p>
-                    <p>a pick up of you donations,we will try our best to help.</p></div>
+                <div class="leader-picture">
+                    <p>Jake Tomas,Chief</p>
+                    <p>a pick up of you donations,we will try our best to help.</p>
+                </div>
             </div>
             <div class="col-md-6 col-xs-12 leader"><img class="center-block"
                                                         src='<?php bloginfo('template_url'); ?>/images/people/volunteerPicture.png'>
@@ -154,6 +155,9 @@
                     <div class="col-md-2 col-xs-5 teamMember"><img class="center-block"
                                                                    src='<?php bloginfo('template_url'); ?>/images/people/leaderPicture.png'>
                     </div>
+                </div>
+                <div class="col-md-2 col-xs-5 teamMember"><img class="center-block"
+                                                               src='<?php bloginfo('template_url'); ?>/images/people/leaderPicture.png'>
                 </div>
                 <div class="col-md-2 col-xs-5 teamMember"><img class="center-block"
                                                                src='<?php bloginfo('template_url'); ?>/images/people/leaderPicture.png'>
