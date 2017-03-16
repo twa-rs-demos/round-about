@@ -3626,6 +3626,20 @@ body {
   margin-bottom: 3rem;
 }
 
+#article .bigger-img {
+  display: inline-block;
+  height: 35rem;
+}
+
+#article .article-content {
+  margin-top: 2rem;
+}
+
+#article .article-footer .pre-and-next a {
+  color: #ec4c9a;
+  text-decoration: none;
+}
+
 #article .article-header h2 {
   font-size: 4.2rem;
 }
