@@ -13,21 +13,23 @@
                 <button><img src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png" alt="">
                 </button>
             </div>
+
+
             <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
-                <button class="advanced-search" data-toggle="modal"  data-target="#myModal">高级搜索 &gt;</button>
+                <button class="advanced-search">高级搜索 &gt;</button>
             </div>
 
 
-            <div class="hidden " id="filter">
-                <div tabindex="-1" role="dialog" id="myModal" data-backdrop=false aria-labelledby="myModalLabel" aria-hidden="true"
-                     class="modal" style="display: block;">
+            <div class="static-modal hidden" id="filter">
+                <div tabindex="-1" role="dialog" class="modal" style="display: block;">
                     <div class="modal-dialog">
                         <div class="modal-content" role="document">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                    &times;
-                                </button>
-                                <h4 class="modal-title">筛选</h4></div>
+                                <div>
+                                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span>
+                                    </button>
+                                    <h4 class="modal-title">筛选</h4></div>
+                            </div>
                             <div class="modal-body">
                                 <div class="location"><p>地点</p>
                                     <div>

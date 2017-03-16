@@ -8,7 +8,13 @@ $(function () {
     });
 
     $(".advanced-search").click(function () {
-        $(this).parent().next().attr('class', 'modal-content');
+        $(this).parent().next().attr('class', 'filter-form');
     });
 
+    $(".close").click(function () {
+        console.log("kkkk");
+        $(this).parents(".filter-form").attr("class", "filter-form hide");
+        // $('.filter-form').attr("class", "vvv hide");
+
+    });
 });
