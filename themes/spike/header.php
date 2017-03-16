@@ -9,7 +9,7 @@ foreach ($menus as $menu) {
   $menu->link = esc_url(get_permalink(get_page_by_title($menu->slug)));
   $tax_terms = get_terms('category', array('child_of' => $menu->cat_ID, "hide_empty" => false));
   foreach ($tax_terms as $tax_term) {
-   $tax_term->link=esc_url(get_permalink(get_page_by_title($tax_term->slug)));
+    $tax_term->link = esc_url(get_permalink(get_page_by_title($tax_term->slug)));
     array_push($sub_menus, $tax_term);
   }
 }
@@ -63,6 +63,8 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
+
+
   </script>
 
 </head>
@@ -105,7 +107,6 @@ foreach ($menus as $menu) {
           </div>
         </div>
       </div>
-
 
       <div class="nav-menu">
         <div>
@@ -172,5 +173,3 @@ foreach ($menus as $menu) {
         </div>
       </div>
     </div>
-
-
