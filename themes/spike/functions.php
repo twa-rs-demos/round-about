@@ -32,9 +32,6 @@ function the_breadcrumb()
   }
 }
 
-?>
-
-<?php
 function wpshock_search_filter($query)
 {
   if ($query->is_search) {
