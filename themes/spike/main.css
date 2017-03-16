@@ -2510,6 +2510,17 @@ img {
   text-decoration: none;
 }
 
+#ourwork-assistance .donate-box {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 5);
+  width: 50rem;
+  height: 40rem;
+  margin: 0 auto;
+}
+
+#ourwork-assistance .donate-box .donate-content .donate-money-margin{
+  margin-top: 2rem;
+}
+
 #ourwork-assistance .rescue-situation-img {
   text-align: center;
 }
@@ -2541,13 +2552,43 @@ img {
   color: #ec4c9a;
 }
 
-#ourwork-assistance .fact-situation-graph img {
+#ourwork-assistance .fact-situation-graph .button-style{
+  position: relative;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box {
+  position: absolute;
+  top: -8rem;
+  right: -14rem;
+  z-index: 100;
+  background: white;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content{
+  color: black;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content h3{
+  color: #ec4c9a;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content .donate-money-margin{
+  margin-top: 2rem;
+}
+
+#ourwork-assistance .fact-situation-graph .button-style .donate-box .donate-content .image-close {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+}
+
+#ourwork-assistance .fact-situation-graph .donate-img {
   display: block;
   margin: 0 auto;
   margin-top: 5.0rem;
 }
 
-#ourwork-assistance .fact-situation-graph div {
+#ourwork-assistance .fact-situation-graph .button-style {
   margin: 0 auto;
   margin-top: 5.0rem;
   width: 22.5rem;
@@ -2605,6 +2646,7 @@ img {
   background: #ec4c9a;
   line-height: 4.9rem;
   border: none;
+  outline: none;
 }
 
 #ourwork-assistance .picture-max .read-more:hover {

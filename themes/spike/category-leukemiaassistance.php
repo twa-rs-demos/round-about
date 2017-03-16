@@ -1,17 +1,43 @@
 <?php get_header() ?>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".I-want-donate").click(function () {
+            $('.donate-box').attr("class", "donate-box");
+        });
+        $(".image-close").click(function () {
+            $('.donate-box').attr("class", "hidden donate-box");
+        });
+    });
+
+</script>
+
 <div id="ourwork-assistance">
     <div class="picture-max"
          style="background-repeat: no-repeat; background-size: cover; background-image: url(&quot;/wp-content/themes/spike/images/ourWorkAssistance/hero_leukemiaAssistance.png&quot;); background-position: center center;">
-        <div class="ourWorkAssistence-picture-text"><p>Yang bin is a 9 year old boy from Xi’an.</p>
-            <p> He was diagnosed with leukemia in 2015.</p>
-            <p> The dignity of our recipients is something</p>
-            <div class="ourWorkAssistence-picture-btn"><a class="story" href="/tw-ra/childStory">阅读杨斌的故事</a></div>
+
+        <?php
+        $args = array(
+            'post_type' => 'post',
+            'category_name' => 'leukemia_assistance_zh'
+        );
+        $result = get_posts($args);
+        $title = $result[0]->post_title;
+        $custom_fields = get_post_custom($result[0]->ID);
+        $profile = $custom_fields['profile'];
+        ?>
+
+        <div class="ourWorkAssistence-picture-text">
+            <p class="span"><?php echo $profile[0] ?></p>
+            <div class="ourWorkAssistence-picture-btn"><a class="story"
+                                                          href="<?php the_permalink($result[0]->ID); ?>"><?php echo $title ?></a>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="text-right"><a class="ourWorkAssistence-picture-readMore"
-                                   href="/tw-ra/leukemia-stories">更多故事&gt; </a></div>
+                                   href="http://localhost:8080/zh/%e5%8b%9f%e6%8d%90%e9%a1%b9%e7%9b%ae/">更多故事&gt; </a>
+        </div>
     </div>
     <div>
         <div class="save-life-situation"><h2 class="middle-title">我们参与挽救的生命</h2>
@@ -22,7 +48,8 @@
                             src="<?php bloginfo('template_url'); ?>/images/ourWorkAssistance/raised.png"></div>
             </div>
             <div class="row"><a href="/tw-ra/donate">
-                    <button class="button-style">参与挽救一个生命</button>
+                    <button class="button-style"><a href="http://localhost:8080/zh/donate_zh/" class="no-decoration">参与挽救一个生命</a>
+                    </button>
                 </a></div>
         </div>
         <div class="fact-situation"><h2 class="middle-title">你知道吗？</h2>
@@ -31,27 +58,19 @@
             <p>影响治愈率的是缺乏的<span>资金</span>。
             </p><span> 你可以改变他们的命运。</span>
             <div class="fact-situation-graph"><img
-                        src="<?php bloginfo('template_url'); ?>/images/ourWorkAssistance/cure rate.png">
+                        src="<?php bloginfo('template_url'); ?>/images/ourWorkAssistance/cure rate.png" class="donate-img">
                 <div class="button-style">
                     <button class="I-want-donate">我要捐赠</button>
-                </div>
-            </div>
-        </div>
-        <div class="hidden">
-            <div class="static-modal donate-money">
-                <div tabindex="-1" role="dialog" class="modal" style="display: block;">
-                    <div class="modal-dialog">
-                        <div class="modal-content" role="document">
-                            <div class="modal-header">
-                                <div class="col-xs-offset-11 col-xs-1"><img
-                                            src="<?php bloginfo('template_url'); ?>/images/home/close.png"
-                                            class="image-close"></div>
-                            </div>
-                            <div class="modal-body">
-                                <div id="donatemoney" class="donate"><h3 class="text-center">捐款</h3>
+                    <div class="hidden donate-box">
+                        <div class="donate-content">
+                            <div class="image-close">x</div>
+                            <div class="donate-body">
+                                <div id="donatemoney" class="donate">
+                                    <h3 class="text-center">捐&nbsp;款</h3>
                                     <div class="row donate-money-margin">
-                                        <div class="col-xs-offset-1 col-xs-5"><img src="<?php bloginfo('template_url'); ?>/images/wechat01.png"
-                                                                                   class="img-center">
+                                        <div class="col-xs-offset-1 col-xs-5"><img
+                                                    src="<?php bloginfo('template_url'); ?>/images/wechat01.png"
+                                                    class="img-center">
                                             <div class="span">Wechat</div>
                                         </div>
                                         <div class="col-xs-5"><a
@@ -64,7 +83,7 @@
                                             <div class="span">CCAFC</div>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row donate-money-margin">
                                         <div class="col-xs-offset-1 col-xs-5"><a
                                                     href="http://love.alipay.com/donate/itemDetail.htm?name=2015081315541167376"
                                                     target="_blank"><img
@@ -84,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
