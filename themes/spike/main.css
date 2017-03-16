@@ -1331,9 +1331,14 @@ img {
   font-size: 2.7rem;
 }
 
+#donate-page-index #item-donation .donate-guide .hide {
+  display: none;
+}
+
 #donate-page-index #item-donation .donate-guide .donate-guide-title {
   color: #EC4C9A;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #donate-page-index .hide {
@@ -1341,18 +1346,52 @@ img {
 }
 
 #donate-page-index .donate-rules {
-  position: absolute;
+  width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 12px;
+  outline: 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  padding-left: 4.0rem;
+  color: #575757;
+  position: fixed;
   top: 0;
-  right: -20rem;
-  border: solid 1px #ccc;
-  padding: 2rem;
-  background: white;
-  z-index: 100;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  overflow: auto;
+  outline: 0;
+}
+
+#donate-page-index .donate-rules .header {
+  padding: 15px;
+}
+
+#donate-page-index .donate-rules .header h2 {
+  font-size: 3.2rem;
+}
+
+#donate-page-index .donate-rules .close {
+  font-size: 2.8rem;
+  font-weight: 400;
+  outline: none;
+}
+
+#donate-page-index .donate-rules .rules {
+  position: relative;
+  padding: 15px;
+  width: 86%;
+  padding-top: 0;
+  margin: 0;
 }
 
 #donate-page-index .donate-rules .rules ul {
   list-style: none;
-  margin-left: -3.5rem;
+  font-size: 2rem;
+  line-height: 3.0rem;
+  padding: 0;
 }
 
 #donate-page-index .donate-guide {
@@ -2242,6 +2281,10 @@ img {
   color: #EB4B99;
 }
 
+#donate-things-rules .modal {
+  display: block;
+}
+
 #donate-things-rules .modal-content {
   padding-left: 4.0rem;
   color: #575757;
@@ -2255,7 +2298,7 @@ img {
 }
 
 #donate-things-rules .modal-body {
-  width: 86%;
+  width: 95%;
   padding-top: 0;
   margin: 0;
 }
@@ -2271,8 +2314,13 @@ img {
 }
 
 #donate-things-rules .close-btn {
-  width: 2.8rem;
-  height: 2.8rem;
+  font-size: 1.9rem;
+  outline: none;
+}
+
+#donate-things-rules button {
+  outline: none;
+  background: none;
 }
 
 #donate-things-rules .modal-dialog {
