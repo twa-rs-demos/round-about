@@ -316,6 +316,13 @@ img {
   margin: 0 auto;
 }
 
+.people-page img{
+  width:100%;
+  hight:100px;
+  display: block;
+  margin: 0 auto;
+}
+
 .assistance-top .assistance-describe {
   margin-top: 2rem;
 }
@@ -372,6 +379,7 @@ img {
 
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
+  /*display: none;*/
 }
 
 #modal-volunteer-content .modal-content {
@@ -656,26 +664,16 @@ img {
   font-weight: 700;
 }
 
-#breadcrumb {
+#page .breadcrumb {
   background-color: #F0F0F0;
   border-radius: 0;
   padding: 1rem 0 1rem 2.8rem;
   margin: 0;
 }
 
-#breadcrumb li + li:before {
-  position: relative;
-  font-family: FontAwesome;
-  font-size: 1.4rem;
-  content: "\F105";
-  color: #B2B6BF;
-  padding: 0;
-  margin: 0 8px 0 0;
-  top: 0;
-}
-
-#breadcrumb li {
-  margin: 0 0.4rem;
+#page .breadcrumb a {
+  color: #414141;
+  text-decoration: none;
 }
 
 @media (min-width: 380px) {
@@ -1120,28 +1118,6 @@ img {
 
 #aboutUs #aboutUs-footer .about-years-events .second-event {
   padding-top: 50px;
-}
-
-#breadcrumb {
-  background-color: #F0F0F0;
-  border-radius: 0;
-  padding: 1rem 0 1rem 2.8rem;
-  margin: 0;
-}
-
-#breadcrumb li + li:before {
-  position: relative;
-  font-family: FontAwesome;
-  font-size: 1.4rem;
-  content: "\F105";
-  color: #B2B6BF;
-  padding: 0;
-  margin: 0 8px 0 0;
-  top: 0;
-}
-
-#breadcrumb li {
-  margin: 0 0.4rem;
 }
 
 #class-fields {
