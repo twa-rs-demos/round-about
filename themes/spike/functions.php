@@ -35,9 +35,7 @@ function the_breadcrumb()
     }
   }
 }
-?>
 
-<?php
 add_filter('posts_orderby_request', 'wpjam_search_orderby_filter');
 function wpjam_search_orderby_filter($orderby = '')
 {

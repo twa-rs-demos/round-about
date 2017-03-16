@@ -27,16 +27,17 @@
                 </div>
                 <div id="news-event" class="">
                     <div>
-
                         <?php
-                        $args = array(
-                            'post_type' => 'post',
-                            'numberposts' => 4,
-                            'category_name' => 'news_zh',
-                        );
-                        $arr = get_posts($args);
+                        $newsandevent_cat = get_category_by_slug('newsandevents_zh');
+//                        $args = array(
+//                            'post_type' => 'post',
+//                            'numberposts' => 4,
+//                            'category_name' => 'newsandevents_zh',
+//                        );
+//                        $arr = get_posts($args);
+                        $posts = query_posts(array('category__in' => array($newsandevent_cat->cat_ID)));
 
-                        foreach ($arr as $result){
+                        foreach ($posts as $result){
                             $title = $result->post_title;
                             $content = $result->post_content;
                             $custom_fields = get_post_custom($result->ID);
@@ -202,3 +203,4 @@
     </div>
 </div>
 <?php get_footer()?>
+
