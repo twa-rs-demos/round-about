@@ -1,13 +1,26 @@
 <?php
 
-add_filter('posts_orderby_request', 'wpjam_search_orderby_filter');
-function wpjam_search_orderby_filter($orderby = ''){
-  if(is_search()){
-    global $wpdb;
-    $keyword = $wpdb->prepare($_REQUEST['s'],'');
-    return "((CASE WHEN {$wpdb->posts}.post_title LIKE '%{$keyword}%' THEN 2 ELSE 0 END) + (CASE WHEN {$wpdb->posts}.post_content LIKE '%{$keyword}%' THEN 1 ELSE 0 END)) DESC, {$wpdb->posts}.post_modified DESC, {$wpdb->posts}.ID ASC";
-  }else{
-    return $orderby;
+function wds_cpt_search( $query ) {
+
+  if ( is_search() && $query->is_main_query() && $query->get( 's' ) ) {
+
+    $query->set(
+
+      'post_type', array('post', 'img'),
+      'meta_query', array(
+        array(
+          'key' => 'img',
+          'value' => '%s',
+          'compare' => 'LIKE',
+        ),
+      )
+    );
+
+    return $query;
   }
 }
+
+add_action( 'pre_get_posts', 'wds_cpt_search' );
+
+
 ?>
