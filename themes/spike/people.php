@@ -7,10 +7,11 @@
     <div id="people-volunteer" class="col-xs-offset-3 col-xs-6"><h2 class="middle-title people-h2-title">以人为本，众人为爱</h2>
         <p class="middle-describe people-p">加入众爱，一起公益。</p>
 
-        <button type="button" class="button-style become-volunteer center-block" data-toggle="modal"
-                data-target="#myModal">
+        <button type="button" class="button-style become-volunteer center-block">
             加入志愿者行列
         </button>
+
+
 
         <div class="hidden volunteer-form">
             <div data-reactroot="" role="dialog">
@@ -177,7 +178,8 @@
                         <div class="modal-dialog">
                             <div class="modal-content" role="document">
                                 <div class="modal-header">
-                                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span>
+                                    <button type="button" class="close" aria-label="Close"><span
+                                                aria-hidden="true">×</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
@@ -185,42 +187,54 @@
                                         <div id="modal-volunteer-content">
                                             <div class="row">
                                                 <div class="col-md-12 col-xs-11 ">
-                                                    <div class="modal-title-info"><span>VOLUNTEERS APPLICATION FORM</span>
+                                                    <div class="modal-title-info">
+                                                        <span>VOLUNTEERS APPLICATION FORM</span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-3 col-xs-4  info-right info-margin"><span><!-- react-text: 19 --> FistName
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
-                                                                                                          required=""></div>
+                                                                                                          required="">
+                                                        </div>
                                                         <div class="col-md-3 col-xs-4 info-right info-margin"><span><!-- react-text: 25 --> LastName
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
-                                                                                                          required=""></div>
+                                                                                                          required="">
+                                                        </div>
                                                     </div>
                                                     <div class="row ">
                                                         <div class="col-md-3 col-xs-4 info-right info-margin"><span><!-- react-text: 32 --> Age
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
-                                                                                                          required=""></div>
+                                                                                                          required="">
+                                                        </div>
                                                         <div class="col-md-3  col-xs-4 info-right info-margin"><span><!-- react-text: 38 -->Telephone Number
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-7 col-xs-8 info-margin"><input type="text"
                                                                                                           class="input-info"
-                                                                                                          required=""></div>
+                                                                                                          required="">
+                                                        </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-3  col-xs-4 info-right info-margin"><span><!-- react-text: 45 -->Email Address
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-9 col-xs-8 info-margin"><input type="text"
                                                                                                           class="text-length input-info"
-                                                                                                          required=""></div>
+                                                                                                          required="">
+                                                        </div>
                                                     </div>
                                                     <div class="row ">
                                                         <div class="col-md-3 col-xs-4 info-right "><span><!-- react-text: 52 -->Commits
-                                                                <!-- /react-text --><span class="pink">*</span></span></div>
+                                                                <!-- /react-text --><span class="pink">*</span></span>
+                                                        </div>
                                                         <div class="col-md-9 col-xs-8 info-margin"><textarea rows="10"
                                                                                                              class="textArea-volunteerForm col-md-7 col-xs-8"
                                                                                                              placeholder="5000 Characters Max"
@@ -252,8 +266,6 @@
                     </div>
                 </div>
             </div>
-
-
 
 
         </div>
