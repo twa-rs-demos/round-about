@@ -22,6 +22,18 @@ var jumpInSamePages = [{
 }, {
     page: 'itemd_onation-en',
     jumppositopn: '#item-donation'
+}, {
+    page: 'apply_founding_zh',
+    jumppositopn: 'https://jinshuju.net/f/RhPPwa'
+}, {
+    page: 'apply_founding_en',
+    jumppositopn: 'https://jinshuju.net/f/RhPPwa'
+}, {
+    page: 'donate_link_zh',
+    jumppositopn: ''
+}, {
+    page: 'donate_link_en',
+    jumppositopn: ''
 }];
 
 $(function () {
@@ -35,20 +47,31 @@ $(function () {
         })
     });
 
-    function getjumpage(jumpInSamePage, submenus, parentLink) {
+    function getjumpage(jumpInSamePage, submenus, parentLink, menus) {
         submenus.forEach((submenu) => {
             if (submenu.slug === jumpInSamePage.page) {
-                submenu.link = `${parentLink}${jumpInSamePage.jumppositopn}`
+                submenu.link = `${parentLink}${jumpInSamePage.jumppositopn}`;
+
+                if (jumpInSamePage.page === 'apply_founding_zh' || jumpInSamePage.page === 'apply_founding_en') {
+                    submenu.link = jumpInSamePage.jumppositopn;
+                }
+                if (jumpInSamePage.page === 'donate_link_zh'||jumpInSamePage.page === 'donate_link_en') {
+                    menus.forEach(menu => {
+                        if (menu.slug === 'donate_zh'||menu.slug === 'donate_en') {
+                            submenu.link = menu.link;
+                        }
+                    });
+                }
             }
         })
     }
 
     jumpInSamePages.forEach((jumpInSamePage) => {
         menus.forEach((menu) => {
-            getjumpage(jumpInSamePage, menu.subMenus, menu.link);
+            getjumpage(jumpInSamePage, menu.subMenus, menu.link, menus);
         })
     });
-    
+
     $("#menuTemplate").tmpl(menus)
         .appendTo("#menu");
 
