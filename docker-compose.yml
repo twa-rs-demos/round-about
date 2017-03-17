@@ -12,4 +12,4 @@ services:
     volumes:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
       - ./themes/spike:/var/www/html/wp-content/themes/spike
-
+      - ./uploads:/var/www/html/wp-content/uploads
