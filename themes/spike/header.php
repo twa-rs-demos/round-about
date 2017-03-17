@@ -111,7 +111,7 @@ foreach ($menus as $menu) {
       <div class="top-info row">
         <div>
           <div class="col-md-6 col-sm-4 col-xs-3">
-            <div class="row logo"><a href="http://localhost:8080/">
+            <div class="row logo"><a href="http://demo:8080/">
                 <img
                   src="<?php bloginfo('template_url'); ?>/images/home/index_logo1.png"
                   alt="logo"></a></div>
