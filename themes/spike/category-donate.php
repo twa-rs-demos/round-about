@@ -381,7 +381,7 @@
                     <div class="col-md-7 col-sm-6 col-xs-5">
                         <div class="text-right">
                             <div class="donateProject-more"><a
-                                        href="http://localhost:8080/zh/donatecurrent_zh/">更多&gt;</a></div>
+                                        href="http://demo:8080/zh/donatecurrent_zh/">更多&gt;</a></div>
                         </div>
                     </div>
                 </div>

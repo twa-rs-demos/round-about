@@ -3281,7 +3281,7 @@ img {
 #media-report .event-img {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("http://localhost:8080/wp-content/themes/spike/images/newsAndEvent/events.png");
+    background-image: url("http://demo:8080/wp-content/themes/spike/images/newsAndEvent/events.png");
     background-position: center center;
 }
 

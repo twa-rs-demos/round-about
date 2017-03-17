@@ -36,7 +36,7 @@
     </div>
     <div class="row">
         <div class="text-right"><a class="ourWorkAssistence-picture-readMore"
-                                   href="http://localhost:8080/zh/%e5%8b%9f%e6%8d%90%e9%a1%b9%e7%9b%ae/">更多故事&gt; </a>
+                                   href="http://demo:8080/zh/%e5%8b%9f%e6%8d%90%e9%a1%b9%e7%9b%ae/">更多故事&gt; </a>
         </div>
     </div>
     <div>
@@ -49,7 +49,7 @@
                             src="<?php bloginfo('template_url'); ?>/images/ourWorkAssistance/raised.png"></div>
             </div>
             <div class="row"><a href="/tw-ra/donate">
-                    <button class="button-style"><a href="http://localhost:8080/zh/donate_zh/"
+                    <button class="button-style"><a href="http://demo:8080/zh/donate_zh/"
                                                     class="no-decoration">参与挽救一个生命</a>
                     </button>
                 </a></div>

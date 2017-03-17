@@ -65,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'wpjam_add_styles' );
         <p class="middle-describe">社区帮扶</p></div>
     </div>
     <div class="ourwork-know-more">
-      <a class="know-more-text" href="http://localhost:8080/zh/ourwork_zh/">了解更多 &gt;</a>
+      <a class="know-more-text" href="http://demo:8080/zh/ourwork_zh/">了解更多 &gt;</a>
     </div>
   </div>
 </div>

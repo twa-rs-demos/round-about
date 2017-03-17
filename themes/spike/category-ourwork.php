@@ -17,9 +17,9 @@
                 <div class="job-icons row icons-margin-bottom">
                     <div class="col-md-4 col-xs-12 icon-container">
                         <div class="job-icons-container">
-                            <a href="http://localhost:8080/zh/leukemiaassistance_zh/"><img src="<?php bloginfo('template_url'); ?>/images/ourWork/icon_leukemia assistance_bg.png"                 alt="白血病救助"/></a>
+                            <a href="http://demo:8080/zh/leukemiaassistance_zh/"><img src="<?php bloginfo('template_url'); ?>/images/ourWork/icon_leukemia assistance_bg.png"                 alt="白血病救助"/></a>
                         </div>
-                        <a href="http://localhost:8080/zh/leukemiaassistance_zh/">白血病救助</a></div>
+                        <a href="http://demo:8080/zh/leukemiaassistance_zh/">白血病救助</a></div>
                     <div class="col-md-4 col-xs-12 icon-container">
                         <div class="job-icons-container">
                             <img src="<?php bloginfo('template_url'); ?>/images/ourWork/icon_medical assistance_bg.png"
