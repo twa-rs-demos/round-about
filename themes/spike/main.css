@@ -2913,7 +2913,7 @@ img {
 
 #people #ourLeaderShip .leader-picture {
     position: absolute;
-    left: 49.9%;
+    left: 50%;
     /*right: 9%;*/
     /*top: 50%;*/
     width:11rem;
@@ -2950,6 +2950,7 @@ img {
 
 #people #ourLeaderShip .leader {
     margin-top: 1rem;
+    left:25%;
 }
 
 #people #ourLeaderShip .leader img{

@@ -100,7 +100,7 @@
     <div id="ourLeaderShip" class="col-md-offset-3 col-md-6 col-xs-offset-3 col-xs-6"><h3 class="middle-title title-h3">
             我们的领导</h3>
         <div class="row">
-            <div class="col-md-6 col-xs-12 leader">
+            <div class="col-md-3 col-xs-12 leader">
                 <img class="center-block"
                      src='<?php bloginfo('template_url'); ?>/images/people/volunteerPicture.png'>
                 <div class="leader-picture">
@@ -108,7 +108,7 @@
                     <p>a pick up of you donations,we will try our best to help.</p>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12 leader">
+            <div class="col-md-3 col-xs-12 leader">
                 <img class="center-block"  src='<?php bloginfo('template_url'); ?>/images/people/volunteerPicture.png'>
                 <div class="leader-picture">
                     <p>Jake Tomas,Chief</p>
