@@ -2914,8 +2914,10 @@ img {
 #people #ourLeaderShip .leader-picture {
     position: absolute;
     left: 49.9%;
-    right: 9%;
-    top: 50%;
+    /*right: 9%;*/
+    /*top: 50%;*/
+    width:11rem;
+    hieght:11rem;
 
     transform: translate3d(-50%, -50%, 0);
     top: 0;
@@ -2923,14 +2925,14 @@ img {
     opacity: 0;
     /*width: 40%;*/
     height: 100%;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 #people #ourLeaderShip .leader-picture p {
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
     color: #fff;
-    padding: 0 1.7rem;
+    padding: 0 0.3rem;
     width: 100%;
 }
 
@@ -2948,6 +2950,11 @@ img {
 
 #people #ourLeaderShip .leader {
     margin-top: 1rem;
+}
+
+#people #ourLeaderShip .leader img{
+    width:11rem;
+    hieght:11rem;
 }
 
 #people #ourCommityLeaders .title-h3 {
