@@ -55,9 +55,9 @@ $(function () {
                 if (jumpInSamePage.page === 'apply_founding_zh' || jumpInSamePage.page === 'apply_founding_en') {
                     submenu.link = jumpInSamePage.jumppositopn;
                 }
-                if (jumpInSamePage.page === 'donate_link_zh'||jumpInSamePage.page === 'donate_link_en') {
+                if (jumpInSamePage.page === 'donate_link_zh' || jumpInSamePage.page === 'donate_link_en') {
                     menus.forEach(menu => {
-                        if (menu.slug === 'donate_zh'||menu.slug === 'donate_en') {
+                        if (menu.slug === 'donate_zh' || menu.slug === 'donate_en') {
                             submenu.link = menu.link;
                         }
                     });
@@ -96,5 +96,18 @@ $(function () {
 
     $('.dropdown-icon').click(function () {
         $(this).parent('.nav-brand').next('.sub-menu').toggle();
+    });
+
+    $(function () {
+        if (__injectedVars.currentLanguage === 'en-US') {
+            $('.lang-item-en').css('display', 'none');
+            $('.lang-item-zh').css('display', 'inline-block');
+            $('.lang-item-zh a').text('中文');
+        } else {
+            $('.lang-item-en').css('display', 'inline-block');
+            $('.lang-item-zh').css('display', 'none');
+        }
     })
+
+
 });

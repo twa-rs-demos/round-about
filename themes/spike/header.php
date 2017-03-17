@@ -36,24 +36,25 @@ foreach ($menus as $menu) {
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
 
   <script type="text/javascript">
-    var __injectedVars = {
-      menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
-      subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
-    };
+      var __injectedVars = {
+          menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
+          subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
+          currentLanguage: '<?php  echo get_bloginfo('language')?>'
+      }
   </script>
 
   <script type="text/javascript">
-    $(document).ready(function () {
-      $(".wechat").click(function () {
-        $('.wechat-box').attr("class", "wechat-box modal");
+      $(document).ready(function () {
+          $(".wechat").click(function () {
+              $('.wechat-box').attr("class", "wechat-box modal");
+          });
+          $(".close").click(function () {
+              $('.wechat-box').attr("class", "hide wechat-box modal");
+          });
       });
-      $(".close").click(function () {
-        $('.wechat-box').attr("class", "hide wechat-box modal");
-      });
-    });
 
   </script>
-  
+
   <script type="text/x-jquery-tmpl" id="menuTemplate">
     <div class="menu-list">
       <div class="first-menu">
@@ -74,10 +75,6 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
-  
-    
-    
-    
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -92,12 +89,7 @@ foreach ($menus as $menu) {
             {{/each}}
         </ul>
    </li>
-
-  
-    
-    
-    
-  </script>
+</script>
 
   <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
 
