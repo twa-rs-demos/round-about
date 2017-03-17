@@ -8,7 +8,7 @@ printf('<script type="text/javascript" src="%s/%s" ></script>', get_template_dir
 
   <div id="aboutUs">
     <div id="aboutUs-header"><h3 class="middle-title aboutUs-title">每个孩子都应该享有同样的机会</h3>
-      <div class="text-center"><a href="/tw-ra/donate">
+      <div class="text-center"><a href="/tw-ra/donate_zh">
           <button class="button-style button-change-destiny">改变TA的命运</button>
         </a></div>
       <div class="video about-video row">

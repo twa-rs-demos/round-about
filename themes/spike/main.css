@@ -3133,13 +3133,14 @@ img {
 #partners .content-on-picture .read-more {
     background-color: #ec4c9a;
     outline: none;
-    width: 18rem;
+    width: 14rem;
     display: inline-block;
     border: none;
-    height: 5rem;
-    line-height: 5rem;
+    height: 4rem;
+    line-height: 4rem;
     border-radius: 0.4rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-top: 5rem;
 }
 
 #partners .main-content .more-stories {
@@ -3273,7 +3274,7 @@ img {
     height: 4.2em;
 }
 
-#book-market .bookfair-review .bookfair-news .words .learn-more {
+#book-market .bookfair-review .bookfair-news .words .learn-more a {
     font-size: 2.2rem;
     color: #ec4c9a;
 }
