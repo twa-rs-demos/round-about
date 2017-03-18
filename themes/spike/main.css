@@ -1912,15 +1912,23 @@ img {
     height: 1.8rem;
 }
 
+
 #header .top-info .right-topinfo .lang-item {
     list-style: none;
-    display: inline-block;
     margin-right: 3rem;
 }
 
 #header .top-info .right-topinfo .lang-item a {
     color: #8a7676;
     font-size: 1.1rem;
+}
+
+#header .top-info .right-topinfo .lang-item-zh {
+    display: none;
+}
+
+#header .top-info .right-topinfo .lang-item-en {
+    display: inline-block;
 }
 
 #header .nav-menu .menu-list1 .menu:last-child {
@@ -3308,6 +3316,10 @@ img {
     font-size: 2rem;
 }
 
+#media-report .ra-in-media .media-data-content .media-words .media-title a {
+    color: #ec4c9a;
+}
+
 #media-report .ra-in-media .media-data-content .media-words p {
     line-height: 2.5rem;
     height: 7.5rem;
@@ -3631,7 +3643,6 @@ body {
 
 #contact-us #content-address .wechat {
     font-size: 2rem;
-    /*color: 2rem;*/
     margin-top: 5px;
     margin-bottom: 30px;
 }
@@ -3642,7 +3653,6 @@ body {
 }
 
 #article .bigger-img {
-  display: inline-block;
   height: 35rem;
 }
 

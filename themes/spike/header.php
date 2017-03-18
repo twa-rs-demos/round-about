@@ -39,7 +39,8 @@ foreach ($menus as $menu) {
       var __injectedVars = {
           menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
           subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
-      };
+          currentLanguage: '<?php  echo get_bloginfo('language')?>'
+      }
   </script>
 
   <script type="text/javascript">
@@ -74,11 +75,6 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
-  
-    
-    
-    
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -93,13 +89,7 @@ foreach ($menus as $menu) {
             {{/each}}
         </ul>
    </li>
-
-  
-    
-    
-    
-
-  </script>
+</script>
 
   <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
 
