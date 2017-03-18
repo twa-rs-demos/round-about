@@ -73,7 +73,7 @@ pre {
     position: relative;
     marign: 0;
     padding: 0;
-    height: 44rem;
+    height: 43rem;
 }
 
 /*--------------------------what we do five icons-------------------------------------*/
@@ -3232,10 +3232,43 @@ img {
     color: #ec4c9a;
 }
 
-#book-market {
-    /*----------------------------------book-change-life------------------------------------*/
-    /*----------------------------------bookfair-notice------------------------------------*/
-    /*----------------------------------bookfair-review------------------------------------*/
+#book-market .book-take-change .slider {
+    position:relative;
+    height:30rem;
+}
+#book-market .book-take-change .slider-extra{
+    position: absolute;
+    top:25rem;
+    left:50px;
+}
+#book-market .book-take-change .slider-nav{
+    list-style: none;
+}
+#book-market .book-take-change .slider-nav li{
+    display: inline-block;
+    width:1.5rem;
+    height:1.5rem;
+    border: solid 1px #ccc;
+    border-radius: 1.5rem;
+    background: #1b6d85;
+}
+
+#book-market .book-take-change .slider-nav .slider-item-selected{
+    background: red;
+}
+#book-market .book-take-change .slider .slider-main{
+    list-style: none;
+}
+#book-market .book-take-change .slider .slider-main .slider-panel{
+    position: absolute;
+    top:0;
+    left:0;
+    height:30rem;
+}
+#book-market .book-take-change .slider .slider-main .slider-panel img{
+    height:100%;
+    width:100%;
+
 }
 
 #book-market .book-change-top {
@@ -3589,15 +3622,36 @@ body {
     font-size: 2rem;
     color: #575757;
 }
+#gallery #gallery-picture .carousel-arrowsmall img{
+    cursor: pointer;
+}
 
 #gallery #gallery-picture .picture-carousel {
     position: relative;
+    height: 41.5rem;
+}
+
+#gallery #gallery-picture .picture-carousel ul{
+    list-style: none;
+    overflow: hidden;
+    margin:0;
+    padding:0;
+}
+#gallery #gallery-picture .picture-carousel .slider-panel{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
 }
 
 #gallery #gallery-picture .carousel-arrowbg-position {
     position: absolute;
     right: 43px;
     bottom: 21px;
+}
+
+#gallery #gallery-picture .carousel-arrowbg-position img{
+    cursor: pointer;
 }
 
 #gallery #gallery-picture .carousel-arrowbg-left {

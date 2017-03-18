@@ -1,39 +1,93 @@
 <?php get_header(); ?>
 
+<script type="text/javascript">
+
+    $(function () {
+        var length,
+            currentIndex = 0,
+            interval,
+            hasStarted = false, //是否已经开始轮播
+            t = 5000; //轮播时间间隔
+        length = $('.slider-panel').length;
+        //将除了第一张图片隐藏
+        $('.slider-panel:not(:first)').hide();
+        //将第一个slider-item设为激活状态
+        $('.slider-item:first').addClass('slider-item-selected');
+
+        //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动
+        $('.slider-panel, .slider-pre, .slider-next').hover(function() {
+            stop();
+        }, function() {
+            start();
+        });
+        $('.slider-item').hover(function(e) {
+            stop();
+            var preIndex = $(".slider-item").filter(".slider-item-selected").index();
+            currentIndex = $(this).index();
+            play(preIndex, currentIndex);
+        }, function() {
+            start();
+        });
+
+        function pre() {
+            var preIndex = currentIndex;
+            currentIndex = (--currentIndex + length) % length;
+            play(preIndex, currentIndex);
+        }
+
+        function next() {
+            var preIndex = currentIndex;
+            currentIndex = ++currentIndex % length;
+            play(preIndex, currentIndex);
+        }
+        function play(preIndex, currentIndex) {
+            $('.slider-panel').eq(preIndex).fadeOut(500)
+                .parent().children().eq(currentIndex).fadeIn(1000);
+            $('.slider-item').removeClass('slider-item-selected');
+            $('.slider-item').eq(currentIndex).addClass('slider-item-selected');
+        }
+        function start() {
+            if(!hasStarted) {
+                hasStarted = true;
+                interval = setInterval(next, t);
+            }
+        }
+        function stop() {
+            clearInterval(interval);
+            hasStarted = false;
+        }
+        start();
+    });
+
+</script>
+
+
+
 <div id="book-market">
     <div class="book-take-change">
         <div class="book-change-top"><h2 class="middle-title">一本书带来的改变</h2>
             <p class="middle-describe">每个月我们都会在选定的国际学校举办大、小型书市（学校假期除外）。</p></div>
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-xs-10 col-xs-offset-1">
-                <div class="carousel slide">
-                    <ol class="carousel-indicators">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active"><img width="300" height="500" alt="900x500"
-                                                      src="<?php bloginfo('template_url'); ?>/images/donate/wechat01.png">
-                            <div class="carousel-caption"><h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p></div>
-                        </div>
-                        <div class="item"><img width="300" height="500" alt="900x500"
-                                               src="<?php bloginfo('template_url'); ?>/images/donate/wechat01.png">
-                            <div class="carousel-caption"><h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
-                        </div>
-                        <div class="item"><img width="300" height="500" alt="900x500"
-                                               src="<?php bloginfo('template_url'); ?>/images/donate/wechat01.png">
-                            <div class="carousel-caption"><h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p></div>
-                        </div>
+                <div class="slider">
+                    <ul class="slider-main">
+                        <li class="slider-panel">
+                            <img src="<?php bloginfo('template_url'); ?>/images/home/hero_index.png">
+                        </li>
+                        <li class="slider-panel">
+                            <img src="<?php bloginfo('template_url'); ?>/images/gallery/gallery_1.jpg">
+                        </li>
+                        <li class="slider-panel">
+                            <img src="<?php bloginfo('template_url'); ?>/images/donate/hero_donate.png">
+                        </li>
+                    </ul>
+                    <div class="slider-extra">
+                        <ul class="slider-nav">
+                            <li class="slider-item"></li>
+                            <li class="slider-item"></li>
+                            <li class="slider-item"></li>
+                        </ul>
                     </div>
-                    <a class="carousel-control left" role="button" href="#"><span
-                                class="glyphicon glyphicon-chevron-left"></span><span
-                                class="sr-only">Previous</span></a><a class="carousel-control right" role="button"
-                                                                      href="#"><span
-                                class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
                 </div>
             </div>
         </div>
