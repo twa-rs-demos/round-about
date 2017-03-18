@@ -48,7 +48,7 @@ $(function () {
             getjumpage(jumpInSamePage, menu.subMenus, menu.link);
         })
     });
-    
+
     $("#menuTemplate").tmpl(menus)
         .appendTo("#menu");
 

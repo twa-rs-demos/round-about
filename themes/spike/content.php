@@ -16,15 +16,23 @@
           <div class="bigger-img"><img src="<?php bloginfo('template_url'); ?>/images/article/article_banner.png"></div>
         </div>
         <div class="article-content"><?php
-          the_content( $more_link_text, $stripteaser );
+          the_content($more_link_text, $stripteaser);
           ?>
         </div>
         <div class="article-footer">
           <div class="pre-and-next">
-            <?php if (get_previous_post()) { previous_post_link("上一篇: %link","%title",true);} else { echo "上一篇：没有了，已经是最后文章";} ?>
+            <?php if (get_previous_post()) {
+              previous_post_link("上一篇: %link", "%title", true);
+            } else {
+              echo "上一篇：没有了，已经是最后文章";
+            } ?>
           </div>
           <div class="pre-and-next">
-            <?php if (get_next_post()) { next_post_link("下一篇: %link","%title",true);} else { echo "下一篇：没有了，已经是最新文章";} ?>
+            <?php if (get_next_post()) {
+              next_post_link("下一篇: %link", "%title", true);
+            } else {
+              echo "下一篇：没有了，已经是最新文章";
+            } ?>
           </div>
         </div>
       </div>
