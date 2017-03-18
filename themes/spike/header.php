@@ -4,11 +4,9 @@ $menus = array_filter($categories, function ($cat, $key) {
   return $cat->parent === 0 && $cat->name !== 'Uncategorized';
 }, ARRAY_FILTER_USE_BOTH);
 
-usort($menus, 'sort_by_description');
-
 function sort_by_description($a, $b)
 {
-  return $a->description - $b->description;
+    return $a->description - $b->description;
 }
 
 $sub_menus = array();
@@ -112,7 +110,7 @@ usort($sub_menus, 'sort_by_description');
 
   </script>
 
-  <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
 
 </head>
 <body>
