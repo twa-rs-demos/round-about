@@ -6,25 +6,42 @@
       <span class="search-name"><?php echo get_search_query(); ?></span>
     </p>
 
-    <?php if (have_posts()) : ?>
+    <?php
+    $resault = $_GET['s'];
+    $posts_info = $wpdb->get_results(
+      "SELECT *
+       FROM $wpdb->posts
+       WHERE (post_type = 'post' and post_status = 'publish' and (post_content like '%" . $resault . "%' or post_title like '%" . $resault . "%') )");
 
-      <?php while (have_posts()) : the_post(); ?>
-        <div class="search-content">
 
-          <?php get_template_part('content', get_post_format()); ?>
-        </div>
-      <?php endwhile; ?>
-    <?php else : ?>
-      <div class="entry-content">
-        <p><?php _e('抱歉没有找到该文章'); ?></p>
-      </div>
+    if (!empty($posts_info)) {
+      foreach ($posts_info as $k => $v) {
+        ?>
+        <li><span><?php the_time('Y-m-d'); ?></span>
+          <a href="<?php echo get_permalink($v->ID); ?>">
+            <?php echo $v->post_title; ?>
+          </a>
+          <?php echo $v->post_content; ?>
+        </li>
+        <?php
+      }
+    } else {
+      echo "<li>抱歉，没有找到符合搜索条件的内容！</li>";
 
-    <?php endif; ?>
+    }
+
+    ?>
+
+
 
 
     <?php global $wp_query;
     echo "搜索 <span class='search-name'>$s</span> 的结果共 " . $wp_query->found_posts . " 条";
     ?>
   </div>
-<!---->
+  <!---->
+
+
+<?php //pagination(array('post_count' => 7)); ?>
+
 <?php get_footer(); ?>

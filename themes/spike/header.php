@@ -4,6 +4,13 @@ $menus = array_filter($categories, function ($cat, $key) {
   return $cat->parent === 0 && $cat->name !== 'Uncategorized';
 }, ARRAY_FILTER_USE_BOTH);
 
+usort($menus, 'sort_by_description');
+
+function sort_by_description($a, $b)
+{
+  return $a->description - $b->description;
+}
+
 $sub_menus = array();
 foreach ($menus as $menu) {
   $menu->link = esc_url(get_permalink(get_page_by_title($menu->slug)));
@@ -13,6 +20,7 @@ foreach ($menus as $menu) {
     array_push($sub_menus, $tax_term);
   }
 }
+usort($sub_menus, 'sort_by_description');
 ?>
 
 <html>
@@ -23,6 +31,7 @@ foreach ($menus as $menu) {
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/search.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/pagenation.css" type="text/css" media="screen"/>
   <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
   <!--        media="screen"/>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
@@ -75,6 +84,12 @@ foreach ($menus as $menu) {
       </div>
     </div>
 
+
+
+
+
+
+
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -89,7 +104,13 @@ foreach ($menus as $menu) {
             {{/each}}
         </ul>
    </li>
-</script>
+
+
+
+
+
+
+  </script>
 
   <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
 
