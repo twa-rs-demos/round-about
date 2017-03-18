@@ -231,6 +231,10 @@ img {
   color: #ec4c9a;
 }
 
+.news-event-switch a {
+  color: #a8a8a8;
+}
+
 /*---------------------advanced-search---------------------------------*/
 .search-box {
   margin: 2rem 0 2rem 0;
