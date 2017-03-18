@@ -1637,16 +1637,17 @@ img {
     height: 17rem;
 }
 
-.child-profile p {
+.child-profile-p {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 25%;
     transform: translate3d(-50%, -50%, 0);
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: #fff;
-    padding: 0 1.7rem;
-    width: 100%;
+    padding: 0 1rem;
+    width: 66%;
+    opacity: 0;
 }
 
 .child-profile:hover {
@@ -1656,7 +1657,8 @@ img {
     opacity: 0.5;
 }
 
-.child-profile:hover p {
+
+.child-profile:hover + .child-profile-p {
     opacity: 1;
     color: #fff;
 }
