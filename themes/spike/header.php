@@ -23,6 +23,7 @@ foreach ($menus as $menu) {
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/bootstrap.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/search.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/pagenation.css" type="text/css" media="screen"/>
   <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
   <!--        media="screen"/>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
