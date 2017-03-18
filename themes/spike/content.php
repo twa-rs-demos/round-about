@@ -17,7 +17,7 @@
           <div class="bigger-img"><img src="<?php echo $image['url']; ?>"></div>
         </div>
         <div class="article-content"><?php
-          the_content( $more_link_text, $stripteaser );
+          the_content($more_link_text, $stripteaser);
           ?>
         </div>
         <div class="article-footer">
