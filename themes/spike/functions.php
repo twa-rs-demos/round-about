@@ -32,9 +32,9 @@ function the_breadcrumb()
   }
 }
 
+
 function wpbeginner_numeric_posts_nav()
 {
-
   if (is_singular())
     return;
 
@@ -99,7 +99,5 @@ function wpbeginner_numeric_posts_nav()
     printf('<li>%s</li>' . "\n", get_next_posts_link());
 
   echo '</ul></div>' . "\n";
-
 }
-
 ?>

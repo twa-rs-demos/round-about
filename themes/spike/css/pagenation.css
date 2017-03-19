@@ -2,8 +2,8 @@
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-  color: #fff;
-  text-decoration:none;
+  color: #3A383F;
+  text-decoration: none;
 }
 
 .navigation li {
@@ -14,14 +14,13 @@
 .navigation li a:hover,
 .navigation li.active a,
 .navigation li.disabled {
-  background-color: #6FB7E9;
+  background-color: #e8e8e8;
   border-radius: 3px;
   cursor: pointer;
-  padding: 12px;
-  /*padding: 0.75rem;*/
+  padding: 4px 8px;
 }
 
 .navigation li a:hover,
 .navigation li.active a {
-  background-color: #3C8DC5;
+  background-color: #ec4c9a;
 }
