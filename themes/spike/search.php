@@ -8,10 +8,13 @@
 
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('content', get_post_format()); ?>
+<!--        --><?php //get_template_part('content', get_post_format()); ?>
+        <?php echo the_title()?>
       <?php endwhile; ?>
-
-      <?php wpbeginner_numeric_posts_nav(); ?>
+      <div class="my-pagination">
+      <?php my_pagination(); ?>
+      </div>
+<!--      --><?php //wpbeginner_numeric_posts_nav(); ?>
     <?php else : ?>
       <?php get_template_part('content', 'none'); ?>
     <?php endif; ?>
