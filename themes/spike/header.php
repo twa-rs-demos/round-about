@@ -77,15 +77,6 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">

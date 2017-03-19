@@ -36,7 +36,7 @@ if ( ! function_exists( 'my_pagination' ) ) :
   function my_pagination() {
     global $wp_query;
 
-    $big = 999999999; 
+    $big = 999999999;
 
     echo
     paginate_links( array(
