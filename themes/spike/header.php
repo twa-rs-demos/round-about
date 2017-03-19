@@ -105,11 +105,6 @@ usort($sub_menus, 'sort_by_description');
         </ul>
    </li>
 
-
-
-
-
-
   </script>
 
   <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
