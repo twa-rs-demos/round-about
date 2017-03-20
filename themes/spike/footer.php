@@ -20,6 +20,13 @@
   </div>
 </div>
 
+<script>
+    $(function () {
+        $('.contact-us-form').click(function () {
+            alert('888')
+        })
+    })
+</script>
 
 <!--foot part-->
 <div id="footer" class="row">
@@ -64,9 +71,60 @@
     <div class="col-md-3 col-sm-6 col-xs-12 no-padding footer-item">
       <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12 no-padding">
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
-          <p class="red-text"> Apply To Volunteer Today &gt; </p>
+          <p class="red-text" data-toggle="modal" data-target="#volunteers-application-form">> Apply To Volunteer Today
+            &gt; </p>
+          <div class="modal fade" id="volunteers-application-form" tabindex="-1" role="dialog"
+               aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog volunteers-application-form-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    VOLUNTEERS APPLICATION FORM
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <?php $form = get_post(1196);
+                  echo do_shortcode('[caldera_form id="CF58cfa95eaf079"]');
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="col-two-text">Have an enquiry?</p>
-          <p class="red-text">Contact Us Now &gt; </p></div>
+          <p class="red-text" data-toggle="modal" data-target="#contact-us-form">
+            Contact Us Now >
+          </p>
+        </div>
+        <div class="modal fade" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog contact-us-form-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                  You may also fill out the form below to contact us
+                </h4>
+              </div>
+              <div class="modal-body">
+                <?php $form = get_post(1196);
+                echo do_shortcode($form->post_content);
+                ?>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+            $(function () {
+                $('[name="fld_4169303"]').attr('data-dismiss', 'modal');
+            })
+        </script>
+
       </div>
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">

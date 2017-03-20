@@ -52,6 +52,68 @@ pre {
   color: #d1d1d3;
 }
 
+#contact-us-form .contact-us-form-modal {
+  width: 860px;
+}
+
+#contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding-left: 67px;
+}
+
+#volunteers-application-form .volunteers-application-form-modal {
+  width: 860px;
+}
+
+#volunteers-application-form .volunteers-application-form-modal .modal-content .modal-header .modal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding-left: 67px;
+}
+
+.caldera_forms_form .label-field {
+  margin-bottom: 15px;
+}
+
+.caldera_forms_form .label-field div {
+  display: inline-block;
+  width: 65%;
+}
+
+.caldera_forms_form .label-field label {
+  width: 130px;
+  text-align: right;
+}
+
+.caldera_forms_form .enquiry div {
+  width: 83%;
+}
+
+.caldera_forms_form .description div {
+  width: 83%;
+}
+
+.caldera_forms_form .description label {
+  vertical-align: top;
+}
+
+.caldera_forms_form .last_row .first_col .cancel-button {
+  margin-left: 56%;
+}
+
+.caldera_forms_form .last_row .first_col .cancel-button div input {
+  background-color: #ccc;
+  color: #a8a8a8;
+  width: 94%;
+}
+
+.caldera_forms_form .last_row .submit-button div input {
+  background-color: #EC4C9A;
+  color: #FFFFFF;
+  width: 20%;
+}
+
 /*--------------------------main-title-------------------------------------*/
 .middle-title {
   color: #ec4c9a;
@@ -3705,7 +3767,14 @@ body {
 }
 
 #article .article-content {
+  font-size: 2rem;
   margin-top: 2rem;
+  margin-bottom: 7rem;
+}
+
+#article .article-footer {
+    position: absolute;
+    bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3735,13 +3804,37 @@ body {
   height: 100%;
 }
 
-#article .article-content {
-  font-size: 2rem;
-  margin-bottom: 5rem;
+#image-carousel {
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    height: 20rem;
+    border-radius: 0;
+    overflow: hidden;
 }
 
-#article .article-footer {
-  margin-bottom: 4rem;
+#image-carousel .handle {
+    width: 160%;
+    height: 100%;
+    border-radius: 0;
+}
+
+#image-carousel .handle .slide {
+    float: left;
+    position: relative;
+    width: 22%;
+    height: 100%;
+    margin-right: 2rem;
+}
+
+#image-carousel .handle .slide img {
+    display: inline-block;
+    width: 40rem;
+    height: 20rem;
+}
+
+#image-carousel .handle .slide .info p {
+    margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/

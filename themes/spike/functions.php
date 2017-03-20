@@ -17,7 +17,8 @@ function the_breadcrumb()
       }
     }
     if (is_page()) {
-      $current_category = get_category_by_slug(get_query_var('pagename'));
+      $current_page_id = get_queried_object_id();
+      $current_category = get_category_by_slug(get_the_title($current_page_id));
       if ($current_category->category_parent !== 0):
         $parent_category = get_category($current_category->category_parent);
         echo '<div class="breadcrumb">';

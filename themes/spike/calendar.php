@@ -108,18 +108,16 @@
                 <div class="calender">
                     <div id="calendar">
                         <div id="calendar-header">
-                            <div class="text-center calendar-header"><i
-                                        class="fa fa-caret-left fa-4x icon-style icon-left"></i><span
-                                        class="year-style"><!-- react-text: 3514 -->2016<!-- /react-text -->
-                                    <!-- react-text: 3515 --> <!-- /react-text --><!-- react-text: 3516 -->3
-                                    <!-- /react-text --><!-- react-text: 3517 -->月<!-- /react-text --></span><i
-                                        class="fa fa-caret-right fa-4x icon-style icon-right"></i></div>
+                            <div class="text-center calendar-header">
+                                <i class="fa fa-caret-left fa-4x icon-style icon-left" id="prevMonth"></i>
+                                <span class="year-style" id="calendarTitle">   </span>
+                                <i class="fa fa-caret-right fa-4x icon-style icon-right" id="nextMonth"></i></div>
                         </div>
                         <div id="calendar-body">
                             <div class="row">
                                 <div class="col-xs-offset-2 col-xs-10 col-sm-offset-3 col-sm-10">
                                     <div class="row weekday">
-                                        <div class="col-sm-1 col-xs-1 weekdays">日</div>
+                                        <div class="col-sm-1 col-xs-1 weekdays ">日</div>
                                         <div class="col-sm-1 col-xs-1 weekdays">一</div>
                                         <div class="col-sm-1 col-xs-1 weekdays">二</div>
                                         <div class="col-sm-1 col-xs-1 weekdays">三</div>
@@ -129,69 +127,70 @@
                                     </div>
                                     <div class="CalendarDay">
                                         <div class="row">
-                                            <div class="day col-xs-1 col-sm-1 usualDay">29</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay"  name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" aria-describedby="tooltip">
-                                                    28
+                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day"
+                                                     aria-describedby="tooltip">
+
                                                 </div>
                                             </div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">1</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">2</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">3</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">4</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" aria-describedby="tooltip">
-                                                    5
+                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="day col-xs-1 col-sm-1 usualDay">6</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">7</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">8</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">9</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">10</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">11</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">12</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="day col-xs-1 col-sm-1 usualDay">13</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">14</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">15</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" aria-describedby="tooltip">
-                                                    16
+                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+
                                                 </div>
                                             </div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">17</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">18</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">19</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="day col-xs-1 col-sm-1 usualDay">20</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">21</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">22</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">23</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">24</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">25</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">26</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="day col-xs-1 col-sm-1 usualDay">27</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" aria-describedby="tooltip">
-                                                    28
+                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+
                                                 </div>
                                             </div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">29</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" aria-describedby="tooltip">
-                                                    30
+                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+
                                                 </div>
                                             </div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">31</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">1</div>
-                                            <div class="day col-xs-1 col-sm-1 usualDay">2</div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
+                                            <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                         </div>
                                     </div>
                                 </div>
