@@ -4,8 +4,6 @@ $menus = array_filter($categories, function ($cat, $key) {
   return $cat->parent === 0 && $cat->name !== 'Uncategorized';
 }, ARRAY_FILTER_USE_BOTH);
 
-usort($menus, 'sort_by_description');
-
 function sort_by_description($a, $b)
 {
   return $a->description - $b->description;
@@ -23,6 +21,7 @@ foreach ($menus as $menu) {
 usort($sub_menus, 'sort_by_description');
 ?>
 
+
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -32,17 +31,13 @@ usort($sub_menus, 'sort_by_description');
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/main.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/search.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/pagenation.css" type="text/css" media="screen"/>
-  <?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.css" type="text/css"-->
-  <!--        media="screen"/>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
 
-  <!--  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
-  <!--  <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
-  <!--  <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/pagination.js"></script>
 
   <script type="text/javascript">
       var __injectedVars = {
@@ -51,7 +46,6 @@ usort($sub_menus, 'sort_by_description');
           currentLanguage: '<?php  echo get_bloginfo('language')?>'
       }
   </script>
-
   <script type="text/javascript">
       $(document).ready(function () {
           $(".wechat").click(function () {
@@ -83,13 +77,6 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -107,12 +94,9 @@ usort($sub_menus, 'sort_by_description');
 
 
 
-
-
-
   </script>
 
-  <script src="<?php bloginfo('template_url'); ?>/js/volunteers-form.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
 
 </head>
 <body>

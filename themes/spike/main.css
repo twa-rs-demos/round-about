@@ -226,7 +226,7 @@ img {
   line-height: 2.8rem;
   margin: 0;
   position: relative;
-  height: 5.6em;
+  height: 8.4rem;
   overflow: hidden;
 }
 
@@ -889,24 +889,6 @@ img {
   line-height: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-}
-
-#news-event #events .text p {
-  font-size: 2rem;
-  line-height: 2.8rem;
-  margin: 0;
-  position: relative;
-  height: 5.6em;
-  overflow: hidden;
-}
-
-#news-event #events .text p::after {
-  content: "...";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0 2rem 1px 3rem;
-  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
 }
 
 #news-event #date-list h4 {
@@ -1693,16 +1675,17 @@ img {
   height: 17rem;
 }
 
-.child-profile p {
+.child-profile-p {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 25%;
   transform: translate3d(-50%, -50%, 0);
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: #fff;
   padding: 0 1.7rem;
-  width: 100%;
+  width: 66%;
+  opacity: 0;
 }
 
 .child-profile:hover {
@@ -1712,7 +1695,7 @@ img {
   opacity: 0.5;
 }
 
-.child-profile:hover p {
+.child-profile:hover + .child-profile-p {
   opacity: 1;
   color: #fff;
 }

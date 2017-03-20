@@ -32,38 +32,19 @@ function the_breadcrumb()
   }
 }
 
-function pagination($query_string)
-{
-  global $posts_per_page, $paged;
-  $my_query = new WP_Query($query_string . "&posts_per_page=-1");
-  $total_posts = $my_query->post_count;
-  if (empty($paged)) $paged = 1;
-  $prev = $paged - 1;
-  $next = $paged + 1;
-  $range = 2; // only edit this if you want to show more page-links
-  $showitems = ($range * 2) + 1;
+if ( ! function_exists( 'my_pagination' ) ) :
+  function my_pagination() {
+    global $wp_query;
 
-  $pages = ceil($total_posts / $posts_per_page);
-  if (1 != $pages) {
-    echo "<div class='pagination'>";
-    echo ($paged > 2 && $paged + $range + 1 > $pages && $showitems < $pages) ? "
-<a href='" . get_pagenum_link(1) . "'>最前</a>" : "";
-    echo ($paged > 1 && $showitems < $pages) ? "
-<a href='" . get_pagenum_link($prev) . "'>上一页</a>" : "";
+    $big = 999999999;
 
-    for ($i = 1; $i <= $pages; $i++) {
-      if (1 != $pages && (!($i >= $paged + $range + 1 ||
-            $i <= $paged - $range - 1) || $pages <= $showitems)
-      ) {
-        echo ($paged == $i) ? "<span class='current'>" . $i . "</span>" :
-          "<a href='" . get_pagenum_link($i) . "' class='inactive' >" . $i . "</a>";
-      }
-    }
-
-    echo ($paged < $pages && $showitems < $pages) ?
-      "<a href='" . get_pagenum_link($next) . "'>下一页</a>" : "";
-    echo ($paged < $pages - 1 && $paged + $range - 1 < $pages && $showitems < $pages) ?
-      "<a href='" . get_pagenum_link($pages) . "'>最后</a>" : "";
-    echo "</div>\n";
+    echo
+    paginate_links( array(
+      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      'format' => '?paged=%#%',
+      'current' => max( 1, get_query_var('paged') ),
+      'total' => $wp_query->max_num_pages
+    ) );
   }
-}
+endif;
+?>

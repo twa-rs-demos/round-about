@@ -14,12 +14,12 @@ db_password=wordpress
 ## 文件夹权限修改
 - 每次启动容器之后，运行脚本
 ```
-./owner_wp
+./before_upload_files
 ```
 
 - 在 git pull 或者 git push 之前，运行脚本
 ```
-./owner_me
+./before_git_pull
 ```
 
 

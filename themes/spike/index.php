@@ -8,9 +8,6 @@ function wpjam_add_styles() {
 add_action( 'wp_enqueue_scripts', 'wpjam_add_styles' );
 ?>
 
-
-
-
 <div id="home" class="container-fluid no-padding">
   <div class="picture-max"
        style="background-repeat: no-repeat; background-size: cover; background-image: url(&quot;/wp-content/themes/spike/images/home/hero_index.png&quot;); background-position: center center;">
