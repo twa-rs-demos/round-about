@@ -17,7 +17,8 @@ function the_breadcrumb()
       }
     }
     if (is_page()) {
-      $current_category = get_category_by_slug(get_query_var('pagename'));
+      $current_page_id = get_queried_object_id();
+      $current_category = get_category_by_slug(get_the_title($current_page_id));
       if ($current_category->category_parent !== 0):
         $parent_category = get_category($current_category->category_parent);
         echo '<div class="breadcrumb">';
@@ -32,19 +33,20 @@ function the_breadcrumb()
   }
 }
 
-if ( ! function_exists( 'my_pagination' ) ) :
-  function my_pagination() {
+if (!function_exists('my_pagination')) :
+  function my_pagination()
+  {
     global $wp_query;
 
     $big = 999999999;
 
     echo
-    paginate_links( array(
-      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+    paginate_links(array(
+      'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
       'format' => '?paged=%#%',
-      'current' => max( 1, get_query_var('paged') ),
+      'current' => max(1, get_query_var('paged')),
       'total' => $wp_query->max_num_pages
-    ) );
+    ));
   }
 endif;
 ?>
