@@ -97,6 +97,7 @@ usort($sub_menus, 'sort_by_description');
   </script>
 
   <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/calendar.js"></script>
 
 </head>
 <body>
