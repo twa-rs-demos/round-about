@@ -91,8 +91,7 @@
               </div>
               <div class="modal-body">
                 <?php $form = get_post(1196);
-                echo do_shortcode('[caldera_form id="CF58cf651f7daed"]');
-                add_filter('my_string_filter_hook_tag_name', 'do_shortcode');
+                echo do_shortcode($form->post_content);
                 ?>
               </div>
             </div>
