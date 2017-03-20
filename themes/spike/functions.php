@@ -31,10 +31,7 @@ function the_breadcrumb()
     }
   }
 }
-?>
 
-
-<?php // Numbered Pagination
 function pagination($query_string)
 {
   global $posts_per_page, $paged;

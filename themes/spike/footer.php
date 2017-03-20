@@ -20,6 +20,13 @@
   </div>
 </div>
 
+<script>
+    $(function () {
+        $('.contact-us-form').click(function () {
+            alert('888')
+        })
+    })
+</script>
 
 <!--foot part-->
 <div id="footer" class="row">
@@ -66,7 +73,38 @@
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
           <p class="red-text"> Apply To Volunteer Today &gt; </p>
           <p class="col-two-text">Have an enquiry?</p>
-          <p class="red-text">Contact Us Now &gt; </p></div>
+          <p class="red-text" data-toggle="modal" data-target="#contact-us-form">
+            Contact Us Now >
+          </p>
+        </div>
+        <div class="modal fade" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+          <div class="modal-dialog contact-us-form-modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                  You may also fill out the form below to contact us
+                </h4>
+              </div>
+              <div class="modal-body">
+                <?php $form = get_post(1196);
+                echo do_shortcode('[caldera_form id="CF58cf651f7daed"]');
+                add_filter('my_string_filter_hook_tag_name', 'do_shortcode');
+                ?>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+            $(function () {
+                $('#fld_4169303_1').attr('data-dismiss', 'modal');
+            })
+        </script>
+
       </div>
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">

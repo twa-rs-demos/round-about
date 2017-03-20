@@ -52,6 +52,54 @@ pre {
   color: #d1d1d3;
 }
 
+#contact-us-form .contact-us-form-modal {
+  width: 860px;
+}
+
+#contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding-left: 67px;
+}
+
+.caldera_forms_form .label-field div {
+  display: inline-block;
+  width: 65%;
+}
+
+.caldera_forms_form .label-field label {
+  width: 130px;
+  text-align: right;
+}
+
+.caldera_forms_form .enquiry div {
+  width: 83%;
+}
+
+.caldera_forms_form .description div {
+  width: 83%;
+}
+
+.caldera_forms_form .description label {
+  vertical-align: top;
+}
+
+.caldera_forms_form .last_row .first_col .cancel-button {
+  margin-left: 56%;
+}
+
+.caldera_forms_form .last_row .first_col .cancel-button div input {
+  background-color: #ccc;
+  color: #a8a8a8;
+  width: 94%;
+}
+
+.caldera_forms_form .last_row .submit-button div input {
+  background-color: #EC4C9A;
+  color: #FFFFFF;
+  width: 20%;
+}
+
 /*--------------------------main-title-------------------------------------*/
 .middle-title {
   color: #ec4c9a;
