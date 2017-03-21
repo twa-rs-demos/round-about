@@ -2278,6 +2278,37 @@ img {
   font-weight: 700;
 }
 
+
+
+#privacy-policy {
+  width: 90%;
+  margin: 0 auto;
+  /*privacyPolicy*/
+}
+
+
+#privacy-policy .privacy-policy-title {
+  font-size: 4.0rem;
+  color: #74298e;
+}
+
+#privacy-policy .legal-content {
+  margin-bottom: 2.5rem;
+}
+
+#privacy-policy .li-item {
+  margin-bottom: .5rem;
+}
+
+#privacy-policy .item-sections {
+  margin-bottom: 3.0rem;
+}
+
+#privacy-policy .item-title {
+  font-weight: 700;
+}
+
+
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
 }

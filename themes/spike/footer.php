@@ -145,9 +145,9 @@
     </div>
   </div>
   <div class="col-sm-offset-6 col-sm-6 col-xs-12">
-    <div class="footer-bottom-text">@2016 Roundabout China<a
-        class="footBottom-info" href="/tw-ra/legal">&nbsp; Legal</a>|
-      <a class="footBottom-info" href="/tw-ra/privacypolicy"> Privacy Policy</a></div>
+    <div class="footer-bottom-text">@2016 Roundabout China
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('legal'))) ?>">&nbsp; Legal</a>|
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('privacy-policy'))) ?>"> Privacy Policy</a></div>
   </div>
 </div>
 
