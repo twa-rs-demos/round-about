@@ -86,8 +86,8 @@
                   </h4>
                 </div>
                 <div class="modal-body">
-                  <?php $form = get_post(1196);
-                  echo do_shortcode('[caldera_form id="CF58cfa95eaf079"]');
+                  <?php $form = get_post(1234);
+                  echo do_shortcode($form->post_content);
                   ?>
                 </div>
               </div>
