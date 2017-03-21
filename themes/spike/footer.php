@@ -65,9 +65,9 @@
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
           <p class="red-text" data-toggle="modal" data-target="#volunteers-application-form">> Apply To Volunteer Today
             &gt; </p>
-          <div class="modal fade" id="volunteers-application-form" tabindex="-1" role="dialog"
+          <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
                aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog volunteers-application-form-modal">
+            <div class="modal-dialog form-modal">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -90,9 +90,9 @@
             Contact Us Now >
           </p>
         </div>
-        <div class="modal fade" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade caldera-forms" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
-          <div class="modal-dialog contact-us-form-modal">
+          <div class="modal-dialog form-modal">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
