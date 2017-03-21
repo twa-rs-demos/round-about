@@ -3235,7 +3235,7 @@ img {
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .eventDay {
+#calendar #calendar-body .CalendarDay .new-events-Day{
   background-color: #ec4c9a;
 }
 
