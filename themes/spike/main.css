@@ -86,32 +86,86 @@ pre {
   text-align: right;
 }
 
-.caldera_forms_form .enquiry div {
-  width: 83%;
-}
-
-.caldera_forms_form .description div {
+.caldera_forms_form .full-width div {
   width: 83%;
 }
 
 .caldera_forms_form .description label {
   vertical-align: top;
+  margin-top: 5px;
 }
 
 .caldera_forms_form .last_row .first_col .cancel-button {
   margin-left: 56%;
 }
 
-.caldera_forms_form .last_row .first_col .cancel-button div input {
+.caldera_forms_form .cancel-button div input {
   background-color: #ccc;
   color: #a8a8a8;
   width: 94%;
 }
 
-.caldera_forms_form .last_row .submit-button div input {
+.caldera_forms_form .submit-button div input {
   background-color: #EC4C9A;
   color: #FFFFFF;
   width: 20%;
+}
+
+.caldera_forms_form .left-label label {
+  text-align: left;
+}
+
+.caldera_forms_form .left-label .control-label {
+  font-weight: 100;
+}
+
+.caldera_forms_form .address-description {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.caldera_forms_form .language-checkbox div {
+  marin-left: 6%;
+}
+
+.caldera_forms_form .language-checkbox .control-label {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.caldera_forms_form .language-checkbox .checkbox {
+  display: inline-block;
+  margin-right: 12%;
+}
+
+.caldera_forms_form .list-items-description {
+  margin: 10px 0 25px 0;
+  font-size: 1.5rem;
+}
+
+.caldera_forms_form .add-new-field-button {
+  border: none;
+  color: #ec4c9a;
+  font-size: 1.7rem;
+  background: none;
+  outline: none;
+  margin-left: 55%;
+}
+
+.caldera_forms_form .notes-title {
+  font-size: 1.7rem;
+  color: #ec4c9a;
+}
+
+.caldera_forms_form .notes {
+  margin: 5px 0;
+  font-size: 1.6rem;
+}
+
+.caldera_forms_form .notes-description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 /*--------------------------main-title-------------------------------------*/
@@ -3773,8 +3827,8 @@ body {
 }
 
 #article .article-footer {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3805,36 +3859,36 @@ body {
 }
 
 #image-carousel {
-    margin: 0;
-    padding: 0;
-    margin-top: 3rem;
-    height: 20rem;
-    border-radius: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+  height: 20rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 #image-carousel .handle {
-    width: 160%;
-    height: 100%;
-    border-radius: 0;
+  width: 160%;
+  height: 100%;
+  border-radius: 0;
 }
 
 #image-carousel .handle .slide {
-    float: left;
-    position: relative;
-    width: 22%;
-    height: 100%;
-    margin-right: 2rem;
+  float: left;
+  position: relative;
+  width: 22%;
+  height: 100%;
+  margin-right: 2rem;
 }
 
 #image-carousel .handle .slide img {
-    display: inline-block;
-    width: 40rem;
-    height: 20rem;
+  display: inline-block;
+  width: 40rem;
+  height: 20rem;
 }
 
 #image-carousel .handle .slide .info p {
-    margin: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/
