@@ -20,14 +20,6 @@
   </div>
 </div>
 
-<script>
-    $(function () {
-        $('.contact-us-form').click(function () {
-            alert('888')
-        })
-    })
-</script>
-
 <!--foot part-->
 <div id="footer" class="row">
   <div>
@@ -119,12 +111,6 @@
           </div>
         </div>
 
-        <script>
-            $(function () {
-                $('.caldera_forms_form [value=Cancel]').attr('data-dismiss', 'modal');
-            })
-        </script>
-
       </div>
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">
@@ -151,8 +137,8 @@
   </div>
 </div>
 
-
 </div>
 </div>
 </body>
+<script src="<?php bloginfo('template_url'); ?>/js/footer.js"></script>
 </html>
