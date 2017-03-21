@@ -14,17 +14,18 @@ $(function () {
         };
     })();
 
+
     // 表格中显示日期
     showCalendarData();
     // 绑定事件
     bindEvent();
 
 
-
     /**
      * 表格中显示数据，并设置类名
      */
     function showCalendarData() {
+
         var _year = dateObj.getDate().getFullYear();
         var _month = dateObj.getDate().getMonth() + 1;
         var _dateStr = getDateStr(dateObj.getDate());
@@ -39,16 +40,58 @@ $(function () {
         var _tds = $("div[name='calendar-day']");
         var _firstDay = new Date(_year, _month - 1, 1);  // 当前月第一天
         for (var i = 0; i < _tds.length; i++) {
-            var _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());
+            var _thisDay = new Date(_year, _month, i + 1 - _firstDay.getDay());
             var _thisDayStr = getDateStr(_thisDay);
             _tds[i].innerText = _thisDay.getDate();
-            //_tds[i].data = _thisDayStr;
             _tds[i].setAttribute('data', _thisDayStr);
+
+            var curr_date = _thisDay.getDate();
+            var curr_month = _thisDay.getMonth();
+            var curr_year = _thisDay.getFullYear();
+
+
+            var formatDate = curr_year + '-' + format(curr_month) + '-' + format(curr_date);
+
+
+            _newsEvents.find((event) => {
+
+                if (event.post_modified.split(" ")[0] == formatDate) {
+
+                    _tds[i].className += ' new-events-Day';
+
+                    console.log( _tds[i].className)
+
+                    return true;
+                } else {
+                    var classNameArr = _tds[i].className.split(" ");
+                    var index = classNameArr.indexOf('new-events-Day');
+                    if (index > 0) {
+                        classNameArr.splice(index, 1);
+                    }
+                    _tds[i].className = classNameArr.join(" ");
+                }
+            })
+
+
             if (_thisDayStr == getDateStr(new Date())) {    // 当前天
-                _tds[i].className += ' currentDay';
+                _tds[i].className += ' current-day';
             }
         }
     }
+
+
+    function format(m) {
+        return m < 10 ? '0' + m : m
+    }
+
+
+
+
+    // $(".new-events-Day").hover(function () {
+    //     $(this).append("<div class='newbox'>I'm new box by prepend</div>");
+    // }, function () {
+    //     $("p").css("background-color", "pink");
+    // });
 
     /**
      * 绑定上个月下个月事件

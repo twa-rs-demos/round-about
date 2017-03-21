@@ -39,6 +39,18 @@ usort($sub_menus, 'sort_by_description');
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/pagination.js"></script>
+    <script type="text/javascript">
+        <?php
+        $category = get_category_by_slug('newsandevents_zh');
+        $args = array(
+            'category' => get_cat_ID($category->name)
+        );
+        $posts_array = get_posts($args);
+        ?>
+        var  _newsEvents = JSON.parse('<?php echo json_encode($posts_array)?>');
+    </script>
+
+
 
   <script type="text/javascript">
       var __injectedVars = {
