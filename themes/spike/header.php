@@ -22,7 +22,6 @@ foreach ($menus as $menu) {
 usort($sub_menus, 'sort_by_description');
 ?>
 
-
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -78,8 +77,6 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -94,10 +91,6 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
-
-
-
-
 
   </script>
 
@@ -215,7 +208,3 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
-
-
