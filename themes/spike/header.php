@@ -34,6 +34,7 @@ usort($sub_menus, 'sort_by_description');
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
@@ -77,6 +78,12 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
+
+
+
+
+
+
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -91,6 +98,12 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
+
+
+
+
+
+
 
   </script>
 
@@ -107,7 +120,7 @@ usort($sub_menus, 'sort_by_description');
       <div class="top-info row">
         <div>
           <div class="col-md-6 col-sm-4 col-xs-3">
-            <div class="row logo"><a href="http://demo:8080/">
+            <div class="row logo"><a href="<?php echo esc_url(home_url('/')); ?>">
                 <img
                   src="<?php bloginfo('template_url'); ?>/images/home/index_logo1.png"
                   alt="logo"></a></div>
@@ -115,10 +128,10 @@ usort($sub_menus, 'sort_by_description');
           <div class="col-md-6 col-sm-8 col-xs-9 text-right no-padding">
             <div class="right-topinfo">
               <a class="top-right-word  no-padding"
-                 href="#">
+                 href="<?php echo esc_url(get_permalink(get_page_by_title('newsletter_center_zh'))) ?>">
                 月报中心
               </a>
-              <a href="#" class="top-right-word no-padding">月报申领</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>#apply-monthly-report" class="top-right-word no-padding">月报申领</a>
               <?php pll_the_languages(); ?>
               <a class="no-padding top-left-icon ">
                 <img class="icon wechat"

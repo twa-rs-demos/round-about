@@ -38,7 +38,6 @@ var jumpInSamePages = [{
 
 $(function () {
     let menus = __injectedVars.menus.map((menu) => {
-
         let subMenus = __injectedVars.subMenus.filter((subMenu) => {
             return subMenu.parent === menu.cat_ID;
         });
@@ -77,6 +76,7 @@ $(function () {
 
     $("#drawerMenuTemplate").tmpl(menus)
         .appendTo("#drawerMenu");
+
 
     $('.menu-list').hover(function () {
         $(this).find('.dropdown').css('display', 'block');

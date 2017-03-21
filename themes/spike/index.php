@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 <?php
-function wpjam_add_styles() {
-    wp_register_script('test',get_template_directory_uri() .'/test.js',array( 'jquery' ), '1.0', true );
-    wp_enqueue_script('test');
+function wpjam_add_styles()
+{
+  wp_register_script('test', get_template_directory_uri() . '/test.js', array('jquery'), '1.0', true);
+  wp_enqueue_script('test');
 }
 
-add_action( 'wp_enqueue_scripts', 'wpjam_add_styles' );
+add_action('wp_enqueue_scripts', 'wpjam_add_styles');
 ?>
 
 <div id="home" class="container-fluid no-padding">
@@ -58,11 +59,13 @@ add_action( 'wp_enqueue_scripts', 'wpjam_add_styles' );
         <p class="middle-describe">灾区救助</p></div>
       <div class="col-md-2 col-xs-6 icon-container">
         <div class="job-icons-container">
-          <img src="<?php bloginfo('template_url'); ?>/images/home/icon_community assistance_small.png" alt="社区帮扶"></div>
+          <img src="<?php bloginfo('template_url'); ?>/images/home/icon_community assistance_small.png" alt="社区帮扶">
+        </div>
         <p class="middle-describe">社区帮扶</p></div>
     </div>
     <div class="ourwork-know-more">
-      <a class="know-more-text" href="http://demo:8080/zh/ourwork_zh/">了解更多 &gt;</a>
+      <a class="know-more-text" href="<?php echo esc_url(get_permalink(get_page_by_title('ourwork_zh'))); ?>">了解更多
+        &gt;</a>
     </div>
   </div>
 </div>
