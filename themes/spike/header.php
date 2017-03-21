@@ -9,6 +9,7 @@ function sort_by_description($a, $b)
   return $a->description - $b->description;
 }
 
+usort($menus, 'sort_by_description');
 $sub_menus = array();
 foreach ($menus as $menu) {
   $menu->link = esc_url(get_permalink(get_page_by_title($menu->slug)));
@@ -20,7 +21,6 @@ foreach ($menus as $menu) {
 }
 usort($sub_menus, 'sort_by_description');
 ?>
-
 
 <html>
 <head>
@@ -92,8 +92,6 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
-
-
 
   </script>
 
@@ -211,7 +209,3 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
-
-
