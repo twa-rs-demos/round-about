@@ -1,32 +1,33 @@
-#search-result{
-  margin: 0 30px;
+#search-result {
+  margin: 0 13rem;
 }
+
 #search-result .search {
   color: #ec4c9a;
-  font-size: 4.2rem;
+  font-size: 4.5rem;
   line-height: 5.5rem;
-  margin: 4rem 0 2rem 0;
+  margin: 5rem 0 2rem 0;
 }
 
 #search-result .result-query {
   color: #575757;
   font-size: 2rem;
+  margin-top: 3rem;
 }
 
 #search-result .search-name {
-  color: #ec4c9a;
   font-size: 2rem;
 }
 
-#search-result strong.search-excerpt {
-
-  color: #ec4c9a;
+.post-item {
+  margin-top: 25px;
 }
 
-#search-result .search-content{
-  margin: 2rem 0 2rem 0;
+.entry-content p{
+  font-size: 1.8rem;
 }
 
-#search-result .result-title{
-  text-align: center;
+.entry-content h3{
+  margin-top: 0;
 }
+

@@ -92,9 +92,13 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
+
+
+
   </script>
 
-    <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/calendar.js"></script>
 
 </head>
 <body>
@@ -161,6 +165,7 @@ usort($sub_menus, 'sort_by_description');
             </div>
 
             <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
+
               <div class="search">
                 <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                   <input type="text" placeholder="搜索本站" name="s" id="s">
@@ -207,4 +212,6 @@ usort($sub_menus, 'sort_by_description');
       </div>
     </div>
 
-      
+
+
+
