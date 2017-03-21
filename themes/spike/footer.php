@@ -129,8 +129,12 @@
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">
       <div>
-        <div><a class="col-three-text" href="/tw-ra/newsAndEvent/newsLetterCenter">NewsletterCenter</a></div>
-        <div><a class="col-three-text" href="/tw-ra/newsAndEvent">CenterNews&amp;Event</a></div>
+        <div><a class="col-three-text"
+                href="<?php echo esc_url(get_permalink(get_page_by_title('newsletter_center_zh'))) ?>">NewsletterCenter</a>
+        </div>
+        <div><a class="col-three-text"
+                href="<?php echo esc_url(get_permalink(get_page_by_title('newsandevents_zh'))) ?>">CenterNews&amp;Event</a>
+        </div>
       </div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 no-padding footer-item">
@@ -146,8 +150,10 @@
   </div>
   <div class="col-sm-offset-6 col-sm-6 col-xs-12">
     <div class="footer-bottom-text">@2016 Roundabout China
-      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('legal'))) ?>">&nbsp; Legal</a>|
-      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('privacy-policy'))) ?>"> Privacy Policy</a></div>
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('legal'))) ?>">&nbsp;
+        Legal</a>|
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('privacy-policy'))) ?>">
+        Privacy Policy</a></div>
   </div>
 </div>
 
