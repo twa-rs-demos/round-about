@@ -59,17 +59,32 @@ pre {
 #contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
   font-weight: 600;
-  padding-left: 67px;
+  padding-left: 8%;
 }
 
-#volunteers-application-form .volunteers-application-form-modal {
+.caldera-forms .form-modal {
   width: 860px;
 }
 
-#volunteers-application-form .volunteers-application-form-modal .modal-content .modal-header .modal-title {
+.caldera-forms .form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
   font-weight: 600;
   padding-left: 67px;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title {
+  padding-left: 16px;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-statement {
+  font-size: 1.5rem;
+  margin-left: 24%;
+  color: #ec4c9a;
 }
 
 .caldera_forms_form .label-field {
@@ -86,32 +101,87 @@ pre {
   text-align: right;
 }
 
-.caldera_forms_form .enquiry div {
-  width: 83%;
-}
-
-.caldera_forms_form .description div {
+.caldera_forms_form .full-width div {
   width: 83%;
 }
 
 .caldera_forms_form .description label {
   vertical-align: top;
+  margin-top: 5px;
 }
 
 .caldera_forms_form .last_row .first_col .cancel-button {
   margin-left: 56%;
 }
 
-.caldera_forms_form .last_row .first_col .cancel-button div input {
+.caldera_forms_form .cancel-button div input {
   background-color: #ccc;
   color: #a8a8a8;
   width: 94%;
 }
 
-.caldera_forms_form .last_row .submit-button div input {
+.caldera_forms_form .submit-button div input {
   background-color: #EC4C9A;
   color: #FFFFFF;
   width: 20%;
+}
+
+.caldera_forms_form .left-label label {
+  text-align: left;
+}
+
+.caldera_forms_form .left-label .control-label {
+  font-weight: 100;
+}
+
+.caldera_forms_form .address-description {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.caldera_forms_form .language-checkbox div {
+  marin-left: 6%;
+}
+
+.caldera_forms_form .language-checkbox .control-label {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.caldera_forms_form .language-checkbox .checkbox {
+  display: inline-block;
+  margin-right: 12%;
+}
+
+.caldera_forms_form .list-items-description {
+  margin: 10px 0 25px 0;
+  font-size: 1.5rem;
+}
+
+.caldera_forms_form .add-new-field-button {
+  border: none;
+  color: #ec4c9a;
+  font-size: 1.7rem;
+  background: none;
+  outline: none;
+  margin-left: 55%;
+}
+
+.caldera_forms_form .notes-title {
+  font-size: 1.7rem;
+  color: #ec4c9a;
+}
+
+.caldera_forms_form .notes {
+  margin: 5px 0;
+  font-size: 1.6rem;
+}
+
+.caldera_forms_form .notes-description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 /*--------------------------main-title-------------------------------------*/
@@ -3161,7 +3231,7 @@ img {
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .eventDay {
+#calendar #calendar-body .CalendarDay .new-events-Day{
   background-color: #ec4c9a;
 }
 
