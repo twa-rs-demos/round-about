@@ -1126,7 +1126,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -30px;
+  top: -38px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -2278,14 +2278,11 @@ img {
   font-weight: 700;
 }
 
-
-
 #privacy-policy {
   width: 90%;
   margin: 0 auto;
   /*privacyPolicy*/
 }
-
 
 #privacy-policy .privacy-policy-title {
   font-size: 4.0rem;
@@ -2307,7 +2304,6 @@ img {
 #privacy-policy .item-title {
   font-weight: 700;
 }
-
 
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
@@ -3659,6 +3655,11 @@ body {
   color: #575757;
 }
 
+#community-center #community-content .get-involved-link {
+  text-decoration: none;
+  color: #ec4c9a;
+}
+
 #community-center #community-content .fist-par {
   margin-top: 72px;
 }
@@ -3805,8 +3806,8 @@ body {
 }
 
 #article .article-footer {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3837,36 +3838,36 @@ body {
 }
 
 #image-carousel {
-    margin: 0;
-    padding: 0;
-    margin-top: 3rem;
-    height: 20rem;
-    border-radius: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+  height: 20rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 #image-carousel .handle {
-    width: 160%;
-    height: 100%;
-    border-radius: 0;
+  width: 160%;
+  height: 100%;
+  border-radius: 0;
 }
 
 #image-carousel .handle .slide {
-    float: left;
-    position: relative;
-    width: 22%;
-    height: 100%;
-    margin-right: 2rem;
+  float: left;
+  position: relative;
+  width: 22%;
+  height: 100%;
+  margin-right: 2rem;
 }
 
 #image-carousel .handle .slide img {
-    display: inline-block;
-    width: 40rem;
-    height: 20rem;
+  display: inline-block;
+  width: 40rem;
+  height: 20rem;
 }
 
 #image-carousel .handle .slide .info p {
-    margin: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/
