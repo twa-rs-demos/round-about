@@ -22,7 +22,6 @@ foreach ($menus as $menu) {
 usort($sub_menus, 'sort_by_description');
 ?>
 
-
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -35,6 +34,7 @@ usort($sub_menus, 'sort_by_description');
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
@@ -78,8 +78,6 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -94,10 +92,6 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
-
-
-
-
 
   </script>
 
@@ -215,7 +209,3 @@ usort($sub_menus, 'sort_by_description');
         </div>
       </div>
     </div>
-
-
-
-

@@ -2,7 +2,7 @@
 
 <div id="news-and-event">
     <div class="picture-max"
-         style="background-repeat: no-repeat; background-size: cover; background-image: url(<?php bloginfo('template_url'); ?>/images/newsAndEvent/hero_news&events.png); background-position: center center;"></div>
+         style="background-repeat: no-repeat; background-size: cover; background-image: url(<?php bloginfo('template_url'); ?>/images/newsAndEvent/hero_news&events.pngz); background-position: center center;"></div>
     <div class="container news-event-title"><h2 class="middle-title">众爱新闻</h2>
         <div class="news_event_category row">
             <div class="col-md-offset-1 col-md-10">
@@ -81,8 +81,6 @@
                             </div>
 
                         <?php } ?>
-
-
 
                         <div class="pagination-project">
                             <ul class="pagination">
