@@ -58,7 +58,7 @@ pre {
 
 #contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 8%;
 }
 
@@ -68,7 +68,7 @@ pre {
 
 .caldera-forms .form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 67px;
 }
 
@@ -99,6 +99,8 @@ pre {
 .caldera_forms_form .label-field label {
   width: 130px;
   text-align: right;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
 .caldera_forms_form .full-width div {
@@ -2348,14 +2350,11 @@ img {
   font-weight: 700;
 }
 
-
-
 #privacy-policy {
   width: 90%;
   margin: 0 auto;
   /*privacyPolicy*/
 }
-
 
 #privacy-policy .privacy-policy-title {
   font-size: 4.0rem;
@@ -2377,7 +2376,6 @@ img {
 #privacy-policy .item-title {
   font-weight: 700;
 }
-
 
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
@@ -3235,7 +3233,7 @@ img {
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .new-events-Day{
+#calendar #calendar-body .CalendarDay .new-events-Day {
   background-color: #ec4c9a;
 }
 
