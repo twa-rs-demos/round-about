@@ -121,7 +121,7 @@
 
         <script>
             $(function () {
-                $('[name="fld_4169303"]').attr('data-dismiss', 'modal');
+                $('.caldera_forms_form [value=Cancel]').attr('data-dismiss', 'modal');
             })
         </script>
 
