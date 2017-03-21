@@ -34,6 +34,7 @@ usort($sub_menus, 'sort_by_description');
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
@@ -91,12 +92,9 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
-
-
-
   </script>
 
-  <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
 
 </head>
 <body>
@@ -163,7 +161,6 @@ usort($sub_menus, 'sort_by_description');
             </div>
 
             <div class="col-md-2 col-xs-5 text-right no-padding header-search-box">
-
               <div class="search">
                 <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                   <input type="text" placeholder="搜索本站" name="s" id="s">
@@ -210,6 +207,4 @@ usort($sub_menus, 'sort_by_description');
       </div>
     </div>
 
-
-
-
+      

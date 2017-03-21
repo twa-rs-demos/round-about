@@ -2324,6 +2324,7 @@ img {
 #donate-things-rules .close-btn {
   font-size: 1.9rem;
   outline: none;
+  cursor: pointer;
 }
 
 #donate-things-rules button {
