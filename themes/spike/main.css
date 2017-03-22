@@ -1207,7 +1207,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -30px;
+  top: -38px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -3734,6 +3734,11 @@ body {
 #community-center #community-content {
   font-size: 2rem;
   color: #575757;
+}
+
+#community-center #community-content .get-involved-link {
+  text-decoration: none;
+  color: #ec4c9a;
 }
 
 #community-center #community-content .fist-par {
