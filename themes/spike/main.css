@@ -58,18 +58,33 @@ pre {
 
 #contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
-  padding-left: 67px;
+  font-weight: 500;
+  padding-left: 8%;
 }
 
-#volunteers-application-form .volunteers-application-form-modal {
+.caldera-forms .form-modal {
   width: 860px;
 }
 
-#volunteers-application-form .volunteers-application-form-modal .modal-content .modal-header .modal-title {
+.caldera-forms .form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 67px;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title {
+  padding-left: 16px;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-statement {
+  font-size: 1.5rem;
+  margin-left: 24%;
+  color: #ec4c9a;
 }
 
 .caldera_forms_form .label-field {
@@ -84,34 +99,100 @@ pre {
 .caldera_forms_form .label-field label {
   width: 130px;
   text-align: right;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
-.caldera_forms_form .enquiry div {
-  width: 83%;
-}
-
-.caldera_forms_form .description div {
+.caldera_forms_form .full-width div {
   width: 83%;
 }
 
 .caldera_forms_form .description label {
   vertical-align: top;
+  margin-top: 5px;
 }
 
 .caldera_forms_form .last_row .first_col .cancel-button {
   margin-left: 56%;
 }
 
-.caldera_forms_form .last_row .first_col .cancel-button div input {
+.caldera_forms_form .cancel-button div input {
   background-color: #ccc;
   color: #a8a8a8;
   width: 94%;
 }
 
-.caldera_forms_form .last_row .submit-button div input {
+.caldera_forms_form .submit-button div input {
   background-color: #EC4C9A;
   color: #FFFFFF;
   width: 20%;
+}
+
+.caldera_forms_form .left-label label {
+  text-align: left;
+}
+
+.caldera_forms_form .left-label .control-label {
+  font-weight: 100;
+}
+
+.caldera_forms_form .address-description {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.caldera_forms_form .language-checkbox div {
+  marin-left: 6%;
+}
+
+.caldera_forms_form .language-checkbox .control-label {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.caldera_forms_form .language-checkbox .checkbox {
+  display: inline-block;
+  margin-right: 12%;
+}
+
+.caldera_forms_form .list-items-description {
+  margin: 10px 0 25px 0;
+  font-size: 1.5rem;
+}
+
+.caldera_forms_form .add-new-field-button {
+  border: none;
+  color: #ec4c9a;
+  font-size: 1.7rem;
+  background: none;
+  outline: none;
+  margin-left: 55%;
+}
+
+.caldera_forms_form .notes-title {
+  font-size: 1.7rem;
+  color: #ec4c9a;
+}
+
+.caldera_forms_form .notes {
+  margin: 5px 0;
+  font-size: 1.6rem;
+}
+
+.caldera_forms_form .notes-description {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.caldera_forms_form .donations-form-description {
+  font-size: 1.5rem;
+  line-height: 22px;
+}
+
+#CF58d08eacd85d1_1-row-1 {
+  margin-bottom: 30px;
 }
 
 /*--------------------------main-title-------------------------------------*/
@@ -1126,7 +1207,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -30px;
+  top: -38px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -2278,6 +2359,33 @@ img {
   font-weight: 700;
 }
 
+#privacy-policy {
+  width: 90%;
+  margin: 0 auto;
+  /*privacyPolicy*/
+}
+
+#privacy-policy .privacy-policy-title {
+  font-size: 4.0rem;
+  color: #74298e;
+}
+
+#privacy-policy .legal-content {
+  margin-bottom: 2.5rem;
+}
+
+#privacy-policy .li-item {
+  margin-bottom: .5rem;
+}
+
+#privacy-policy .item-sections {
+  margin-bottom: 3.0rem;
+}
+
+#privacy-policy .item-title {
+  font-weight: 700;
+}
+
 #modal-volunteer-content {
   margin-bottom: 3.0rem;
 }
@@ -3134,7 +3242,7 @@ img {
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .eventDay {
+#calendar #calendar-body .CalendarDay .new-events-Day {
   background-color: #ec4c9a;
 }
 
@@ -3628,6 +3736,11 @@ body {
   color: #575757;
 }
 
+#community-center #community-content .get-involved-link {
+  text-decoration: none;
+  color: #ec4c9a;
+}
+
 #community-center #community-content .fist-par {
   margin-top: 72px;
 }
@@ -3774,8 +3887,8 @@ body {
 }
 
 #article .article-footer {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3806,36 +3919,36 @@ body {
 }
 
 #image-carousel {
-    margin: 0;
-    padding: 0;
-    margin-top: 3rem;
-    height: 20rem;
-    border-radius: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+  height: 20rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 #image-carousel .handle {
-    width: 160%;
-    height: 100%;
-    border-radius: 0;
+  width: 160%;
+  height: 100%;
+  border-radius: 0;
 }
 
 #image-carousel .handle .slide {
-    float: left;
-    position: relative;
-    width: 22%;
-    height: 100%;
-    margin-right: 2rem;
+  float: left;
+  position: relative;
+  width: 22%;
+  height: 100%;
+  margin-right: 2rem;
 }
 
 #image-carousel .handle .slide img {
-    display: inline-block;
-    width: 40rem;
-    height: 20rem;
+  display: inline-block;
+  width: 40rem;
+  height: 20rem;
 }
 
 #image-carousel .handle .slide .info p {
-    margin: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/

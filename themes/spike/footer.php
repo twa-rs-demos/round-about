@@ -20,14 +20,6 @@
   </div>
 </div>
 
-<script>
-    $(function () {
-        $('.contact-us-form').click(function () {
-            alert('888')
-        })
-    })
-</script>
-
 <!--foot part-->
 <div id="footer" class="row">
   <div>
@@ -73,9 +65,9 @@
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
           <p class="red-text" data-toggle="modal" data-target="#volunteers-application-form">> Apply To Volunteer Today
             &gt; </p>
-          <div class="modal fade" id="volunteers-application-form" tabindex="-1" role="dialog"
+          <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
                aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog volunteers-application-form-modal">
+            <div class="modal-dialog form-modal">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -98,9 +90,9 @@
             Contact Us Now >
           </p>
         </div>
-        <div class="modal fade" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade caldera-forms" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
-          <div class="modal-dialog contact-us-form-modal">
+          <div class="modal-dialog form-modal">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -119,18 +111,16 @@
           </div>
         </div>
 
-        <script>
-            $(function () {
-                $('[name="fld_4169303"]').attr('data-dismiss', 'modal');
-            })
-        </script>
-
       </div>
     </div>
     <div class="col-md-2 col-sm-7 col-xs-12 no-padding footer-item">
       <div>
-        <div><a class="col-three-text" href="/tw-ra/newsAndEvent/newsLetterCenter">NewsletterCenter</a></div>
-        <div><a class="col-three-text" href="/tw-ra/newsAndEvent">CenterNews&amp;Event</a></div>
+        <div><a class="col-three-text"
+                href="<?php echo esc_url(get_permalink(get_page_by_title('newsletter_center_zh'))) ?>">NewsletterCenter</a>
+        </div>
+        <div><a class="col-three-text"
+                href="<?php echo esc_url(get_permalink(get_page_by_title('newsandevents_zh'))) ?>">CenterNews&amp;Event</a>
+        </div>
       </div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 no-padding footer-item">
@@ -145,14 +135,16 @@
     </div>
   </div>
   <div class="col-sm-offset-6 col-sm-6 col-xs-12">
-    <div class="footer-bottom-text">@2016 Roundabout China<a
-        class="footBottom-info" href="/tw-ra/legal">&nbsp; Legal</a>|
-      <a class="footBottom-info" href="/tw-ra/privacypolicy"> Privacy Policy</a></div>
+    <div class="footer-bottom-text">@2016 Roundabout China
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('legal'))) ?>">&nbsp;
+        Legal</a>|
+      <a class="footBottom-info" href="<?php echo esc_url(get_permalink(get_page_by_title('privacy-policy'))) ?>">
+        Privacy Policy</a></div>
   </div>
 </div>
-
 
 </div>
 </div>
 </body>
+<script src="<?php bloginfo('template_url'); ?>/js/footer.js"></script>
 </html>
