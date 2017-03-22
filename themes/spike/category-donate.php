@@ -1,57 +1,3 @@
-
-<?php get_header(); ?>
-
-<!--      php获取数据-->
-<?php
-$args = array(
-    'post_type' => 'post',
-//    'numberposts' => 8,
-//    'category_name' => 'current_appeals_zh',
-    'post_status'=>array('publish')
-);
-$posts = get_posts($args);
-echo $posts.length();
-$demodatas = array();
-foreach ($posts as $post):
-    $demodata = (object)[];
-    $custom_fields = get_post_custom($post->ID);
-    $demodata->name = $custom_fields['name'][0];
-    $demodata->age = $custom_fields['age'][0];
-    $demodata->disease = $custom_fields['disease'][0];
-    $demodata->profile = $custom_fields['profile'][0];
-    $demodata->money = $custom_fields['money'][0];
-    $demodata->img = get_field("img", $post->ID)['url'];
-    $demodata->link = get_permalink($post->ID);
-    if ($demodata->name != null && $demodata->age != null && $demodata->disease != null && $demodata->profile != null && $demodata->money != null) :
-        $demodatas[] = $demodata;
-    endif;
-endforeach;
-?>
-
-<!--      变量注入-->
-<script type="text/javascript">
-    var __injectedDemoVars = {
-        datas: Object.values(<?php echo json_encode($demodatas); ?>)
-    }
-</script>
-<!--      将模板和数据联系起来-->
-<script src="<?php bloginfo('template_url'); ?>/js/template.js"></script>
-<!--      定义模板-->
-<script type="text/x-jquery-tmpl" id="donateTemplate">
-          <div class="col-md-3 col-sm-4 col-xs-6 donating-project"><img
-                    src="${img}" alt="img"/>
-                  <div class="child-profile">${profile}</p></div>
-                  <div class="child-profile-text">
-                    <h4>${name}，${age}岁</h4>
-                    <p class="disease">${disease}</p>
-                    <p>需要&nbsp;${money}</p>
-                    <p class="pink"><a href="${link}">阅读更多 &gt;</a></p>
-                  </div>
-                </div>
-
-    </script>
-
-
 <script type="text/javascript">
     $(document).ready(function () {
         $(".donate-guide-title").hover(function () {
@@ -381,34 +327,74 @@ endforeach;
                 </div>
             </div>
         </div>
-        <div class="donating-projects">
+        <div class="donating-projects" id="donate-demo">
             <div class="donating-middle-text">
                 <h2 class="middle-title">正在捐款的项目</h2>
             </div>
             <div class="row">
                 <div class="col-md-offset-1 col-md-10" id="donate-template">
+                    <?php
+                    $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+                    $args = array(
+                        'posts_per_page' => 8,
+                        'category_name' => 'current_appeals_zh',
+                        'paged' => $paged
+                    );
+                    $posts_query = new WP_Query($args);
+                    $posts = $posts_query->posts;
+                    ?>
+                    <?php foreach ($posts as $post): ?>
+                        <?php $custom_fields = get_post_custom($post->ID); ?>
+                        <?php
+                        $name = $custom_fields['name'][0];
+                        $age = $custom_fields['age'][0];
+                        $disease = $custom_fields['disease'][0];
+                        $profile = $custom_fields['profile'][0];
+                        $money = $custom_fields['money'][0];
+                        $img = get_field("img", $post->ID);
+                        if ($name != null && $age != null && $disease != null && $profile != null && $money != null) :
+                            ?>
+                            <div class="col-md-3 col-sm-4 col-xs-6 donating-project"><img
+                                        src="<?php echo $img['url']; ?>" alt="img"/>
+                                <div class="child-profile"></div>
+                                <p class="child-profile-p"><?php echo $profile; ?></p>
+                                <div class="child-profile-text">
+                                    <h4><?php echo $name; ?>，<?php echo $age; ?>岁</h4>
+                                    <p><?php echo $disease; ?></p>
+                                    <p>需要&nbsp;<?php echo $money; ?></p>
+                                    <p class="pink"><a href="<?php the_permalink($post->ID); ?>">阅读更多 &gt;</a></p>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div id="pagination-project" class="row">
-                <div class="col-md-offset-1 col-md-3 col-sm-5 col-xs-6 ">
-                    <div class="pagination-project">
-                        <ul class="pagination">
-                            <li class="disabled"><i class="fa fa-chevron-left"></i></li>
-                            <li class="active"><a name="1"></a>1</li>
-                            <li class=""><a name="2"></a>2</li>
-                            <li class=""><i class="fa fa-chevron-right"></i></li>
-                        </ul>
+            <!--            <div class="row">-->
+            <!--                <div class="my-pagination pagination-style col-md-offset-1 col-md-3 col-sm-5 col-xs-6 ">-->
+            <!--                    --><?php //hehe($posts_query); ?>
+            <!--                </div>-->
+            <!--                <div class="col-md-7 col-sm-6 col-xs-5">-->
+            <!--                    <div class="text-right">-->
+            <!--                        <div class="donateProject-more">更多&gt;</div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="my-pagination pagination-style col-md-offset-1 col-md-3 col-sm-5 col-xs-6 ">
+                        <?php hehe($posts_query); ?>
                     </div>
-                </div>
-                <div class="col-md-7 col-sm-6 col-xs-5">
-                    <div class="text-right">
-                        <div class="donateProject-more"><a
-                                    href="http://localhost:8080/zh/donatecurrent_zh/">更多&gt;</a></div>
+                    <div class="col-md-7 col-sm-6 col-xs-5">
+                        <div class="text-right">
+                            <div class="donateProject-more">更多&gt;</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<?php get_footer(); ?>
+
+
 
