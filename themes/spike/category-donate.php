@@ -371,7 +371,7 @@
             </div>
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
-                    <div class="my-pagination pagination-style col-md-offset-1 col-md-3 col-sm-5 col-xs-6 ">
+                    <div class="my-pagination pagination-style col-md-offset-1">
                         <?php page_pagination($posts_query); ?>
                     </div>
                     <div class="col-md-7 col-sm-6 col-xs-5">
