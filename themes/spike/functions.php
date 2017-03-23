@@ -1,6 +1,6 @@
 <?php
 
-require_once('wp-advanced-search/wpas.php'); ?>
+require_once('libs/wp-advanced-search/wpas.php'); ?>
 <?php
 
 function the_breadcrumb()
