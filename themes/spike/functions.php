@@ -50,7 +50,7 @@ if (!function_exists('my_pagination')) :
 endif;
 
 
-function hehe($the_query) {
+function page_pagination($the_query) {
     $big = 999999999; // need an unlikely integer
 
     echo paginate_links( array(

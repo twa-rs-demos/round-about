@@ -38,7 +38,7 @@
                     <?php endif; ?>
                 <?php endforeach; ?>
                 <div class="my-pagination col-sm-12 pagination-style">
-                    <?php hehe($posts_query); ?>
+                    <?php page_pagination($posts_query); ?>
                 </div>
             </div>
         </div>
