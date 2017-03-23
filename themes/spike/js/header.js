@@ -84,7 +84,7 @@ $(function () {
         $(this).find('.dropdown').css('display', 'none');
     });
 
-    $('.fa-bars').click(function () {
+    $('.icon-menulist2').click(function () {
         $('.menu-list2 ').toggle(function () {
             if ($('.menu-list2').is(':visible')) {
                 $('body').css('overflow', 'hidden');

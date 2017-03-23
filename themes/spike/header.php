@@ -203,7 +203,7 @@ usort($sub_menus, 'sort_by_description');
 
           <div class="row no-margin responsive-menu">
             <div class="col-md-2 col-xs-3">
-              <button class="menu-icon">
+              <button class="menu-icon icon-menulist2">
                 <i class="fa fa-bars"></i>
               </button>
             </div>
