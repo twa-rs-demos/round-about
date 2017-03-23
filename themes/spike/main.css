@@ -58,7 +58,7 @@ pre {
 
 #contact-us-form .contact-us-form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 8%;
 }
 
@@ -68,7 +68,7 @@ pre {
 
 .caldera-forms .form-modal .modal-content .modal-header .modal-title {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 67px;
 }
 
@@ -99,6 +99,8 @@ pre {
 .caldera_forms_form .label-field label {
   width: 130px;
   text-align: right;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
 .caldera_forms_form .full-width div {
@@ -181,6 +183,15 @@ pre {
 
 .caldera_forms_form .notes-description {
   font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.caldera_forms_form .donations-form-description {
+  font-size: 1.5rem;
+  line-height: 22px;
+}
+
+#CF58d08eacd85d1_1-row-1 {
   margin-bottom: 30px;
 }
 
@@ -3231,7 +3242,7 @@ img {
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .new-events-Day{
+#calendar #calendar-body .CalendarDay .new-events-Day {
   background-color: #ec4c9a;
 }
 

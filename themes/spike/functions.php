@@ -44,8 +44,7 @@ if (!function_exists('my_pagination')) :
 
     $big = 999999999;
 
-    echo
-    paginate_links(array(
+    echo paginate_links(array(
       'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
       'format' => '?paged=%#%',
       'current' => max(1, get_query_var('paged')),
@@ -53,6 +52,20 @@ if (!function_exists('my_pagination')) :
     ));
   }
 endif;
+
+
+function hehe($the_query) {
+    $big = 999999999; // need an unlikely integer
+
+    echo paginate_links( array(
+//        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $the_query->max_num_pages
+    ) );
+}
+
+
 
 function search_word_replace($buffer)
 {
