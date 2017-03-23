@@ -19,17 +19,20 @@ $(function () {
 
 
     $('.news-list-btn').click(function(){
+        console.log("lllll")
        $('#news-event').attr('class','news');
-       $('.calender').attr('class','calender hide');
-       $('.calender-btn').removeClass('choosed');
+       $('.calendar').attr('class','calendar hide');
+       $('.calendar-btn').removeClass('choosed');
        $('.news-list-btn').addClass('choosed');
 
     });
 
-    $('.calender-btn').click(function(){
+    $('.calendar-btn').click(function(){
+        console.log("nnnnnn")
+
         $('#news-event').attr('class','hide');
-        $('.calender').attr('class','calender');
-        $('.calender-btn').addClass('choosed');
+        $('.calendar').attr('class','calendar');
+        $('.calendar-btn').addClass('choosed');
         $('.news-list-btn').removeClass('choosed');
 
     });

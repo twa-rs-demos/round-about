@@ -26,7 +26,7 @@
 
                     <span class="news-list-btn ">列表</span>
                     <span>&nbsp; |&nbsp;</span>
-                    <span class="calender-btn choosed">日历</span>
+                    <span class="calendar-btn choosed">日历</span>
 
                 </div>
                 <div id="news-event" class="hidden">
@@ -35,7 +35,7 @@
                         $calendar_cat = get_category_by_slug('calendar_zh');
                         $posts = get_posts(array('posts_per_page' => 4,
                             'category__in' => array($calendar_cat->cat_ID)));
-                        foreach ($posts as $post) {
+                            foreach ($posts as $post) {
                             $title = $post->post_title;
                             $content = $post->post_content;
                             $custom_fields = get_post_custom($post->ID);
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="calender">
+                <div class="calendar">
                     <div id="calendar">
                         <div id="calendar-header">
                             <div class="text-center calendar-header">
@@ -129,7 +129,7 @@
                                         <div class="row">
                                             <div class="day col-xs-1 col-sm-1 usualDay"  name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day"
+                                                <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"
                                                      aria-describedby="tooltip">
 
                                                 </div>
@@ -139,7 +139,7 @@
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+                                                <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day" aria-describedby="tooltip">
 
                                                 </div>
                                             </div>
@@ -158,7 +158,7 @@
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+                                                <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day" aria-describedby="tooltip">
 
                                                 </div>
                                             </div>
@@ -178,13 +178,13 @@
                                         <div class="row">
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+                                                <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day" aria-describedby="tooltip">
 
                                                 </div>
                                             </div>
                                             <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day"></div>
                                             <div>
-                                                <div class="day col-xs-1 col-sm-1 eventDay" name="calendar-day" aria-describedby="tooltip">
+                                                <div class="day col-xs-1 col-sm-1 usualDay" name="calendar-day" aria-describedby="tooltip">
 
                                                 </div>
                                             </div>

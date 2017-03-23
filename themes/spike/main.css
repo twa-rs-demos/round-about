@@ -1207,7 +1207,7 @@ img {
 
 #aboutUs #aboutUs-footer .circle-year {
   position: absolute;
-  top: -38px;
+  top: -30px;
 }
 
 #aboutUs #aboutUs-footer .circle {
@@ -3239,30 +3239,11 @@ img {
 }
 
 #calendar #calendar-body .CalendarDay .usualDay {
+  position: relative;
   background-color: #F0F0F0;
 }
 
-#calendar #calendar-body .CalendarDay .new-events-Day {
-  background-color: #ec4c9a;
-}
 
-#eventDay .event-date {
-  text-align: left;
-  padding-left: 10px;
-}
-
-#eventDay .date {
-  color: #ec4c9a;
-  font-size: 1.5rem;
-}
-
-#eventDay .time {
-  color: #8B8B8B;
-}
-
-#eventDay p {
-  margin-bottom: 3px;
-}
 
 #tooltip .tooltip-inner {
   background-color: white;
@@ -3450,6 +3431,108 @@ img {
 #book-market .bookfair-review {
   margin-bottom: 16rem;
 }
+
+#calendar #calendar-body .CalendarDay .new-events-Day{
+  position: relative;
+  background-color: #ec4c9a;
+}
+
+#eventDay .event-date {
+  text-align: left;
+  margin-left:1rem;
+  /*float: right;*/
+}
+
+.new-events-img{
+  float: left;
+}
+
+.new-events-img{
+  display: inline-block;
+  width:9rem;
+  height:6rem;
+  /*margin-top:2rem;*/
+  /*padding-left:1px;*/
+
+  /*margin:1rem;*/
+}
+
+#eventDay .date {
+  color: #ec4c9a;
+  font-size: 16px;
+}
+
+#eventDay .time {
+  color: #8B8B8B;
+  font-size:12px;
+}
+
+#eventDay .content{
+  line-height: 15px;
+  font-size:12px;
+  coloe:#575757;
+
+}
+
+#eventDay p {
+  line-height: 2rem;
+  margin-bottom: 3px;
+  margin-left:8rem;
+
+}
+
+
+
+.news-pop{
+  position: absolute;
+  height:20rem;
+  width:40rem;
+  text-align: left;
+  border-radius: .4rem;
+
+  /*padding-left:15px ;*/
+  /*padding-right:10px ;*/
+
+  overflow: hidden;/*内容超出后隐藏*/
+  text-overflow: ellipsis;/* 超出内容显示为省略号*/
+  /*white-space: nowrap;!*文本不进行换行*!*/
+  background-color: white;
+
+  color: black;
+  border: 1px solid #F0F0F0;
+  float: left;
+  left:-6rem;
+  /*top:-1px;*/
+  /*text-align: left;*/
+  /*top:20rem;*/
+  padding: 1rem  2rem;
+  margin: 1px;
+  display: none;
+
+  /*filter: alpha(opacity=80);*/
+  /*-moz-opacity: 0.8;*/
+  /*opacity: 1;*/
+  /*transform: translate3d(-41%, 0, 0);*/
+
+
+  z-index: 100;
+}
+
+.event-region{
+  display: none;
+  position: absolute;
+  color:white;
+  /*border: 1px solid red;*/
+  /*margin-bottom:10px;*/
+　bottom: -300px;
+  /*top:35px;*/
+  top:75%;
+  margin: 0;
+  padding-bottom: -1px;
+
+  z-index:1000;
+}
+
 
 #book-market .bookfair-review .bookfair-news {
   margin-top: 4rem;
@@ -3887,8 +3970,8 @@ body {
 }
 
 #article .article-footer {
-  position: absolute;
-  bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3919,36 +4002,36 @@ body {
 }
 
 #image-carousel {
-  margin: 0;
-  padding: 0;
-  margin-top: 3rem;
-  height: 20rem;
-  border-radius: 0;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem;
+    height: 20rem;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 #image-carousel .handle {
-  width: 160%;
-  height: 100%;
-  border-radius: 0;
+    width: 160%;
+    height: 100%;
+    border-radius: 0;
 }
 
 #image-carousel .handle .slide {
-  float: left;
-  position: relative;
-  width: 22%;
-  height: 100%;
-  margin-right: 2rem;
+    float: left;
+    position: relative;
+    width: 22%;
+    height: 100%;
+    margin-right: 2rem;
 }
 
 #image-carousel .handle .slide img {
-  display: inline-block;
-  width: 40rem;
-  height: 20rem;
+    display: inline-block;
+    width: 40rem;
+    height: 20rem;
 }
 
 #image-carousel .handle .slide .info p {
-  margin: 0;
+    margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/
