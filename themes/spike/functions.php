@@ -1,4 +1,8 @@
 <?php
+
+require_once('wp-advanced-search/wpas.php'); ?>
+<?php
+
 function the_breadcrumb()
 {
   $sep = ' > ';
@@ -75,4 +79,49 @@ function SearchFilter($query)
 }
 
 add_filter('pre_get_posts', 'SearchFilter');
+
+
+function my_search_form()
+{
+  $args = array();
+  // Set default WP_Query
+  $args['wp_query'] = array('post_type' => array('post'),
+    'orderby' => 'title',
+    'order' => 'ASC');
+  // Configure form fields
+  $args['fields'][] = array('type' => 'search',
+    'placeholder' => 'Enter search terms');
+  $args['fields'][] = array('type' => 'post_type',
+    'format' => 'checkbox',
+    'label' => 'Search by post type',
+    'default_all'=>true,
+//    'values' => array('page' => 'Pages',
+//      'field' => 'Fields',
+//      'param' => 'Parameters')
+);
+  $args['fields'][] = array('type' => 'orderby',
+    'format' => 'select',
+    'label' => 'Order by',
+    'values' => array('title' => 'Title',
+      'date' => 'Date Added'));
+//  $args['fields'][] = array('type' => 'order',
+//    'format' => 'radio',
+//    'label' => 'Order',
+//    'values' => array('ASC' => 'ASC', 'DESC' => 'DESC'),
+//    'default' => 'ASC');
+   $args['fields'][] = array('type' => 'posts_per_page',
+    'format' => 'select',
+    'label' => 'Results per page',
+    'values' => array(2 => 2, 5 => 5, 10 => 10),
+    'default' => 10);
+  $args['fields'][] = array('type' => 'submit',
+    'class' => 'button',
+    'value' => 'Search'
+  );
+
+  register_wpas_form('myform', $args);
+}
+
+add_action('init', 'my_search_form');
+
 ?>
