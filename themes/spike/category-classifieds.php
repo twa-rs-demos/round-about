@@ -1,6 +1,3 @@
-
-<?php get_header(); ?>
-
 <div class="row" id="class-fields">
   <div class="col-sm-offset-2 col-sm-8 no-padding">
     <div>
@@ -11,11 +8,12 @@
     <div class="search-box row">
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-box-container">
 
-        <form method="get" action="<?php echo esc_ul(get_permalink(get_page_by_title('classifieds_zh')))?>">
-          <input type="text" name="s" id="s"/>
-          <img name='submit' type="submit"
-               src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
-               alt="search">
+        <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+          <input type="text" placeholder="搜索本站" name="s" id="s">
+          <button><img id="searchsubmit" class="submit"
+                       src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
+                       alt="search">
+          </button>
         </form>
       </div>
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
@@ -114,5 +112,3 @@
     </div>
   </div>
 </div>
-
-<?php get_footer(); ?>
