@@ -1,68 +1,4 @@
-<?php get_header(); ?>
-
-<script type="text/javascript">
-
-    $(function () {
-        var length,
-            currentIndex = 0,
-            interval,
-            hasStarted = false, //是否已经开始轮播
-            t = 5000; //轮播时间间隔
-        length = $('.slider-panel').length;
-        //将除了第一张图片隐藏
-        $('.slider-panel:not(:first)').hide();
-        //将第一个slider-item设为激活状态
-        $('.slider-item:first').addClass('slider-item-selected');
-
-        //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动
-        $('.slider-panel, .slider-pre, .slider-next').hover(function() {
-            stop();
-        }, function() {
-            start();
-        });
-        $('.slider-item').hover(function(e) {
-            stop();
-            var preIndex = $(".slider-item").filter(".slider-item-selected").index();
-            currentIndex = $(this).index();
-            play(preIndex, currentIndex);
-        }, function() {
-            start();
-        });
-
-        function pre() {
-            var preIndex = currentIndex;
-            currentIndex = (--currentIndex + length) % length;
-            play(preIndex, currentIndex);
-        }
-
-        function next() {
-            var preIndex = currentIndex;
-            currentIndex = ++currentIndex % length;
-            play(preIndex, currentIndex);
-        }
-        function play(preIndex, currentIndex) {
-            $('.slider-panel').eq(preIndex).fadeOut(500)
-                .parent().children().eq(currentIndex).fadeIn(1000);
-            $('.slider-item').removeClass('slider-item-selected');
-            $('.slider-item').eq(currentIndex).addClass('slider-item-selected');
-        }
-        function start() {
-            if(!hasStarted) {
-                hasStarted = true;
-                interval = setInterval(next, t);
-            }
-        }
-        function stop() {
-            clearInterval(interval);
-            hasStarted = false;
-        }
-        start();
-    });
-
-</script>
-
-
-
+<script src="<?php bloginfo('template_url'); ?>/js/bookfair.js"></script>
 <div id="book-market">
     <div class="book-take-change">
         <div class="book-change-top"><h2 class="middle-title">一本书带来的改变</h2>
@@ -103,14 +39,14 @@
                     <div id="news-event" class="">
                         <div>
                             <?php
-                            $newsandevent_cat = get_category_by_slug('newsandevents_zh');
-                            $posts = get_posts(array('posts_per_page' => 4,
-                                'category__in' => array($newsandevent_cat->cat_ID)));
+                            $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+                            $query = new WP_Query( array( 'tag' => 'bookfair_notice', 'posts_per_page' => 2 ,'paged' => $paged) );
+                            $posts = $query->posts;
                             foreach ($posts as $post){
                                 $title = $post->post_title;
                                 $content = $post->post_content;
                                 $custom_fields = get_post_custom($post->ID);
-                                $name = $custom_fields['name_news'];
+                                $name = $custom_fields['head_name'];
                                 $image = get_field('img', $post->ID);
                                 ?>
 
@@ -156,19 +92,9 @@
                                 </div>
 
                             <?php } ?>
-
-                            <div class="pagination-project">
-                                <ul class="pagination">
-                                    <li class=""><a><i class="fa fa-chevron-left"></i></a></li>
-                                    <li class=""><a name="1">
-                                            1</a></li>
-                                    <li class=""><a name="2">
-                                            2</a></li>
-                                    <li class=""><a name="3">
-                                            3</a></li>
-                                    <li class=""><a><i class="fa fa-chevron-right"></i></a></li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="my-pagination col-sm-12 pagination-style row">
+                            <?php page_pagination($query); ?>
                         </div>
                     </div>
 
@@ -277,13 +203,8 @@
                 <div class="bookfair-news">
 
                     <?php
-                    $args = array(
-                        'post_type' => 'post',
-                        'numberposts' => 4,
-                        'category_name' => 'bookfair_zh',
-                    );
-                    $arr = get_posts($args);
-
+                    $query = new WP_Query( array( 'tag' => 'previous_bookfair', 'posts_per_page' => 4 ) );
+                    $arr = $query->posts;
                     foreach ($arr as $result) {
                         $title = $result->post_title;
                         $content = $result->post_content;
@@ -313,4 +234,3 @@
     </div>
 </div>
 
-<?php get_footer(); ?>
