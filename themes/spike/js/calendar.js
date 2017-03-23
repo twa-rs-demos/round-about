@@ -36,7 +36,6 @@ $(function () {
         calendarTitle.html(titleStr);
 
         // 设置表格中的日期数据
-
         var _tds = $("div[name='calendar-day']");
         var _firstDay = new Date(_year, _month - 1, 1);  // 当前月第一天
         for (var i = 0; i < _tds.length; i++) {
@@ -55,12 +54,29 @@ $(function () {
 
             _newsEvents.find((event) => {
 
-                if (event.post_modified.split(" ")[0] == formatDate) {
-
+                if (event.time.split(" ")[0] == formatDate) {
                     _tds[i].className += ' new-events-Day';
+                    var eventDay = event.time.split(" ")[0].split("-");
+                    var eventDateText = eventDay[1] + "月"　+ eventDay[2]+"日";
+                    if(_tds[i].innerHTML.length<3){
+                        _tds[i].innerHTML +=   "<div class='event-region'><i class='fa fa-caret-up fa-lg' aria-hidden='true'></i></div>";
 
-                    console.log( _tds[i].className)
-
+                        _tds[i].innerHTML += "" +
+                            "<div id='eventDay' class='news-pop '> " +
+                                        "<div class='row  '> " +
+                                                    "<div class='col-xs-5 new-events-img'> " +
+                                                      `<img src=${event.img}` +　" class='new-events-img'  alt='img'/>" +
+                                                    "</div> " +
+                                                    "<div class='col-xs-9　event-date'> " +
+                                                           "<div class='event-date'> " +
+                                                               "<p class='date'>"+eventDateText +"</p>" +
+                                                               "<p class='time'>" + event.activityTime +"</p> " +
+                                                               "<p class='content'>"+ event.content+"</p> " +
+                                                            "</div> " +
+                                                    "</div> " +
+                                        "</div> " +
+                                "</div>" ;
+                    }
                     return true;
                 } else {
                     var classNameArr = _tds[i].className.split(" ");
@@ -84,14 +100,13 @@ $(function () {
         return m < 10 ? '0' + m : m
     }
 
-
-
-
-    // $(".new-events-Day").hover(function () {
-    //     $(this).append("<div class='newbox'>I'm new box by prepend</div>");
-    // }, function () {
-    //     $("p").css("background-color", "pink");
-    // });
+    $(".new-events-Day").hover(function () {
+        $(this).find('.news-pop').css('display', 'block');
+        $(this).find('.event-region').css('display', 'block');
+    }, function () {
+        $(this).find('.news-pop').css("display", "none");
+        $(this).find('.event-region').css("display", "none");
+    });
 
     /**
      * 绑定上个月下个月事件

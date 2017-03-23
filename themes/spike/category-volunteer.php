@@ -14,7 +14,27 @@
                         organizations in the Beijing area and many more throughout China, Inner Mongolia and
                         Mongolia.</p></div>
                 <div class="involved-volunteer-join"><h2 class="middle-title">快来加入我们吧</h2>
-                    <button>现在申请成为志愿者</button>
+                    <button data-toggle="modal" data-target="#volunteers-application-form">现在申请成为志愿者</button>
+                </div>
+                <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
+                     aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog form-modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    &times;
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">
+                                    VOLUNTEERS APPLICATION FORM
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <?php $form = get_post(1234);
+                                echo do_shortcode($form->post_content);
+                                ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12 volunteer-countries"><h2
                             class="middle-title">来自<span
@@ -27,12 +47,14 @@
             <div class="volunteer-stories"><h2 class="middle-title">志愿者故事</h2>
                 <div class="row text-center">
                     <?php
+                    $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
                     $args = array(
-                        'post_type' => 'post',
-                        'numberposts' => 9,
+                        'posts_per_page' => 8,
                         'category_name' => 'volunteer_zh',
+                        'paged' => $paged
                     );
-                    $arr = get_posts($args);
+                    $posts_query = new WP_Query($args);
+                    $arr = $posts_query->posts;
 
                     foreach ($arr as $result) {
                         $title = $result->post_title;
@@ -44,6 +66,11 @@
                             <p><?php echo $title; ?>
                             </p><a href="<?php  the_permalink($result->ID); ?>">Read More &gt;</a></div>
                     <?php } ?>
+                </div>
+                <div class="row">
+                    <div class="my-paginationcol-md-3 col-sm-4 col-xs-12 pagination-style">
+                        <?php page_pagination($posts_query); ?>
+                    </div>
                 </div>
             </div>
         </div>

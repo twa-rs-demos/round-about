@@ -1,5 +1,3 @@
-<?php get_header(); ?>
-
 <div id="directory">
     <div class="row">
         <div class="col-sm-offset-2 col-sm-8 no-padding charity-roster">
@@ -18,6 +16,8 @@
                     <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
                         <button class="advanced-search">高级搜索 &gt;</button>
                     </div>
+
+                    <?php echo do_shortcode('[mdf_search_form id="1416"]');?>
 
                     <div class="static-modal hidden" id="filter">
                         <div tabindex="-1" role="dialog" class="modal" style="display: block;">
@@ -79,12 +79,15 @@
         <div class="col-sm-offset-2 col-sm-8 no-padding charities-list">
             <div>
                 <?php
+                $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
                 $args = array(
-                    'post_type' => 'post',
-                    'numberposts' => 4,
-                    'category_name' => 'directory_zh', // returns all posts,
+                    'posts_per_page' => 4,
+                    'category_name' => 'directory_zh',
+                    'paged' => $paged
                 );
-                $posts = get_posts($args);
+                $posts_query = new WP_Query($args);
+                $posts = $posts_query->posts;
+
                 ?>
                 <?php foreach ($posts as $post): ?>
                     <?php $custom_fields = get_post_custom($post->ID); ?>
@@ -119,19 +122,11 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-                <div class="pagination-project">
-                    <ul class="pagination">
-                        <li class=""><a><i class="fa fa-chevron-left"></i></a></li>
-                        <li class=""><a name="1"> 1 </a></li>
-                        <li class=""><a name="2"> 2 </a></li>
-                        <li class=""><a name="3"> 3 </a></li>
-                        <li class=""><a><i class="fa fa-chevron-right"></i></a></li>
-                    </ul>
+                <div class="my-pagination col-xs-12 pagination-style">
+                    <?php page_pagination($posts_query); ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<?php get_footer(); ?>

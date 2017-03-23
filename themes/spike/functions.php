@@ -1,6 +1,6 @@
 <?php
 
-require_once('wp-advanced-search/wpas.php'); ?>
+require_once('libs/wp-advanced-search/wpas.php'); ?>
 <?php
 
 function the_breadcrumb()
@@ -54,7 +54,7 @@ if (!function_exists('my_pagination')) :
 endif;
 
 
-function hehe($the_query) {
+function page_pagination($the_query) {
     $big = 999999999; // need an unlikely integer
 
     echo paginate_links( array(
