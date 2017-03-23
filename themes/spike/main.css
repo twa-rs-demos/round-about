@@ -3489,10 +3489,6 @@ img {
   width:40rem;
   text-align: left;
   border-radius: .4rem;
-
-  /*padding-left:15px ;*/
-  /*padding-right:10px ;*/
-
   overflow: hidden;/*内容超出后隐藏*/
   text-overflow: ellipsis;/* 超出内容显示为省略号*/
   /*white-space: nowrap;!*文本不进行换行*!*/
@@ -3502,19 +3498,9 @@ img {
   border: 1px solid #F0F0F0;
   float: left;
   left:-6rem;
-  /*top:-1px;*/
-  /*text-align: left;*/
-  /*top:20rem;*/
   padding: 1rem  2rem;
   margin: 1px;
   display: none;
-
-  /*filter: alpha(opacity=80);*/
-  /*-moz-opacity: 0.8;*/
-  /*opacity: 1;*/
-  /*transform: translate3d(-41%, 0, 0);*/
-
-
   z-index: 100;
 }
 
@@ -3522,8 +3508,6 @@ img {
   display: none;
   position: absolute;
   color:white;
-  /*border: 1px solid red;*/
-  /*margin-bottom:10px;*/
 　bottom: -300px;
   /*top:35px;*/
   top:75%;
