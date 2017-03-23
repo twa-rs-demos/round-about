@@ -234,10 +234,11 @@ usort($sub_menus, 'sort_by_description');
       </div>
     </div>
 
+<?php
+//$query = new WP_Query( array( 'tag' => 'bookfair_notice', 'posts_per_page' => 5 ) );
+//      echo '<pre>';
+//      var_dump($query);
+//      echo '</pre>';
+//?>
 
-
-
-
-
-
-
+      
