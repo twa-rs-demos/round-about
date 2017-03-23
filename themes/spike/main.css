@@ -3939,6 +3939,10 @@ body {
   margin-bottom: 30px;
 }
 
+#article .hide {
+  display: none;
+}
+
 #article .article-header {
   margin-top: 5rem;
   margin-bottom: 3rem;

@@ -22,7 +22,23 @@ $image = get_field('img', $post->ID);
 $categories = get_the_category();
 $posts = get_posts(array('posts_per_page' => 4,
   'category__in' => array($categories[0]->cat_ID)));
-?>
+if (sizeof($posts) < 4) {
+  echo "
+  <script type=\"text/javascript\">
+  $(document).ready(function() {
+    $('.dragdealer').attr('class', 'hide dragdealer');
+ });
+  </script>
+  ";
+} else {
+  echo "
+  <script type=\"text/javascript\">
+  $(document).ready(function() {
+    $('.dragdealer').attr('class', 'dragdealer');
+ });
+  </script>
+  ";
+} ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
