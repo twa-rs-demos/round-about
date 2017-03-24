@@ -63,7 +63,8 @@ pre {
 }
 
 .caldera-forms .form-modal {
-  width: 860px;
+  margin:5%;
+  width: auto;
 }
 
 .caldera-forms .form-modal .modal-content .modal-header .modal-title {
@@ -3243,8 +3244,6 @@ img {
   background-color: #F0F0F0;
 }
 
-
-
 #tooltip .tooltip-inner {
   background-color: white;
   color: black;
@@ -3375,6 +3374,22 @@ img {
   height: 30rem;
 }
 
+#book-market .book-take-change .slider .join_volunteer_button{
+  /*z-index: 100;*/
+  position: absolute;
+  right: 8rem;
+  bottom: 4rem;
+
+}
+#book-market .book-take-change .slider .join_volunteer_button button{
+  padding: .7rem 3rem;
+  color: white;
+  background: #ec4c9a;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
 #book-market .book-take-change .slider-extra {
   position: absolute;
   top: 25rem;
@@ -3391,11 +3406,11 @@ img {
   height: 1.5rem;
   border: solid 1px #ccc;
   border-radius: 1.5rem;
-  background: #1b6d85;
+  /*background: #f0f0f0;*/
 }
 
 #book-market .book-take-change .slider-nav .slider-item-selected {
-  background: red;
+  background: #ccc;
 }
 
 #book-market .book-take-change .slider .slider-main {
@@ -3432,25 +3447,25 @@ img {
   margin-bottom: 16rem;
 }
 
-#calendar #calendar-body .CalendarDay .new-events-Day{
+#calendar #calendar-body .CalendarDay .new-events-Day {
   position: relative;
   background-color: #ec4c9a;
 }
 
 #eventDay .event-date {
   text-align: left;
-  margin-left:1rem;
+  margin-left: 1rem;
   /*float: right;*/
 }
 
-.new-events-img{
+.new-events-img {
   float: left;
 }
 
-.new-events-img{
+.new-events-img {
   display: inline-block;
-  width:9rem;
-  height:6rem;
+  width: 9rem;
+  height: 6rem;
   /*margin-top:2rem;*/
   /*padding-left:1px;*/
 
@@ -3464,60 +3479,57 @@ img {
 
 #eventDay .time {
   color: #8B8B8B;
-  font-size:12px;
+  font-size: 12px;
 }
 
-#eventDay .content{
+#eventDay .content {
   line-height: 15px;
-  font-size:12px;
-  coloe:#575757;
+  font-size: 12px;
+  coloe: #575757;
 
 }
 
 #eventDay p {
   line-height: 2rem;
   margin-bottom: 3px;
-  margin-left:8rem;
+  margin-left: 8rem;
 
 }
 
-
-
-.news-pop{
+.news-pop {
   position: absolute;
-  height:auto;
-  width:40rem;
+  height: auto;
+  width: 40rem;
   text-align: left;
   border-radius: .4rem;
-  overflow: hidden;/*内容超出后隐藏*/
-  text-overflow: ellipsis;/* 超出内容显示为省略号*/
+  overflow: hidden; /*内容超出后隐藏*/
+  text-overflow: ellipsis; /* 超出内容显示为省略号*/
   /*white-space: nowrap;!*文本不进行换行*!*/
   background-color: white;
 
   color: black;
   border: 1px solid #F0F0F0;
   float: left;
-  left:-6rem;
-  padding: 1rem  2rem;
+  left: -6rem;
+  padding: 1rem 2rem;
   margin: 0px;
   /*top:-1px;*/
   display: none;
   z-index: 100;
 }
 
-.event-region{
+.event-region {
   display: none;
   position: absolute;
-  color:white;
-　bottom: -300px;
+  color: white;
+  　bottom: -300px;
   /*top:35px;*/
-  top:75%;
+  top: 75%;
   margin: 0;
   padding-bottom: -1px;
 
-  z-index:1000;
+  z-index: 1000;
 }
-
 
 #book-market .bookfair-review .bookfair-news {
   margin-top: 4rem;
@@ -3959,8 +3971,8 @@ body {
 }
 
 #article .article-footer {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
 #article .article-footer .pre-and-next a {
@@ -3991,36 +4003,36 @@ body {
 }
 
 #image-carousel {
-    margin: 0;
-    padding: 0;
-    margin-top: 3rem;
-    height: 20rem;
-    border-radius: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+  height: 20rem;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 #image-carousel .handle {
-    width: 160%;
-    height: 100%;
-    border-radius: 0;
+  width: 160%;
+  height: 100%;
+  border-radius: 0;
 }
 
 #image-carousel .handle .slide {
-    float: left;
-    position: relative;
-    width: 22%;
-    height: 100%;
-    margin-right: 2rem;
+  float: left;
+  position: relative;
+  width: 22%;
+  height: 100%;
+  margin-right: 2rem;
 }
 
 #image-carousel .handle .slide img {
-    display: inline-block;
-    width: 40rem;
-    height: 20rem;
+  display: inline-block;
+  width: 40rem;
+  height: 20rem;
 }
 
 #image-carousel .handle .slide .info p {
-    margin: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/

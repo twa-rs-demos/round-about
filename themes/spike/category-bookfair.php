@@ -24,6 +24,9 @@
                             <li class="slider-item"></li>
                         </ul>
                     </div>
+                    <div class="join_volunteer_button">
+                        <button>加入志愿者行列</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,9 +43,9 @@
                         <div>
                             <?php
                             $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-                            $query = new WP_Query( array( 'tag' => 'bookfair_notice', 'posts_per_page' => 2 ,'paged' => $paged) );
+                            $query = new WP_Query(array('tag' => 'bookfair_notice', 'posts_per_page' => 2, 'paged' => $paged));
                             $posts = $query->posts;
-                            foreach ($posts as $post){
+                            foreach ($posts as $post) {
                                 $title = $post->post_title;
                                 $content = $post->post_content;
                                 $custom_fields = get_post_custom($post->ID);
@@ -53,10 +56,12 @@
                                 <div class="row row-margin-bottom">
                                     <div class="col-md-9 col-xs-12">
                                         <div id="events" class="row">
-                                            <div class="col-md-5 col-sm-4 col-xs-4"><img src="<?php echo $image['url']; ?>" alt="img" /></div>
-                                            <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a href="<?php  the_permalink($post->ID); ?>"><?php
+                                            <div class="col-md-5 col-sm-4 col-xs-4"><img
+                                                        src="<?php echo $image['url']; ?>" alt="img"/></div>
+                                            <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a
+                                                            href="<?php the_permalink($post->ID); ?>"><?php
                                                         echo $title; ?></a><br><?php
-                                                    echo '@ '.$name[0] ?></h3>
+                                                    echo '@ ' . $name[0] ?></h3>
                                                 <p><?php
                                                     echo $content; ?></p></div>
                                         </div>
@@ -203,7 +208,7 @@
                 <div class="bookfair-news">
 
                     <?php
-                    $query = new WP_Query( array( 'tag' => 'previous_bookfair', 'posts_per_page' => 4 ) );
+                    $query = new WP_Query(array('tag' => 'previous_bookfair', 'posts_per_page' => 4));
                     $arr = $query->posts;
                     foreach ($arr as $result) {
                         $title = $result->post_title;
