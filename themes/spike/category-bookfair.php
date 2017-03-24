@@ -1,4 +1,3 @@
-<script src="<?php bloginfo('template_url'); ?>/js/bookfair.js"></script>
 <div id="book-market">
     <div class="book-take-change">
         <div class="book-change-top"><h2 class="middle-title">一本书带来的改变</h2>
@@ -7,18 +6,25 @@
             <div class="col-md-offset-2 col-md-8 col-xs-10 col-xs-offset-1">
                 <div class="slider">
                     <ul class="slider-main">
+                        <?php
+                        $args = array(
+                            'numberposts' => 4,
+                            'post_type' => 'post',
+                            'category_name' => 'bookfair_zh'
+                        );
+                        $posts= get_posts( $args );
+
+                        foreach ($posts as $post){
+                        $img = get_field("img", $post->ID); ?>
+
                         <li class="slider-panel">
-                            <img src="<?php bloginfo('template_url'); ?>/images/home/hero_index.png">
+                            <img src="<?php echo $img['url']; ?>">
                         </li>
-                        <li class="slider-panel">
-                            <img src="<?php bloginfo('template_url'); ?>/images/gallery/gallery_1.jpg">
-                        </li>
-                        <li class="slider-panel">
-                            <img src="<?php bloginfo('template_url'); ?>/images/donate/hero_donate.png">
-                        </li>
+                       <?php } ?>
                     </ul>
                     <div class="slider-extra">
                         <ul class="slider-nav">
+                            <li class="slider-item"></li>
                             <li class="slider-item"></li>
                             <li class="slider-item"></li>
                             <li class="slider-item"></li>
@@ -31,6 +37,7 @@
             </div>
         </div>
     </div>
+
     <div class="bookfair-notice">
         <div><h2 class="middle-title">书市预告</h2></div>
         <div class="container">
