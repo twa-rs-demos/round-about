@@ -57,4 +57,7 @@ $(function () {
     }
 
     start();
+
+    var $divWidth = $('.slider').width();
+    $('.slider-panel img').css({'width': $divWidth});
 });

@@ -1,3 +1,5 @@
+<script src="<?php bloginfo('template_url'); ?>/js/advance-search.js"></script>
+
 <div class="row" id="class-fields">
   <div class="col-sm-offset-2 col-sm-8 no-padding">
     <div>
@@ -8,17 +10,12 @@
     <div class="search-box row">
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-box-container">
 
-        <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-          <input type="text" placeholder="搜索本站" name="s" id="s">
-          <button><img id="searchsubmit" class="submit"
-                       src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
-                       alt="search">
-          </button>
-        </form>
-
-        <?php $search = new WP_Advanced_Search('myform');
+        <?php $search = new WP_Advanced_Search('myclassifieldsform');
         $search->the_form();
         ?>
+        <img src='<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png' alt=''
+             class="submit-search-icon"/>
+
 
       </div>
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
@@ -118,17 +115,22 @@
   </div>
 </div>
 
-<div class="search-results large-9 columns">
-  <?php
-  $temp = $wp_query;
-  $wp_query = $search->query();
-  ?>
-  <h4 class="results-count">
-    Displaying <?php echo $search->results_range(); ?>
-    of <?php echo $wp_query->found_posts; ?> results
-  </h4>
-  <?php
 
+<div class="search-results large-9 columns">
+  <?php $wp_query = $search->query(); ?>
+
+  <?php
+  $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+  $args = array(
+    'posts_per_page' => 4,
+    'category_name' => 'classifieds_zh',
+    'paged' => $paged
+  );
+  $posts_query = new WP_Query($args);
+
+  ?>
+
+  <?php
   if ($wp_query->have_posts()) :
 
     while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
@@ -155,22 +157,17 @@
             ?>
           </div>
         </div>
-        <footer>
-          <?php the_tags('<footer class="entry-meta"><span class="tag-links">', '', '</span>'); ?>
-        </footer>
       </article>
-
       <?php
     endwhile;
 
   else :
     echo '<p>Sorry, no results matched your search.</p>';
   endif;
-
-  $search->pagination();
-
-  $wp_query = $temp;
-  wp_reset_query();
   ?>
+  <div class='my-pagination'>
+    <?php page_pagination($posts_query); ?>
+  </div>
 
+  <?php wp_reset_query(); ?>
 </div>
