@@ -94,11 +94,12 @@ function SearchFilter($query)
 add_filter('pre_get_posts', 'SearchFilter');
 
 
-function my_search_form()
+function directory_search_form()
 {
   $args = array();
   $args['wp_query'] = array('post_type' => array('post'),
     'orderby' => 'title',
+    'cat' => array(79),
     'order' => 'ASC');
   $args['fields'][] = array('type' => 'search',
     'placeholder' => '搜索本站');
@@ -107,9 +108,9 @@ function my_search_form()
     'value' => ''
   );
 
-  register_wpas_form('myform', $args);
+  register_wpas_form('directory_form', $args);
 }
 
-add_action('init', 'my_search_form');
+add_action('init', 'directory_search_form');
 
 ?>
