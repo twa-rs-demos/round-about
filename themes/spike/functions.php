@@ -112,4 +112,26 @@ function my_search_form()
 
 add_action('init', 'my_search_form');
 
+
+function classifields_search_form()
+{
+  $args = array();
+  $args['wp_query'] = array('post_type' => array('post'),
+    'orderby' => 'title',
+    'order' => 'ASC',
+    'cat'=>array(75)
+  );
+  $args['fields'][] = array('type' => 'search',
+    'placeholder' => '搜索本站');
+  $args['fields'][] = array('type' => 'submit',
+    'class' => 'button',
+    'value' => ''
+  );
+
+  register_wpas_form('myclassifieldsform', $args);
+}
+
+add_action('init', 'classifields_search_form');
+
+
 ?>

@@ -13,7 +13,8 @@
         <?php $search = new WP_Advanced_Search('myform');
         $search->the_form();
         ?>
-        <img src='<?php bloginfo('template_url');?>/images/home/icon_search_small_focused.png' alt='' class="submit-search-icon"/>
+        <img src='<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png' alt=''
+             class="submit-search-icon"/>
 
 
       </div>
@@ -115,7 +116,6 @@
 </div>
 
 
-
 <div class="search-results large-9 columns">
   <?php
 
@@ -125,11 +125,23 @@
     Displaying <?php echo $search->results_range(); ?>
     of <?php echo $wp_query->found_posts; ?> results
   </h4>
+
+
   <?php
+  $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
+  $args = array(
+    'posts_per_page' => 4,
+    'category_name' => 'current_appeals_zh',
+    'paged' => $paged
+  );
+  $posts_query = new WP_Query($args);
 
-  if ( $wp_query->have_posts() ) :
+  ?>
 
-    while ( $wp_query->have_posts() ) :$wp_query->the_post(); ?>
+  <?php
+  if ($wp_query->have_posts()) :
+
+    while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
 
       <article id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
         <?php $image = get_field('img', get_the_ID()); ?>
@@ -164,8 +176,7 @@
     echo '<p>Sorry, no results matched your search.</p>';
   endif;
 
-  $search->pagination();
-
+  page_pagination($posts_query);
   wp_reset_query();
   ?>
 </div>
