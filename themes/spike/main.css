@@ -63,7 +63,7 @@ pre {
 }
 
 .caldera-forms .form-modal {
-  margin:5%;
+  margin: 5%;
   width: auto;
 }
 
@@ -394,9 +394,10 @@ img {
 
 .search-box .search-box-container input {
   outline: none;
-  width: 83%;
+  width: 100%;
   border: none;
   background-color: #D8D8D8;
+  vertical-align: middle;
 }
 
 .search-box .search-box-container button {
@@ -1025,46 +1026,6 @@ img {
 
 .news-event-switch .choosed {
   color: #ec4c9a;
-}
-
-/*---------------------advanced-search---------------------------------*/
-.search-box {
-  margin: 2rem 0 2rem 0;
-}
-
-.search-box .search-box-container {
-  background-color: #D8D8D8;
-  padding: 0.3rem 0 0.3rem 1.5rem;
-  border-radius: 3rem;
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.search-box .search-box-container input {
-  outline: none;
-  width: 83%;
-  border: none;
-  background-color: #D8D8D8;
-}
-
-.search-box .search-box-container button {
-  border: none;
-  background-color: #D8D8D8;
-  outline: none;
-  border-radius: 2rem;
-  padding-right: 0;
-}
-
-.search-box .search-type {
-  color: #ec4c9a;
-  font-size: 2rem;
-}
-
-.search-box .search-type button {
-  border: none;
-  background-color: #FFF;
-  padding: 0;
-  outline: none;
 }
 
 /*---------------------CSS-Wrap---------------------------------*/
@@ -3374,14 +3335,14 @@ img {
   height: 30rem;
 }
 
-#book-market .book-take-change .slider .join_volunteer_button{
+#book-market .book-take-change .slider .join_volunteer_button {
   /*z-index: 100;*/
   position: absolute;
   right: 8rem;
-  bottom: 4rem;
-
+  bottom: 6rem;
 }
-#book-market .book-take-change .slider .join_volunteer_button button{
+
+#book-market .book-take-change .slider .join_volunteer_button button {
   padding: .7rem 3rem;
   color: white;
   background: #ec4c9a;
@@ -3406,7 +3367,6 @@ img {
   height: 1.5rem;
   border: solid 1px #ccc;
   border-radius: 1.5rem;
-  /*background: #f0f0f0;*/
 }
 
 #book-market .book-take-change .slider-nav .slider-item-selected {
