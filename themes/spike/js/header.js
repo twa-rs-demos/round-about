@@ -120,5 +120,18 @@ $(function () {
         if (Object.values($(ele))[0].innerText.trim() === __injectedVars.currentPage.name) {
             $(ele).find('a').addClass('selected-sub');
         }
-    })
+    });
+
+    $('.nav-brand').each((index, ele) => {
+        const menu = Object.values($(ele))[0].innerText.trim();
+        if (menu === __injectedVars.currentPage.name || menu === __injectedVars.parentPageName) {
+            $(ele).addClass('active');
+        }
+    });
+
+    $('.sub-item').each((index, ele) => {
+        if (Object.values($(ele))[0].innerText.trim() === __injectedVars.currentPage.name) {
+            $(ele).find('a').addClass('selected-sub-menu');
+        }
+    });
 });
