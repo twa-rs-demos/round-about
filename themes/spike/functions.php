@@ -134,4 +134,4 @@ function classifields_search_form()
 }
 
 add_action('init', 'classifields_search_form');
-?>]
+?>
