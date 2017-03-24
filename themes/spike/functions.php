@@ -93,13 +93,35 @@ function SearchFilter($query)
 
 add_filter('pre_get_posts', 'SearchFilter');
 
+
+function directory_search_form()
+{
+  $args = array();
+  $args['wp_query'] = array('post_type' => array('post'),
+    'orderby' => 'title',
+    'order' => 'ASC',
+    'cat' => array(79)
+  );
+  $args['fields'][] = array('type' => 'search',
+    'placeholder' => '搜索本站');
+  $args['fields'][] = array('type' => 'submit',
+    'class' => 'button',
+    'value' => ''
+  );
+
+  register_wpas_form('directory_form', $args);
+}
+
+add_action('init', 'directory_search_form');
+
+
 function classifields_search_form()
 {
   $args = array();
   $args['wp_query'] = array('post_type' => array('post'),
     'orderby' => 'title',
     'order' => 'ASC',
-    'cat'=>array(75)
+    'cat' => array(75)
   );
   $args['fields'][] = array('type' => 'search',
     'placeholder' => '搜索本站');
@@ -112,6 +134,4 @@ function classifields_search_form()
 }
 
 add_action('init', 'classifields_search_form');
-
-
 ?>
