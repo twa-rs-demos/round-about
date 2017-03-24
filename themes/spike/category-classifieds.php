@@ -15,6 +15,11 @@
                        alt="search">
           </button>
         </form>
+
+        <?php $search = new WP_Advanced_Search('myform');
+        $search->the_form();
+        ?>
+
       </div>
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
         <button class="advanced-search">高级搜索 &gt;</button>
@@ -111,4 +116,61 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="search-results large-9 columns">
+  <?php
+  $temp = $wp_query;
+  $wp_query = $search->query();
+  ?>
+  <h4 class="results-count">
+    Displaying <?php echo $search->results_range(); ?>
+    of <?php echo $wp_query->found_posts; ?> results
+  </h4>
+  <?php
+
+  if ($wp_query->have_posts()) :
+
+    while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
+
+      <article id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
+        <?php $image = get_field('img', get_the_ID()); ?>
+        <div class='row post-item'>
+          <?php if ($image) {
+            echo "<img src=" . $image['url'] . " alt='img' class='col-xs-3'/>";
+          } ?>
+          <div class="entry-content  col-xs-9">
+            <?php
+
+            if (is_single()) :
+              the_title('<h3 class="entry-title">', '</h3>');
+            else :
+              the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
+            endif;
+
+            the_content(sprintf(
+              __('Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen'),
+              the_title('<span class="screen-reader-text">', '</span>', false)
+            ));
+            ?>
+          </div>
+        </div>
+        <footer>
+          <?php the_tags('<footer class="entry-meta"><span class="tag-links">', '', '</span>'); ?>
+        </footer>
+      </article>
+
+      <?php
+    endwhile;
+
+  else :
+    echo '<p>Sorry, no results matched your search.</p>';
+  endif;
+
+  $search->pagination();
+
+  $wp_query = $temp;
+  wp_reset_query();
+  ?>
+
 </div>
