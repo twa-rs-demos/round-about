@@ -19,7 +19,6 @@ $(function () {
 
 
     $('.news-list-btn').click(function(){
-        console.log("lllll")
        $('#news-event').attr('class','news');
        $('.calendar').attr('class','calendar hide');
        $('.calendar-btn').removeClass('choosed');
@@ -28,8 +27,6 @@ $(function () {
     });
 
     $('.calendar-btn').click(function(){
-        console.log("nnnnnn")
-
         $('#news-event').attr('class','hide');
         $('.calendar').attr('class','calendar');
         $('.calendar-btn').addClass('choosed');

@@ -3339,8 +3339,7 @@ img {
   /*z-index: 100;*/
   position: absolute;
   right: 8rem;
-  bottom: 4rem;
-
+  bottom: 6rem;
 }
 
 #book-market .book-take-change .slider .join_volunteer_button button {
@@ -3368,7 +3367,6 @@ img {
   height: 1.5rem;
   border: solid 1px #ccc;
   border-radius: 1.5rem;
-  /*background: #f0f0f0;*/
 }
 
 #book-market .book-take-change .slider-nav .slider-item-selected {
