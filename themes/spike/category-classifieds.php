@@ -10,7 +10,7 @@
     <div class="search-box row">
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-box-container">
 
-        <?php $search = new WP_Advanced_Search('myform');
+        <?php $search = new WP_Advanced_Search('myclassifieldsform');
         $search->the_form();
         ?>
         <img src='<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png' alt=''
@@ -117,21 +117,13 @@
 
 
 <div class="search-results large-9 columns">
-  <?php
-
-  $wp_query = $search->query();
-  ?>
-  <h4 class="results-count">
-    Displaying <?php echo $search->results_range(); ?>
-    of <?php echo $wp_query->found_posts; ?> results
-  </h4>
-
+  <?php $wp_query = $search->query(); ?>
 
   <?php
   $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
   $args = array(
     'posts_per_page' => 4,
-    'category_name' => 'current_appeals_zh',
+    'category_name' => 'classifieds_zh',
     'paged' => $paged
   );
   $posts_query = new WP_Query($args);
@@ -165,9 +157,6 @@
             ?>
           </div>
         </div>
-        <footer>
-          <?php the_tags('<footer class="entry-meta"><span class="tag-links">', '', '</span>'); ?>
-        </footer>
       </article>
       <?php
     endwhile;
@@ -175,8 +164,10 @@
   else :
     echo '<p>Sorry, no results matched your search.</p>';
   endif;
-
-  page_pagination($posts_query);
-  wp_reset_query();
   ?>
+  <div class='my-pagination'>
+    <?php page_pagination($posts_query); ?>
+  </div>
+
+  <?php wp_reset_query(); ?>
 </div>
