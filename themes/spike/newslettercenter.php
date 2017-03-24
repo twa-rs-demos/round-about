@@ -1,7 +1,7 @@
 <div id="medical-assistance" class="row">
     <div class="col-xs-12 no-padding">
         <div class="assistance-top">
-            <div><h2 class="middle-title">March 2016</h2></div>
+            <div><h2 class="middle-title"><?php echo strtotime(date('m')); ?></h2></div>
             <div class="assistence-pic-container">
                 <img
                         src="<?php bloginfo('template_url'); ?>/images/assistance/banner_store.png">
