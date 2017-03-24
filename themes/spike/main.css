@@ -3335,16 +3335,17 @@ img {
   height: 30rem;
 }
 
-.slider ul{
-  margin:0;
+.slider ul {
+  margin: 0;
 }
 
-.slider .join_volunteer_button{
+.slider .join_volunteer_button {
   position: absolute;
   right: 8rem;
   bottom: 6rem;
 }
-.slider .join_volunteer_button button{
+
+.slider .join_volunteer_button button {
   padding: .7rem 3rem;
   color: white;
   background: #ec4c9a;
@@ -3930,6 +3931,7 @@ body {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 7rem;
+  word-break: break-all;
 }
 
 #article .article-footer {
