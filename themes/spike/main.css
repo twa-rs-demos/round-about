@@ -3330,19 +3330,21 @@ img {
   color: #ec4c9a;
 }
 
-#book-market .book-take-change .slider {
+.slider {
   position: relative;
   height: 30rem;
 }
 
-#book-market .book-take-change .slider .join_volunteer_button {
-  /*z-index: 100;*/
+.slider ul{
+  margin:0;
+}
+
+.slider .join_volunteer_button{
   position: absolute;
   right: 8rem;
   bottom: 6rem;
 }
-
-#book-market .book-take-change .slider .join_volunteer_button button {
+.slider .join_volunteer_button button{
   padding: .7rem 3rem;
   color: white;
   background: #ec4c9a;
@@ -3351,17 +3353,17 @@ img {
   border-radius: 4px;
 }
 
-#book-market .book-take-change .slider-extra {
+.slider-extra {
   position: absolute;
   top: 25rem;
   left: 50px;
 }
 
-#book-market .book-take-change .slider-nav {
+.slider-nav {
   list-style: none;
 }
 
-#book-market .book-take-change .slider-nav li {
+.slider-nav li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
@@ -3369,22 +3371,22 @@ img {
   border-radius: 1.5rem;
 }
 
-#book-market .book-take-change .slider-nav .slider-item-selected {
+.slider-nav .slider-item-selected {
   background: #ccc;
 }
 
-#book-market .book-take-change .slider .slider-main {
+.slider .slider-main {
   list-style: none;
 }
 
-#book-market .book-take-change .slider .slider-main .slider-panel {
+.slider .slider-main .slider-panel {
   position: absolute;
   top: 0;
   left: 0;
   height: 30rem;
 }
 
-#book-market .book-take-change .slider .slider-main .slider-panel img {
+.slider .slider-main .slider-panel img {
   height: 100%;
   width: 100%;
 

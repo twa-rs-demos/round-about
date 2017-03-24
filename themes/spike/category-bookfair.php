@@ -1,12 +1,4 @@
 <script type="text/javascript">
-    $(function(){
-        var $divWidth = $('.slider').width();
-        $('.slider-panel img').css({'width':$divWidth});
-    });
-</script>
-
-
-<script type="text/javascript">
     var _newsEvents = [];
     <?php
     $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
