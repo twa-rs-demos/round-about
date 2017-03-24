@@ -1,3 +1,5 @@
+<script src="<?php bloginfo('template_url'); ?>/js/advance-search.js"></script>
+
 <div class="row" id="class-fields">
   <div class="col-sm-offset-2 col-sm-8 no-padding">
     <div>
@@ -8,17 +10,11 @@
     <div class="search-box row">
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-box-container">
 
-        <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-          <input type="text" placeholder="搜索本站" name="s" id="s">
-          <button><img id="searchsubmit" class="submit"
-                       src="<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png"
-                       alt="search">
-          </button>
-        </form>
-
         <?php $search = new WP_Advanced_Search('myform');
         $search->the_form();
         ?>
+        <img src='<?php bloginfo('template_url');?>/images/home/icon_search_small_focused.png' alt='' class="submit-search-icon"/>
+
 
       </div>
       <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
@@ -118,9 +114,11 @@
   </div>
 </div>
 
+
+
 <div class="search-results large-9 columns">
   <?php
-  $temp = $wp_query;
+
   $wp_query = $search->query();
   ?>
   <h4 class="results-count">
@@ -129,9 +127,9 @@
   </h4>
   <?php
 
-  if ($wp_query->have_posts()) :
+  if ( $wp_query->have_posts() ) :
 
-    while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
+    while ( $wp_query->have_posts() ) :$wp_query->the_post(); ?>
 
       <article id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
         <?php $image = get_field('img', get_the_ID()); ?>
@@ -159,7 +157,6 @@
           <?php the_tags('<footer class="entry-meta"><span class="tag-links">', '', '</span>'); ?>
         </footer>
       </article>
-
       <?php
     endwhile;
 
@@ -169,8 +166,6 @@
 
   $search->pagination();
 
-  $wp_query = $temp;
   wp_reset_query();
   ?>
-
 </div>
