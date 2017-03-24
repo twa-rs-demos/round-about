@@ -63,7 +63,8 @@ pre {
 }
 
 .caldera-forms .form-modal {
-  width: 860px;
+  margin:5%;
+  width: auto;
 }
 
 .caldera-forms .form-modal .modal-content .modal-header .modal-title {
