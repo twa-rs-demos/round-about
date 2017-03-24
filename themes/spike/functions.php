@@ -104,7 +104,7 @@ function my_search_form()
     'placeholder' => '搜索本站');
   $args['fields'][] = array('type' => 'submit',
     'class' => 'button',
-    'value' => 'Search'
+    'value' => ''
   );
 
   register_wpas_form('myform', $args);

@@ -23,11 +23,31 @@
   margin-top: 25px;
 }
 
-.entry-content p{
+.entry-content p {
   font-size: 1.8rem;
 }
 
-.entry-content h3{
+.entry-content h3 {
   margin-top: 0;
 }
 
+#wp-advanced-search {
+  margin-bottom: 0;
+  width: 85%;
+  display: inline-block;
+}
+
+#wp-advanced-search .wpas-search_query {
+  width: 96%;
+  display: inline-block;
+}
+
+#wp-advanced-search .wpas-submit {
+  width: 2%;
+  display: inline-block;
+}
+
+.search-box .search-box-container .submit-search-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
