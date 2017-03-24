@@ -54,17 +54,17 @@ if (!function_exists('my_pagination')) :
 endif;
 
 
-function page_pagination($the_query) {
-    $big = 999999999; // need an unlikely integer
+function page_pagination($the_query)
+{
+  $big = 999999999; // need an unlikely integer
 
-    echo paginate_links( array(
+  echo paginate_links(array(
 //        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-        'format' => '?paged=%#%',
-        'current' => max( 1, get_query_var('paged') ),
-        'total' => $the_query->max_num_pages
-    ) );
+    'format' => '?paged=%#%',
+    'current' => max(1, get_query_var('paged')),
+    'total' => $the_query->max_num_pages
+  ));
 }
-
 
 
 function search_word_replace($buffer)
@@ -97,36 +97,11 @@ add_filter('pre_get_posts', 'SearchFilter');
 function my_search_form()
 {
   $args = array();
-  // Set default WP_Query
   $args['wp_query'] = array('post_type' => array('post'),
     'orderby' => 'title',
     'order' => 'ASC');
-  // Configure form fields
   $args['fields'][] = array('type' => 'search',
-    'placeholder' => 'Enter search terms');
-  $args['fields'][] = array('type' => 'post_type',
-    'format' => 'checkbox',
-    'label' => 'Search by post type',
-    'default_all'=>true,
-//    'values' => array('page' => 'Pages',
-//      'field' => 'Fields',
-//      'param' => 'Parameters')
-);
-  $args['fields'][] = array('type' => 'orderby',
-    'format' => 'select',
-    'label' => 'Order by',
-    'values' => array('title' => 'Title',
-      'date' => 'Date Added'));
-//  $args['fields'][] = array('type' => 'order',
-//    'format' => 'radio',
-//    'label' => 'Order',
-//    'values' => array('ASC' => 'ASC', 'DESC' => 'DESC'),
-//    'default' => 'ASC');
-   $args['fields'][] = array('type' => 'posts_per_page',
-    'format' => 'select',
-    'label' => 'Results per page',
-    'values' => array(2 => 2, 5 => 5, 10 => 10),
-    'default' => 10);
+    'placeholder' => '搜索本站');
   $args['fields'][] = array('type' => 'submit',
     'class' => 'button',
     'value' => 'Search'
