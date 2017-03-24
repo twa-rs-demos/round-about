@@ -2197,8 +2197,8 @@ img {
   text-decoration: none;
 }
 
-#header .nav-menu .menu-list1 .dropdown .dropdown-list .dropdown-items .dropdown-item .selected-sub {
-  color: #ec4c9a;
+#header .nav-menu .menu-list1 .selected-sub {
+  color: #ec4c9a !important;
 }
 
 #header .header-search-box {

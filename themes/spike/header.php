@@ -20,6 +20,9 @@ foreach ($menus as $menu) {
   }
 }
 usort($sub_menus, 'sort_by_description');
+
+$current_page = get_category_by_slug(get_the_title(get_queried_object_id()));
+$parent_page_name = get_cat_name($current_page->category_parent);
 ?>
 
 <html>
@@ -32,31 +35,31 @@ usort($sub_menus, 'sort_by_description');
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/search.css" type="text/css" media="screen"/>
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/pagenation.css" type="text/css" media="screen"/>
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.min.js"></script>
-  <script src="<?php bloginfo('template_url'); ?>/libs/bootstrap.min.js"></script>
+  <!--  <script src="--><?php //bloginfo('template_url'); ?><!--/libs/bootstrap.min.js"></script>-->
   <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <!--  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>-->
 
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script src="<?php bloginfo('template_url'); ?>/js/header.js"></script>
   <script src="<?php bloginfo('template_url'); ?>/js/pagination.js"></script>
-    <script type="text/javascript">
-        <?php
-        $category = get_category_by_slug('newsandevents_zh');
-        $args = array(
-            'category' => get_cat_ID($category->name)
-        );
-        $posts_array = get_posts($args);
-        ?>
-        var  _newsEvents = JSON.parse('<?php echo json_encode($posts_array)?>');
-    </script>
-
-
+  <script type="text/javascript">
+    <?php
+    $category = get_category_by_slug('newsandevents_zh');
+    $args = array(
+      'category' => get_cat_ID($category->name)
+    );
+    $posts_array = get_posts($args);
+    ?>
+    var _newsEvents = JSON.parse('<?php echo json_encode($posts_array)?>');
+  </script>
 
   <script type="text/javascript">
       var __injectedVars = {
           menus: Object.values(JSON.parse('<?php echo json_encode($menus)?>')),
           subMenus: JSON.parse('<?php echo json_encode($sub_menus)?>'),
-          currentLanguage: '<?php  echo get_bloginfo('language')?>'
+          currentLanguage: '<?php  echo get_bloginfo('language')?>',
+          currentPage: JSON.parse('<?php echo json_encode($current_page);?>'),
+          parentPageName: JSON.parse('<?php echo json_encode($parent_page_name);?>')
       }
   </script>
   <script type="text/javascript">
@@ -68,7 +71,6 @@ usort($sub_menus, 'sort_by_description');
               $('.wechat-box').attr("class", "hide wechat-box modal");
           });
       });
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="menuTemplate">
@@ -91,11 +93,6 @@ usort($sub_menus, 'sort_by_description');
       </div>
     </div>
 
-
-
-
-
-
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -110,11 +107,6 @@ usort($sub_menus, 'sort_by_description');
             {{/each}}
         </ul>
    </li>
-
-
-
-
-
 
 
   </script>
