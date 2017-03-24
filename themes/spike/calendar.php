@@ -1,4 +1,47 @@
-<?php get_header() ?>
+
+<script type="text/javascript">
+    var _newsEvents = [];
+    <?php
+    $newsandevent_cat = get_category_by_slug('newsandevents_zh');
+    $newsandevent_cat_ID = $newsandevent_cat->cat_ID;
+    $children_categories=get_categories(
+        array( 'parent' => $newsandevent_cat_ID )
+    );
+
+    $children_cat_ID = array();
+    foreach ($children_categories as $child_cat){
+        $children_cat_ID[] = $child_cat->cat_ID;
+    }
+    $args = array(
+        'numberposts' => -1,
+        'category_name' => 'newsandevents_zh',
+        'paged' => $paged,
+        'category__not_in' => $children_cat_ID,
+        'category__in'=>$newsandevent_cat_ID
+    );
+    $posts_query = new WP_Query($args);
+    $posts_array = $posts_query->posts;
+    ?>
+
+    <?php foreach ($posts_array as $post) : setup_postdata($post);
+    $time = $post->post_date;
+    $custom_fields = get_post_custom($post->ID);
+    $activityTime = $custom_fields['activity-time'];
+    $content = $post->post_content;
+    $image = get_field('img', $post->ID);
+    ?>
+
+    _newsEvents.push({
+        time:<?php  echo json_encode($time);?>,
+        activityTime:<?php echo json_encode($activityTime[0])?>,
+        content:<?php  echo json_encode($content);?>,
+        img:<?php echo json_encode($image['url']);?>,
+    });
+
+    <?php endforeach;
+    wp_reset_postdata(); ?>
+
+</script>
 
 <div id="news-and-event">
     <div class="picture-max"
@@ -35,7 +78,7 @@
                         $calendar_cat = get_category_by_slug('calendar_zh');
                         $posts = get_posts(array('posts_per_page' => 4,
                             'category__in' => array($calendar_cat->cat_ID)));
-                            foreach ($posts as $post) {
+                        foreach ($posts as $post) {
                             $title = $post->post_title;
                             $content = $post->post_content;
                             $custom_fields = get_post_custom($post->ID);
@@ -202,4 +245,3 @@
         </div>
     </div>
 </div>
-<?php get_footer() ?>
