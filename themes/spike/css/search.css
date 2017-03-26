@@ -51,3 +51,9 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+#news-and-event #wp-advanced-search  #wpas-submit .wpas-submit{
+  border: none;
+  vertical-align: middle;
+  height: 2rem;
+}
