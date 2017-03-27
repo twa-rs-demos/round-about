@@ -97,9 +97,12 @@
                   <div><p class="span"><?php echo $content; ?></p>
                   </div>
                   <div>
-                    <?php foreach ($tags as $tag) : ?>
-                      <span class="tag"><?php echo $tag->name; ?></span>
-                    <?php endforeach; ?>
+                    <?php
+                    if ($tags) {
+                      foreach ($tags as $tag) : ?>
+                        <span class="tag"><?php echo $tag->name; ?></span>
+                      <?php endforeach;
+                    } ?>
                   </div>
                 </div>
               </div>
