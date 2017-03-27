@@ -51,3 +51,12 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+#directory .modal-backdrop {
+  position: static;
+  background: none;
+}
+
+#directory .modal-backdrop.in {
+  opacity: 0;
+}

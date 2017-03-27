@@ -420,6 +420,51 @@ img {
   outline: none;
 }
 
+#filter-form {
+  z-index: 1050;
+  display: block;
+  position: fixed;
+  outline: none;
+  border: solid 1px #D8D8D8;
+  background-color: #fff;
+  width: 291px;
+  padding: 20px 17px;
+  top: 10%;
+  right: 10%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+#filter-form .form-header .modal-title {
+  font-size: 3rem;
+  color: #ec4c9a;
+  padding-bottom: 0;
+}
+
+#filter-form .form-body {
+  padding-top: 6px;
+}
+
+#filter-form .form-body .filter-button {
+  border: 1px #ec4c9a solid;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  margin: 0 19px 10px 0;
+  padding: 2px 11px;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#filter-form .form-body .active {
+  background-color: #ec4c9a;
+  color: #FFFFFF;
+}
+
+#filter-form .form-body p {
+  font-size: 2.1rem;
+  padding-top: 0;
+}
+
 /*---------------------CSS-Wrap---------------------------------*/
 .css-wrap {
   position: relative;
@@ -1240,43 +1285,6 @@ img {
   margin-bottom: 2rem;
   outline: none;
   font-size: 1.5rem;
-}
-
-#filter .modal-content {
-  width: 312px;
-  float: right;
-}
-
-#filter .modal-content .modal-header {
-  padding-bottom: 0;
-}
-
-#filter .modal-content .modal-header .modal-title {
-  font-size: 3rem;
-  color: #ec4c9a;
-}
-
-#filter .modal-content .modal-body {
-  padding-top: 6px;
-}
-
-#filter .modal-content .modal-body .filter-button {
-  border: 1px #ec4c9a solid;
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  margin: 0 19px 10px 0;
-  padding: 0 10px;
-  outline: none;
-}
-
-#filter .modal-content .modal-body .active {
-  background-color: #ec4c9a;
-  color: #FFFFFF;
-}
-
-#filter .modal-content .modal-body p {
-  font-size: 2.1rem;
-  padding-top: 0;
 }
 
 @media (min-width: 768px) {
