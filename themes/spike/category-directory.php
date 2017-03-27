@@ -18,62 +18,46 @@
 
           </div>
 
-
           <div class="col-sm-offset-4 col-xs-offset-3 col-sm-4 col-xs-6 no-padding search-type">
             <button class="advanced-search">高级搜索 &gt;</button>
           </div>
 
-          <div class="static-modal hidden" id="filter">
-            <div tabindex="-1" role="dialog" class="modal" style="display: block;">
-              <div class="modal-dialog">
-                <div class="modal-content" role="document">
-                  <div class="modal-header">
-                    <div>
-                      <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span>
-                      </button>
-                      <h4 class="modal-title">筛选</h4></div>
-                  </div>
-                  <div class="modal-body">
-                    <div class="location"><p>地点</p>
-                      <div>
-                        <button class="filter-button ">北京</button>
-                        <button class="filter-button ">上海</button>
-                        <button class="filter-button ">河北</button>
-                        <button class="filter-button ">河南</button>
-                        <button class="filter-button ">杭州</button>
-                        <button class="filter-button ">成都</button>
-                        <button class="filter-button ">甘肃</button>
-                        <button class="filter-button ">青海</button>
-                        <button class="filter-button ">广西</button>
-                      </div>
-                    </div>
-                    <div class="organization"><p>机构</p>
-                      <div>
-                        <button class="filter-button ">非营利</button>
-                        <button class="filter-button ">社会企业</button>
-                        <button class="filter-button ">营利</button>
-                      </div>
-                    </div>
-                    <div class="benefit"><p>受益</p>
-                      <div>
-                        <button class="filter-button ">孩子</button>
-                        <button class="filter-button ">老年人</button>
-                        <button class="filter-button ">白血病</button>
-                        <button class="filter-button ">癌症</button>
-                        <button class="filter-button ">灾难</button>
-                        <button class="filter-button ">HTV/AIDS</button>
-                        <button class="filter-button ">普通的</button>
-                        <button class="filter-button ">教育</button>
-                        <button class="filter-button ">流浪汉</button>
-                        <button class="filter-button ">其他</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div id="filter-form" class="hide" tabindex=1>
+            <div class="form-header">
+              <h4 class="modal-title">筛选</h4>
+            </div>
+            <div class="form-body">
+              <div class="location"><p>地点</p>
+                <span class="filter-button ">北京</span>
+                <span class="filter-button ">上海</span>
+                <span class="filter-button ">河北</span>
+                <span class="filter-button ">河南</span>
+                <span class="filter-button ">杭州</span>
+                <span class="filter-button ">成都</span>
+                <span class="filter-button ">甘肃</span>
+                <span class="filter-button ">青海</span>
+                <span class="filter-button ">广西</span>
+              </div>
+              <div class="organization"><p>机构</p>
+                <span class="filter-button ">非营利</span>
+                <span class="filter-button ">社会企业</span>
+                <span class="filter-button ">营利</span>
+              </div>
+              <div class="benefit"><p>受益</p>
+                <span class="filter-button ">孩子</span>
+                <span class="filter-button ">老年人</span>
+                <span class="filter-button ">白血病</span>
+                <span class="filter-button ">癌症</span>
+                <span class="filter-button ">灾难</span>
+                <span class="filter-button ">HTV/AIDS</span>
+                <span class="filter-button ">普通的</span>
+                <span class="filter-button ">教育</span>
+                <span class="filter-button ">流浪汉</span>
+                <span class="filter-button ">其他</span>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
