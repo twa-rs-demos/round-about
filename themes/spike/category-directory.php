@@ -65,7 +65,6 @@
   <div class="row">
     <div class="col-sm-offset-2 col-sm-8 no-padding charities-list">
 
-
       <?php
       $wp_query = $search->query();
       if ($wp_query->have_posts()) :
