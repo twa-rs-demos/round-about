@@ -79,7 +79,7 @@
           <span>&nbsp; |&nbsp;</span>
           <span class="calendar-btn ">日历</span>
         </div>
-        <div id="news-event" class="">
+        <div id="news-event">
           <div>
             <?php
             $wp_query = $search->query();

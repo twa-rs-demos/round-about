@@ -105,7 +105,6 @@ $parent_page_name = get_cat_name($current_page->category_parent);
 
     <script src="<?php bloginfo('template_url'); ?>/js/events.js"></script>
     <script src="<?php bloginfo('template_url'); ?>/js/calendar.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/js/bookfair.js"></script>
 
 </head>
 <body>
@@ -219,5 +218,11 @@ $parent_page_name = get_cat_name($current_page->category_parent);
                 </div>
             </div>
         </div>
+
+
+
+
+
+
 
 
