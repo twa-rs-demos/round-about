@@ -52,11 +52,8 @@
   vertical-align: middle;
 }
 
-#directory .modal-backdrop {
-  position: static;
-  background: none;
-}
-
-#directory .modal-backdrop.in {
-  opacity: 0;
+#news-and-event #wp-advanced-search  #wpas-submit .wpas-submit{
+  border: none;
+  vertical-align: middle;
+  height: 2rem;
 }

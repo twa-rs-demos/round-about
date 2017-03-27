@@ -12,6 +12,7 @@
                             'category_name' => 'medical_assistance_zh'
                         );
                         $posts= get_posts( $args );
+                        $length = sizeof($posts);
                         foreach ($posts as $post){
                             $img = get_field("img", $post->ID); ?>
 
@@ -22,10 +23,11 @@
                     </ul>
                     <div class="slider-extra">
                         <ul class="slider-nav">
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
+                            <?php if($length>1){
+                                while($length--) { ?>
+                                    <li class="slider-item" ></li >
+                                <?php }
+                            } ?>
                         </ul>
                     </div>
                 </div>

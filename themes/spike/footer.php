@@ -63,7 +63,7 @@
     <div class="col-md-3 col-sm-6 col-xs-12 no-padding footer-item">
       <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12 no-padding">
         <div class="two-title"><p class="col-two-text">Want to join us?</p>
-          <p class="red-text" data-toggle="modal" data-target="#volunteers-application-form">> Apply To Volunteer Today
+          <p class="red-text" data-toggle="modal" data-target="#volunteers-application-form">Apply To Volunteer Today
             &gt; </p>
           <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
                aria-labelledby="myModalLabel" aria-hidden="true">
@@ -90,7 +90,8 @@
             Contact Us Now >
           </p>
         </div>
-        <div class="modal fade caldera-forms" id="contact-us-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <div class="modal fade caldera-forms" id="contact-us-form" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel"
              aria-hidden="true">
           <div class="modal-dialog form-modal">
             <div class="modal-content">

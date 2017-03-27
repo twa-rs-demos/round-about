@@ -113,61 +113,62 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="charities-list col-sm-offset-2 col-sm-8 no-padding">
 
 
-<div class="search-results large-9 columns">
-  <?php $wp_query = $search->query(); ?>
+    <?php
+    $wp_query = $search->query();
 
-  <?php
-  $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-  $args = array(
-    'posts_per_page' => 4,
-    'category_name' => 'classifieds_zh',
-    'paged' => $paged
-  );
-  $posts_query = new WP_Query($args);
+    if ($wp_query->have_posts()) :
 
-  ?>
+      $posts = $wp_query->posts;
 
-  <?php
-  if ($wp_query->have_posts()) :
-
-    while ($wp_query->have_posts()) :$wp_query->the_post(); ?>
-
-      <article id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
-        <?php $image = get_field('img', get_the_ID()); ?>
-        <div class='row post-item'>
-          <?php if ($image) {
-            echo "<img src=" . $image['url'] . " alt='img' class='col-xs-3'/>";
-          } ?>
-          <div class="entry-content  col-xs-9">
-            <?php
-
-            if (is_single()) :
-              the_title('<h3 class="entry-title">', '</h3>');
-            else :
-              the_title('<h3 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h3>');
-            endif;
-
-            the_content(sprintf(
-              __('Continue reading %s <span class="meta-nav">&rarr;</span>', 'twentyfourteen'),
-              the_title('<span class="screen-reader-text">', '</span>', false)
-            ));
-            ?>
+      foreach ($posts as $post): ?>
+        <article id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
+          <?php $custom_fields = get_post_custom($post->ID); ?>
+          <?php
+          $charityName = $custom_fields['charityName'][0];
+          $charityAddress = $custom_fields['charityAddress'][0];
+          $charityPhone = $custom_fields['charityPhone'][0];
+          $img = get_field("img", $post->ID);
+          $content = $post->post_content;
+          $tags = get_the_tags($post->ID);
+          ?>
+          <div class="row charities">
+            <div class="col-xs-2 no-padding">
+              <img src="<?php echo $img['url']; ?>" alt="charity-img"/>
+            </div>
+            <div class="col-xs-10 no-padding"><h5 class="charity-name"><a
+                  href="<?php the_permalink($post->ID); ?>"><?php echo $charityName; ?></a></h5>
+              <div class="charity-info">
+                <div><i class="fa fa-home" aria-hidden="true"></i><span
+                    class="span"><?php echo $charityAddress; ?></span>
+                </div>
+                <div><i class="fa fa-phone" aria-hidden="true"></i><span
+                    class="span"><?php echo $charityPhone; ?></span>
+                </div>
+                <div><p class="span"><?php echo $content; ?></p>
+                </div>
+                <div>
+                  <?php foreach ($tags as $tag) : ?>
+                    <span class="tag"><?php echo $tag->name; ?></span>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </article>
-      <?php
-    endwhile;
+        </article>
+        <?php
+      endforeach;
 
-  else :
-    echo '<p>Sorry, no results matched your search.</p>';
-  endif;
-  ?>
-  <div class='my-pagination'>
-    <?php page_pagination($posts_query); ?>
+    else :
+      echo '<p>Sorry, no results matched your search.</p>';
+    endif;
+    ?>
+    <div class='my-pagination'>
+      <?php page_pagination($wp_query); ?>
+    </div>
+
+    <?php wp_reset_query(); ?>
   </div>
-
-  <?php wp_reset_query(); ?>
 </div>

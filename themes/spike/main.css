@@ -1257,9 +1257,9 @@ img {
   padding-top: 50px;
 }
 
-#class-fields {
-  margin-bottom: 17rem;
-}
+/*#class-fields {*/
+/*margin-bottom: 17rem;*/
+/*}*/
 
 #class-fields .public-resource p {
   font-size: 2rem;
@@ -1658,11 +1658,9 @@ img {
   border-color: #ec4c9a;
 }
 
-#pagination-project .donateProject-more {
-  display: inline-block;
-  margin-top: 2.5rem;
-  color: #ec4c9a;
+.pagination-style .donate-project-more {
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 /*---------------------------donate-projects------------------------------------*/
@@ -4008,3 +4006,62 @@ body {
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/
+
+#class-fields .charities-list {
+  margin-top: 32px;
+  border-top: 1px solid #DBDBDB;
+}
+
+#class-fields .charities-list .charities {
+  margin-top: 18px;
+  margin-bottom: 32px;
+}
+
+#class-fields .charities-list .charities .image {
+  border: 1px #E1E1E1 solid;
+  max-width: 100%;
+  width: 80%;
+}
+
+#class-fields .charities-list .charities .charity-name {
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+  color: #ec4c9a;
+  line-height: 3.5rem;
+}
+
+#class-fields .charities-list .charities .charity-info .fa {
+  font-size: 1.9rem;
+  color: #A2AAB5;
+  margin-right: 10px;
+}
+
+#class-fields .charities-list .charities .charity-info .span {
+  font-size: 2rem;
+  word-break: break-all;
+  line-height: 3.5rem;
+}
+
+#class-fields .charities-list .charities .charity-info p {
+  position: relative;
+  overflow: hidden;
+  line-height: 3.5rem;
+  height: 7rem;
+}
+
+#class-fields .charities-list .charities .charity-info p::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0 2rem 1px 3rem;
+  background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y;
+}
+
+#class-fields .charities-list .charities .charity-info .tag {
+  background-color: #D8D8D8;
+  border-radius: 12px;
+  padding: 3px 14px;
+  margin-right: 8px;
+  font-size: 1.8rem;
+}

@@ -134,4 +134,27 @@ function classifields_search_form()
 }
 
 add_action('init', 'classifields_search_form');
+
+
+
+function newsAndEvents_form()
+{
+  $args = array();
+  $args['wp_query'] = array('post_type' => array('post'),
+    'orderby' => 'title',
+    'order' => 'ASC',
+    'cat' => array(7)
+  );
+  $args['fields'][] = array('type' => 'search',
+    'placeholder' => '搜索本站');
+  $args['fields'][] = array('type' => 'submit',
+    'class' => 'button',
+    'value' => ''
+  );
+
+  register_wpas_form('newsAndEventsform', $args);
+}
+
+add_action('init', 'newsAndEvents_form');
+
 ?>

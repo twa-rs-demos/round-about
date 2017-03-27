@@ -41,21 +41,21 @@
                             'category_name' => 'bookfair_zh'
                         );
                         $posts= get_posts( $args );
-
+                        $length = sizeof($posts);
                         foreach ($posts as $post){
-                        $img = get_field("img", $post->ID); ?>
-
-                        <li class="slider-panel">
-                            <img src="<?php echo $img['url']; ?>">
-                        </li>
-                       <?php } ?>
+                            $img = get_field("img", $post->ID); ?>
+                            <li class="slider-panel">
+                                <img src="<?php echo $img['url']; ?>">
+                            </li>
+                        <?php } ?>
                     </ul>
                     <div class="slider-extra">
                         <ul class="slider-nav">
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
-                            <li class="slider-item"></li>
+                            <?php if($length>1){
+                                while($length--) { ?>
+                                    <li class="slider-item" ></li >
+                                <?php }
+                            } ?>
                         </ul>
                     </div>
                     <div class="join_volunteer_button">
