@@ -114,23 +114,11 @@
     </div>
   </div>
   <div class="charities-list col-sm-offset-2 col-sm-8 no-padding">
-    <?php
 
+
+    <?php
     $wp_query = $search->query();
-    ?>
 
-    <?php
-    $paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
-    $args = array(
-      'posts_per_page' => 4,
-      'category_name' => 'classifieds_zh',
-      'paged' => $paged
-    );
-    $posts_query = new WP_Query($args);
-
-    ?>
-
-    <?php
     if ($wp_query->have_posts()) :
 
       $posts = $wp_query->posts;
@@ -178,7 +166,7 @@
     endif;
     ?>
     <div class='my-pagination'>
-      <?php page_pagination($posts_query); ?>
+      <?php page_pagination($wp_query); ?>
     </div>
 
     <?php wp_reset_query(); ?>
