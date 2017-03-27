@@ -1650,11 +1650,9 @@ img {
   border-color: #ec4c9a;
 }
 
-#pagination-project .donateProject-more {
-  display: inline-block;
-  margin-top: 2.5rem;
-  color: #ec4c9a;
+.pagination-style .donate-project-more {
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 /*---------------------------donate-projects------------------------------------*/
