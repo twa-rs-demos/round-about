@@ -1,49 +1,4 @@
 <script src="<?php bloginfo('template_url'); ?>/js/advance-search.js"></script>
-
-<script type="text/javascript">
-    var _newsEvents = [];
-    <?php
-    $newsandevent_cat = get_category_by_slug('newsandevents_zh');
-    $newsandevent_cat_ID = $newsandevent_cat->cat_ID;
-    $children_categories = get_categories(
-      array('parent' => $newsandevent_cat_ID)
-    );
-
-    $children_cat_ID = array();
-    foreach ($children_categories as $child_cat) {
-      $children_cat_ID[] = $child_cat->cat_ID;
-    }
-    $args = array(
-      'numberposts' => -1,
-      'category_name' => 'newsandevents_zh',
-      'paged' => $paged,
-      'category__not_in' => $children_cat_ID,
-      'category__in' => $newsandevent_cat_ID
-    );
-    $posts_query = new WP_Query($args);
-    $posts_array = $posts_query->posts;
-    ?>
-
-    <?php foreach ($posts_array as $post) : setup_postdata($post);
-    $time = $post->post_date;
-    $custom_fields = get_post_custom($post->ID);
-    $activityTime = $custom_fields['activity-time'];
-    $content = $post->post_content;
-    $image = get_field('img', $post->ID);
-    ?>
-
-    _newsEvents.push({
-        time:<?php  echo json_encode($time);?>,
-        activityTime:<?php echo json_encode($activityTime[0])?>,
-        content:<?php  echo json_encode($content);?>,
-        img:<?php echo json_encode($image['url']);?>,
-    });
-
-    <?php endforeach;
-    wp_reset_postdata(); ?>
-
-</script>
-
 <div id="news-and-event">
   <div class="picture-max"
        style="background-repeat: no-repeat; background-size: cover; background-image: url(<?php bloginfo('template_url'); ?>/images/newsAndEvent/hero_news&events.png); background-position: center center;"></div>
@@ -92,6 +47,14 @@
                 $custom_fields = get_post_custom($post->ID);
                 $name = $custom_fields['name_news'];
                 $image = get_field('img', $post->ID);
+
+
+                $start_day = $custom_fields['start_day'];
+                $end_day = $custom_fields['end_day'];
+                $start_date = $custom_fields['start_date'];
+                $end_date = $custom_fields['end_date'];
+                $start_day_time = $custom_fields['start_day_time'];
+                $end_day_time = $custom_fields['end_day_time'];
                 ?>
 
                 <div class="row row-margin-bottom">
@@ -118,11 +81,24 @@
                         <div class="row">
                           <div class="col-xs-2">
                             <div class="box-border">
-                              <div class="num-box">28</div>
+                              <div class="num-box"><?php
+
+                                if ($start_day[0]) {
+
+                                  echo $start_day[0];
+                                } ?>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-xs-10"><h4>Fri, 13 March
-                              <br>10:00am-14:00pm
+                          <div class="col-xs-10"><h4><?php
+                              if ($start_date[0]) {
+                                echo $start_date[0];
+                              } ?>
+                              <br><?php
+                              if ($start_day_time[0]) {
+                                echo $start_day_time[0];
+                              }
+                              ?>
                             </h4></div>
                         </div>
                       </div>
@@ -130,11 +106,19 @@
                         <div class="row">
                           <div class="col-xs-2">
                             <div class="box-border">
-                              <div class="num-box">28</div>
+                              <div class="num-box"><?php
+                                if ($end_day[0]) {
+                                  echo $end_day[0];
+                                } ?></div>
                             </div>
                           </div>
-                          <div class="col-xs-10"><h4>Fri, 13 March
-                              <br>10:00am-14:00pm
+                          <div class="col-xs-10"><h4><?php
+                              if ($end_date[0]) {
+                                echo $end_date[0];
+                              } ?>
+                              <br><?php if ($end_day_time[0]) {
+                                echo $end_day_time[0];
+                              } ?>
                             </h4></div>
                         </div>
                       </div>
