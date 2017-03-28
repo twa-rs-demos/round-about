@@ -1,3 +1,5 @@
+<script src="<?php bloginfo('template_url'); ?>/js/auto-carousel.js"></script>
+
 <div id="medical-assistance" class="row">
     <div class="col-xs-12 no-padding">
         <div class="assistance-top">
