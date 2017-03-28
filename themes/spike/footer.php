@@ -83,6 +83,9 @@
                   ?>
                 </div>
               </div>
+              <div class="hide form-success-info" id="form-success-info">
+                success
+              </div>
             </div>
           </div>
           <p class="col-two-text">Have an enquiry?</p>
@@ -108,6 +111,9 @@
                 echo do_shortcode($form->post_content);
                 ?>
               </div>
+            </div>
+            <div class="hide form-success-info" id="form-success-info">
+              success
             </div>
           </div>
         </div>

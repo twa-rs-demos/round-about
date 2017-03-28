@@ -88,6 +88,21 @@ pre {
   color: #ec4c9a;
 }
 
+.form-success-info {
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  background-color: #dff0d8;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.caldera-forms .alert-success {
+  display: none;
+}
+
 .caldera_forms_form .label-field {
   margin-bottom: 15px;
 }

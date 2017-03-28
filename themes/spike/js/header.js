@@ -134,5 +134,4 @@ $(function () {
             $(ele).find('a').addClass('selected-sub-menu');
         }
     });
-
-  });
+});
