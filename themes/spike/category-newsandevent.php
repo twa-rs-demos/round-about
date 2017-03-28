@@ -6,13 +6,13 @@
     <div class="news_event_category row">
       <div class="col-md-offset-1 col-md-10">
         <div class="col-md-3 col-md-offset-1 margin-bottom col-xs-12">
-
-          <?php $search = new WP_Advanced_Search('newsAndEventsform');
-          $search->the_form();
-          ?>
-          <img src='<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png' alt=''
-               class="submit-search-icon"/>
-
+          <div class="advanced-search-box">
+            <?php $search = new WP_Advanced_Search('newsAndEventsform');
+            $search->the_form();
+            ?>
+            <img src='<?php bloginfo('template_url'); ?>/images/home/icon_search_small_focused.png' alt=''
+                 class="submit-search-icon"/>
+          </div>
         </div>
         <div class="col-md-2 col-xs-4">
           <button class="filter-button">募款</button>

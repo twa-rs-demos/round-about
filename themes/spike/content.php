@@ -1,17 +1,41 @@
 <?php get_header(); ?>
 
-<link href="<?php bloginfo('template_url'); ?>/css/dragdealer.css" rel="stylesheet" type="text/css">
-<script src="<?php bloginfo('template_url'); ?>/js/dragdealer.js"></script>
+  <script src="<?php bloginfo('template_url'); ?>/js/jssor.slider-22.2.16.mini.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-  $(function () {
-    new Dragdealer('image-carousel', {
-      steps: 4,
-      speed: 0.3,
-      loose: true
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+      var jssor_1_options = {
+        $AutoPlay: false,
+        $SlideWidth: 200,
+        $SlideHeight: '100%',
+        $SlideSpacing: 13,
+        $Cols: 4,
+        $Loop: 0,
+        $Scale: true
+      };
+
+      var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+      function ScaleSlider() {
+        var refSize = $('.picture').width();
+        if (refSize) {
+          refSize = Math.min(refSize, 100000);
+          jssor_1_slider.$ScaleWidth(refSize);
+        }
+        else {
+          window.setTimeout(ScaleSlider, 30);
+        }
+      }
+
+      ScaleSlider();
+      $(window).bind("load", ScaleSlider);
+      $(window).bind("resize", ScaleSlider);
+      $(window).bind("orientationchange", ScaleSlider);
     });
-  })
-</script>
+
+  </script>
+
 
 <?php
 $id = get_the_ID();
@@ -20,13 +44,13 @@ $title = $content->post_title;
 $image = get_field('img', $post->ID);
 
 $categories = get_the_category();
-$posts = get_posts(array('posts_per_page' => 4,
+$posts = get_posts(array('posts_per_page' => 6,
   'category__in' => array($categories[0]->cat_ID)));
 if (sizeof($posts) < 4) {
   echo "
   <script type=\"text/javascript\">
   $(document).ready(function() {
-    $('.dragdealer').attr('class', 'hide dragdealer');
+    $('.drag').attr('class', 'hide drag');
  });
   </script>
   ";
@@ -34,21 +58,19 @@ if (sizeof($posts) < 4) {
   echo "
   <script type=\"text/javascript\">
   $(document).ready(function() {
-    $('.dragdealer').attr('class', 'dragdealer');
+    $('.drag').attr('class', 'drag');
  });
   </script>
   ";
-} ?>
+}
+?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <div id="article">
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10 ">
-        <div class="article-header"><h1 class=""><?php
-            echo $title; ?></h1></div>
+    <div id="article">
+      <div class="row" style="overflow: hidden; position: relative;">
 
-        <div class="article-footer">
+        <div class="article-footer col-sm-offset-2">
           <?php $category = get_the_category();
           $categoryIDS = $category->term_id;
           ?>
@@ -68,34 +90,39 @@ if (sizeof($posts) < 4) {
           </div>
         </div>
 
-        <div class="picture">
-          <div class="bigger-img"><img src="<?php echo $image['url']; ?>"></div>
-        </div>
+        <div class="col-sm-offset-2 col-sm-8">
+          <div class="article-header"><h1 class=""><?php
+              echo $title; ?></h1></div>
 
-        <div id="image-carousel" class="dragdealer">
-          <div class="handle">
-            <?php
-            foreach ($posts as $post) {
-              $image_info = get_field('img', $post->ID);
-              ?>
-              <div class="slide">
-                <a href="<?php the_permalink($post->ID); ?>">
-                  <img src="<?php echo $image_info['url']; ?>">
-                </a>
-              </div>
-            <?php } ?>
+
+          <div class="picture">
+            <div class="bigger-img"><img src="<?php echo $image['url']; ?>"></div>
           </div>
-        </div>
 
-        <div class="article-content"><?php
-          the_content($more_link_text, $stripteaser);
-          ?>
-        </div>
+          <div id="jssor_1" class="drag">
+            <div data-u="slides" class="slides">
+              <?php
+              foreach ($posts as $post) {
+                $image_info = get_field('img', $post->ID);
+                ?>
+                <div>
+                  <a href="<?php the_permalink($post->ID); ?>">
+                    <img src="<?php echo $image_info['url']; ?>">
+                  </a>
+                </div>
+              <?php } ?>
+            </div>
+          </div>
 
+          <div class="article-content"><?php
+            the_content($more_link_text, $stripteaser);
+            ?>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
 
-</article>
+  </article>
 
 <?php get_footer(); ?>
