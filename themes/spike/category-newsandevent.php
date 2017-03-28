@@ -80,15 +80,14 @@
                       <div class="col-md-12 col-xs-6 margin-bottom ">
                         <div class="row">
                           <div class="col-xs-2">
-                            <div class="box-border">
-                              <div class="num-box"><?php
-
-                                if ($start_day[0]) {
-
+                            <?php if ($start_day[0]) { ?>
+                              <div class="box-border">
+                                <div class="num-box"><?php
                                   echo $start_day[0];
-                                } ?>
+                                  ?>
+                                </div>
                               </div>
-                            </div>
+                            <?php } ?>
                           </div>
                           <div class="col-xs-10"><h4><?php
                               if ($start_date[0]) {
@@ -105,12 +104,14 @@
                       <div class="col-md-12 col-xs-6 margin-bottom">
                         <div class="row">
                           <div class="col-xs-2">
-                            <div class="box-border">
-                              <div class="num-box"><?php
-                                if ($end_day[0]) {
+                            <?php if ($end_day[0]) { ?>
+                              <div class="box-border">
+                                <div class="num-box"><?php
                                   echo $end_day[0];
-                                } ?></div>
-                            </div>
+                                  ?>
+                                </div>
+                              </div>
+                            <?php } ?>
                           </div>
                           <div class="col-xs-10"><h4><?php
                               if ($end_date[0]) {
