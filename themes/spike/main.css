@@ -3591,11 +3591,12 @@ img {
   width: 80%;
 }
 
-#directory .charities-list .charities .charity-name {
+#directory .charities-list .charities .charity-name  a{
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
   line-height: 3.5rem;
+  text-decoration: none;
 }
 
 #directory .charities-list .charities .charity-info .fa {
