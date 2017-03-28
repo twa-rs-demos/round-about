@@ -380,45 +380,6 @@ img {
 }
 
 /*---------------------advanced-search---------------------------------*/
-.search-box {
-  margin: 2rem 0 2rem 0;
-}
-
-.search-box .search-box-container {
-  background-color: #D8D8D8;
-  padding: 0.3rem 0 0.3rem 1.5rem;
-  border-radius: 3rem;
-  margin-bottom: 2rem;
-  display: block;
-}
-
-.search-box .search-box-container input {
-  outline: none;
-  width: 100%;
-  border: none;
-  background-color: #D8D8D8;
-  vertical-align: middle;
-}
-
-.search-box .search-box-container button {
-  border: none;
-  background-color: #D8D8D8;
-  outline: none;
-  border-radius: 2rem;
-  padding-right: 0;
-}
-
-.search-box .search-type {
-  color: #ec4c9a;
-  font-size: 2rem;
-}
-
-.search-box .search-type button {
-  border: none;
-  background-color: #FFF;
-  padding: 0;
-  outline: none;
-}
 
 #filter-form {
   z-index: 1050;
@@ -3158,12 +3119,13 @@ img {
 #news-and-event .news_event_category input {
   border-radius: 10.0rem;
   background-color: #d8d8d8;
-  height: 3rem;
+  height: 25px;
   color: #535353;
   font-size: 1.6rem;
   outline: none;
-  padding-left: 1rem;
-  border: 1px solid #a8a8a8;
+  width: 90%;
+  float: left;
+  border: none;
 }
 
 #calendar #calendar-header .calendar-header {
