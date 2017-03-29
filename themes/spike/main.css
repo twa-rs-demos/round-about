@@ -1659,6 +1659,11 @@ img {
 .pagination-style .donate-project-more {
   font-size: 2rem;
   line-height: 2rem;
+  color: #ec4c9a;
+}
+.pagination-style .donate-project-more a{
+  color: #ec4c9a;
+  text-decoration: none;
 }
 
 /*---------------------------donate-projects------------------------------------*/
@@ -1712,6 +1717,7 @@ img {
   color: #ec4c9a;
   font-size: 2rem;
   margin-top: 0.9rem;
+  text-decoration: none;
 }
 
 .donating-project .child-profile-text {
@@ -1743,19 +1749,21 @@ img {
   padding: 0 1.7rem;
   width: 66%;
   opacity: 0;
-}
-
-.child-profile:hover {
-  background-color: #ec4c9a;
-  cursor: pointer;
   display: block;
-  opacity: 0.5;
 }
 
-.child-profile:hover + .child-profile-p {
-  opacity: 1;
-  color: #fff;
-}
+/*.child-profile:hover {*/
+  /*background-color: #ec4c9a;*/
+  /*cursor: pointer;*/
+
+  /*opacity: 0.5;*/
+  /*margin:0;*/
+/*}*/
+
+/*.child-profile:hover + .child-profile-p {*/
+  /*opacity: 1;*/
+  /*color: #fff;*/
+/*}*/
 
 #footer {
   font-family: Microsoft YaHei;
@@ -2169,6 +2177,7 @@ img {
 
 #header .header-search-box {
   padding-right: 2rem;
+  padding-bottom:.5rem;
 }
 
 #header .header-search-box .search {
