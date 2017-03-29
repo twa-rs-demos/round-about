@@ -75,6 +75,7 @@ pre {
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title {
   padding-left: 16px;
+  position: relative;
 }
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-title {
@@ -84,8 +85,24 @@ pre {
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-statement {
   font-size: 1.5rem;
-  margin-left: 24%;
   color: #ec4c9a;
+  position: absolute;
+  right: 10%;
+}
+
+.form-success-info {
+  position: absolute;
+  bottom: 20%;
+  left: 45%;
+  background-color: #dff0d8;
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+}
+
+.caldera-forms .alert-success {
+  display: none;
 }
 
 .caldera_forms_form .label-field {
@@ -161,6 +178,26 @@ pre {
 .caldera_forms_form .list-items-description {
   margin: 10px 0 25px 0;
   font-size: 1.5rem;
+}
+
+.caldera_forms_form .list-items-content {
+  display: none;
+}
+
+.caldera_forms_form .list-items-details .list-item {
+  position: relative;
+}
+
+.caldera_forms_form .list-items-details .list-item .delete-list-item {
+  position: absolute;
+  top: 18%;
+  right: 1%;
+}
+
+.caldera_forms_form .list-items-details .list-item .delete-list-item .delete-list-item-icon {
+  font-size: 1.8rem;
+  color: #a8a8a8;
+  cursor: pointer;
 }
 
 .caldera_forms_form .add-new-field-button {
@@ -3553,7 +3590,7 @@ img {
   width: 80%;
 }
 
-#directory .charities-list .charities .charity-name  a{
+#directory .charities-list .charities .charity-name a {
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
