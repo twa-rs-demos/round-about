@@ -75,6 +75,7 @@ pre {
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title {
   padding-left: 16px;
+  position: relative;
 }
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-title {
@@ -84,8 +85,9 @@ pre {
 
 #request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-statement {
   font-size: 1.5rem;
-  margin-left: 24%;
   color: #ec4c9a;
+  position: absolute;
+  right: 10%;
 }
 
 .form-success-info {
@@ -3588,7 +3590,7 @@ img {
   width: 80%;
 }
 
-#directory .charities-list .charities .charity-name  a{
+#directory .charities-list .charities .charity-name a {
   font-size: 2rem;
   margin: 0 0 5px 0;
   color: #ec4c9a;
