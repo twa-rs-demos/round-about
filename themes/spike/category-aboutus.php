@@ -58,7 +58,7 @@ printf('<script type="text/javascript" src="%s/%s" ></script>', get_template_dir
           $first_event_time = $custom_fields['first_event_time'];
           $second_event = $custom_fields['second_event'];
           $second_event_time = $custom_fields['second_event_time'];
-          if ($i >= 8) break;
+          if ($i >9) break;
           ?>
 
           <div class="col-md-1 col-xs-1 no-padding">
