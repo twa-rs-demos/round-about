@@ -1872,7 +1872,7 @@ img {
 
 #apply-monthly-report {
   position: relative;
-  height: 18rem;
+  height: 200px;
   width: 100%;
   background-size: cover;
   background: #e8e8e8;
@@ -1902,7 +1902,7 @@ img {
   border: .1rem solid #c9c1c1;
   outline: none;
   border-radius: 2.0rem;
-  width: 34rem;
+  /*width: 34rem;*/
   height: 32px;
   font-size: 1.6rem;
   display: inline-block;
@@ -1918,10 +1918,15 @@ img {
   font-size: 1.6rem;
 }
 
+#CF58db5ce2bf69f_1-row-1 .col-sm-1 {
+  padding: 0;
+}
+
 #apply-monthly-report .apply-monthly-report-form .submit-email-button input {
-  width: 9.5rem;
-  height: 3rem;
-  line-height: 1.8rem;
+  width: 100px;
+  height: 27px;
+  line-height: 1.6rem;
+  margin-top: 3px;
   -webkit-appearance: none;
   border: .1rem solid #eb67a7;
   border-radius: 2.0rem;
