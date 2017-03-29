@@ -154,4 +154,5 @@
 </div>
 </body>
 <script src="<?php bloginfo('template_url'); ?>/js/footer.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/form.js"></script>
 </html>
