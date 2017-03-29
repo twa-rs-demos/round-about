@@ -29,7 +29,8 @@ $(function () {
         $(this).parent().parent().remove();
     });
 
-    $('#CF58d08eacd85d1_1').submit(function () {
+    $('#CF58d08eacd85d1_1').submit(function (e) {
+        e.preventDefault();
         let values = '';
         $('.list-item').each(function (i, obj) {
             if ($(obj).find('input').val() !== '') {
@@ -39,6 +40,25 @@ $(function () {
             }
         });
         $('.list-items-content').val(values);
+    });
+});
+
+$(function () {
+    $('.caldera_forms_form [value=Cancel]').attr('data-dismiss', 'modal');
+
+    $('.caldera_forms_form').submit(function (e) {
+        e.preventDefault();
+        function explode() {
+            $('.form-success-info').toggleClass('hide');
+        }
+
+        explode();
+        setTimeout(explode, 3000);
+        function submit() {
+            $(this).toggleClass('hide');
+        }
+
+        setTimeout(submit, 5000);
         this.submit();
     });
 });

@@ -92,7 +92,7 @@ pre {
 
 .form-success-info {
   position: absolute;
-  top: 20%;
+  bottom: 20%;
   left: 45%;
   background-color: #dff0d8;
   width: 200px;
