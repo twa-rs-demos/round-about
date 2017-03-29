@@ -7,11 +7,11 @@
 
       var jssor_1_options = {
         $AutoPlay: false,
-        $SlideWidth: 200,
+        $SlideWidth: 224,
         $SlideHeight: '100%',
         $SlideSpacing: 13,
         $Cols: 4,
-        $Loop: 0,
+        $Loop: 1,
         $Scale: true
       };
 
