@@ -58,6 +58,7 @@ $(function () {
 
     start();
 
-    var $divWidth = $('.slider').width();
-    $('.slider-panel img').css({'width': $divWidth});
+    var divWidth = $('.slider').css('width');
+    console.log(divWidth);
+    $('.slider-panel img').css({'width': divWidth});
 });

@@ -1752,19 +1752,6 @@ img {
   display: block;
 }
 
-/*.child-profile:hover {*/
-  /*background-color: #ec4c9a;*/
-  /*cursor: pointer;*/
-
-  /*opacity: 0.5;*/
-  /*margin:0;*/
-/*}*/
-
-/*.child-profile:hover + .child-profile-p {*/
-  /*opacity: 1;*/
-  /*color: #fff;*/
-/*}*/
-
 #footer {
   font-family: Microsoft YaHei;
   background-color: #3A383F;
