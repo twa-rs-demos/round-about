@@ -1,3 +1,26 @@
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.child-profile').hover(function(){
+            console.log('ni');
+            $(this).css({
+                "background-color": " #ec4c9a",
+                "cursor": " pointer",
+                "opacity": " 0.5",
+                "margin": " 0"
+            });
+            $(this).next().css({
+                "opacity": "1",
+                "color": "#fff"
+            });
+        },function(){
+            $(this).css({"opacity":"0"});
+            $(this).next().css({"opacity":"0"});
+        });
+    });
+
+</script>
+
+
 <div>
     <div class="donating-projects">
         <div class="donating-middle-text"><h2 class="middle-title">正在捐款的项目</h2></div>
