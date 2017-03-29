@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-offset-1 col-sm-10 no-pad    ding">
+        <div class="col-xs-offset-1 col-xs-10 no-padding">
             <div class="volunteer-stories"><h2 class="middle-title">志愿者故事</h2>
                 <div class="row text-center">
                     <?php
