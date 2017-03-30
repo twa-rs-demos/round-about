@@ -5,7 +5,9 @@ $(function () {
 
     $('.filter-button').click(function (e) {
         $(this).addClass('active');
-        $('#search_query').val($(this).text());
+        if ($(this).text() !== '') {
+            $('#search_query').val($('#search_query').val() + $(this).text());
+        }
         $('.wpas-submit').click();
     });
 
