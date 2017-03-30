@@ -1,3 +1,4 @@
+<script src="<?php bloginfo('template_url'); ?>/js/auto-carousel.js"></script>
 <script type="text/javascript">
     var _newsEvents = [];
     <?php
@@ -59,8 +60,33 @@
             </ul>
           </div>
           <div class="join_volunteer_button">
-            <button>加入志愿者行列</button>
+            <button data-toggle="modal" data-target="#volunteers-application-form">加入志愿者行列</button>
           </div>
+
+          <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
+               aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog form-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    VOLUNTEERS APPLICATION FORM
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <?php $form = get_post(1234);
+                  echo do_shortcode($form->post_content);
+                  ?>
+                </div>
+              </div>
+              <div class="hide form-success-info" id="form-success-info">
+                success
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
