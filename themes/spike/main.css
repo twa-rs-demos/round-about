@@ -94,6 +94,31 @@ pre {
   line-height: 150px;
 }
 
+.become-partner .form-success-info {
+  position: absolute;
+  bottom: 20%;
+  left: 26%;
+  width: 270px;
+  height: 156px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.become-partner .form-success-info .close-form-icon {
+  position: absolute;
+  top: 8%;
+  right: 5%;
+  color: #a8a8a8;
+}
+
+.become-partner .form-success-info .success-info {
+  position: absolute;
+  left: 5%;
+  top: 34%;
+  line-height: 1.5;
+  color: #a8a8a8;
+}
+
 .alert-success {
   display: none;
 }
@@ -550,8 +575,22 @@ img {
   outline: none;
 }
 
+.caldera_forms_form .page-form-item {
+  margin-bottom: 20px;
+}
+
 .caldera_forms_form .page-form-item label {
   font-weight: 100;
+  font-size: 1.8rem;
+}
+
+.caldera_forms_form .page-form-item select {
+  border-radius: 20px;
+}
+
+.caldera_forms_form .page-form-item textarea {
+  border-radius: 15px;
+  resize: none;
 }
 
 .caldera_forms_form .page-form-statement {
@@ -567,7 +606,7 @@ img {
 }
 
 .caldera_forms_form .page-form-item div input {
-  border-radius: 10rem;
+  border-radius: 20px;
   margin-top: 1rem;
   outline: none;
   border: 1px solid #cdcdcd;
