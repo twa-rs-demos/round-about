@@ -73,21 +73,14 @@ pre {
   padding-left: 67px;
 }
 
-#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title {
-  padding-left: 16px;
+.caldera_forms_form .modal-title {
   position: relative;
+  margin-bottom: 25px;
 }
 
-#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-title {
+.caldera_forms_form .modal-title .form-title {
   font-size: 2.2rem;
   font-weight: 500;
-}
-
-#request-pick-up-for-donations-form .form-modal .modal-content .modal-header .modal-title .form-statement {
-  font-size: 1.5rem;
-  color: #ec4c9a;
-  position: absolute;
-  right: 10%;
 }
 
 .form-success-info {
@@ -559,6 +552,7 @@ img {
   color: #ec4c9a;
   float: right;
   margin-top: 9px;
+  margin-right: 10%;
 }
 
 .caldera_forms_form .page-form-item div input {
