@@ -101,7 +101,7 @@
                 <div class="row row-margin-bottom">
                   <div class="col-md-9 col-xs-12">
                     <div id="events" class="row">
-                      <div class="col-md-5 col-sm-4 col-xs-4"><img
+                      <div class="col-md-5 col-sm-4 col-xs-4 no-padding"><img
                           src="<?php echo $image['url']; ?>" alt="img"/></div>
                       <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a
                             href="<?php the_permalink($post->ID); ?>"><?php
@@ -113,9 +113,9 @@
                   </div>
                   <div class="col-md-3 col-xs-12 no-display">
                     <div id="date-list" class="row">
-                      <div class="col-md-12 col-xs-6 margin-bottom ">
+                      <div class="col-md-12 col-xs-6 margin-bottom no-padding">
                         <div class="row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-2 no-padding">
                             <div class="box-border">
                               <div class="num-box"><?php echo $start_day[0]; ?></div>
                             </div>
@@ -125,9 +125,9 @@
                             </h4></div>
                         </div>
                       </div>
-                      <div class="col-md-12 col-xs-6 margin-bottom">
+                      <div class="col-md-12 col-xs-6 margin-bottom no-padding">
                         <div class="row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-2 no-padding">
                             <div class="box-border">
                               <div class="num-box"><?php echo $end_day[0] ?></div>
                             </div>
