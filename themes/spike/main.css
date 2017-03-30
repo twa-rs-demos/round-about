@@ -3020,7 +3020,7 @@ img {
 }
 
 #people #ourLeaderShip .title-h3 {
-  margin-top: 9rem;
+  margin-top: 6rem;
 }
 
 #people #ourLeaderShip .leader-picture {
@@ -3083,9 +3083,11 @@ img {
 }
 
 #people #ourTeam .welcome-family {
-  margin-top: 3.3rem;
+  margin-top: -6rem;
   margin-bottom: 11.5rem;
   outline: none;
+  width: 30rem;
+  height: 5rem;
 }
 
 #news-and-event .news-event-title {
