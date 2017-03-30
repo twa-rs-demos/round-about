@@ -1,3 +1,4 @@
+'use strict';
 var jumpInSamePages = [{
     page: 'retailstore_zh',
     jumppositopn: '#physicalstore'
@@ -35,10 +36,10 @@ var jumpInSamePages = [{
     page: 'donate_link_en',
     jumppositopn: ''
 }];
-
 $(function () {
-    let menus = __injectedVars.menus.map((menu) => {
-        let subMenus = __injectedVars.subMenus.filter((subMenu) => {
+    'use strict';
+    var menus = __injectedVars.menus.map((menu) => {
+        var subMenus = __injectedVars.subMenus.filter((subMenu) => {
             return subMenu.parent === menu.cat_ID;
         });
         return Object.assign({}, menu, {
@@ -110,27 +111,28 @@ $(function () {
     });
 
     $('.first-menu').each((index, ele) => {
-        const menu = Object.values($(ele))[0].innerText.trim();
+        const menu = $(ele)[0].innerText.trim();
         if (menu === __injectedVars.currentPage.name || menu === __injectedVars.parentPageName) {
             $(ele).addClass('active');
         }
     });
 
     $('.dropdown-item').each((index, ele) => {
-        if (Object.values($(ele))[0].innerText.trim() === __injectedVars.currentPage.name) {
+
+        if ($(ele)[0].innerText.trim() === __injectedVars.currentPage.name) {
             $(ele).find('a').addClass('selected-sub');
         }
     });
 
     $('.nav-brand').each((index, ele) => {
-        const menu = Object.values($(ele))[0].innerText.trim();
+        const menu = $(ele)[0].innerText.trim();
         if (menu === __injectedVars.currentPage.name || menu === __injectedVars.parentPageName) {
             $(ele).addClass('active');
         }
     });
 
     $('.sub-item').each((index, ele) => {
-        if (Object.values($(ele))[0].innerText.trim() === __injectedVars.currentPage.name) {
+        if ($(ele)[0].innerText.trim() === __injectedVars.currentPage.name) {
             $(ele).find('a').addClass('selected-sub-menu');
         }
     });

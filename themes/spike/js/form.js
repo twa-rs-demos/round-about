@@ -31,7 +31,7 @@ $(function () {
 
     $('#CF58d08eacd85d1_1').submit(function (e) {
         e.preventDefault();
-        let values = '';
+        var values = '';
         $('.list-item').each(function (i, obj) {
             if ($(obj).find('input').val() !== '') {
                 values = values + $(obj).find('.quantity').val() + '/';
