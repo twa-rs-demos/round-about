@@ -57,8 +57,12 @@ $(function () {
     }
 
     start();
-
     var divWidth = $('.slider').css('width');
-    // console.log(divWidth);
     $('.slider-panel img').css({'width': divWidth});
+});
+
+$(window).resize(function() {
+    var divWidthReal = $('.slider').css('width');
+console.log(divWidthReal);
+    $('.slider-panel img').css({'width': divWidthReal});
 });
