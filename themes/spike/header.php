@@ -25,7 +25,7 @@ $current_page = get_category_by_slug(get_the_title(get_queried_object_id()));
 $parent_page_name = get_cat_name($current_page->category_parent);
 ?>
 
-<html>
+<!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Tutorial theme</title>
@@ -85,6 +85,7 @@ $parent_page_name = get_cat_name($current_page->category_parent);
 
 
 
+
   </script>
 
   <script type="text/x-jquery-tmpl" id="drawerMenuTemplate">
@@ -99,6 +100,7 @@ $parent_page_name = get_cat_name($current_page->category_parent);
   {{/each}}
   </ul>
   </li>
+
 
 
 
