@@ -59,6 +59,6 @@ $(function () {
     start();
 
     var divWidth = $('.slider').css('width');
-    console.log(divWidth);
+    // console.log(divWidth);
     $('.slider-panel img').css({'width': divWidth});
 });

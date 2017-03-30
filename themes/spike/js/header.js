@@ -1,3 +1,4 @@
+'use strict';
 var jumpInSamePages = [{
     page: 'retailstore_zh',
     jumppositopn: '#physicalstore'
@@ -35,10 +36,10 @@ var jumpInSamePages = [{
     page: 'donate_link_en',
     jumppositopn: ''
 }];
-
 $(function () {
-    let menus = __injectedVars.menus.map((menu) => {
-        let subMenus = __injectedVars.subMenus.filter((subMenu) => {
+   'use strict';
+    var menus = __injectedVars.menus.map((menu) => {
+        var subMenus = __injectedVars.subMenus.filter((subMenu) => {
             return subMenu.parent === menu.cat_ID;
         });
         return Object.assign({}, menu, {
