@@ -1,3 +1,4 @@
+<script src="<?php bloginfo('template_url'); ?>/js/auto-carousel.js"></script>
 <script type="text/javascript">
     var _newsEvents = [];
     <?php
@@ -59,8 +60,33 @@
             </ul>
           </div>
           <div class="join_volunteer_button">
-            <button>加入志愿者行列</button>
+            <button data-toggle="modal" data-target="#volunteers-application-form">加入志愿者行列</button>
           </div>
+
+          <div class="modal fade caldera-forms" id="volunteers-application-form" tabindex="-1" role="dialog"
+               aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog form-modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    VOLUNTEERS APPLICATION FORM
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  <?php $form = get_post(1234);
+                  echo do_shortcode($form->post_content);
+                  ?>
+                </div>
+              </div>
+              <div class="hide form-success-info" id="form-success-info">
+                success
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -101,7 +127,7 @@
                 <div class="row row-margin-bottom">
                   <div class="col-md-9 col-xs-12">
                     <div id="events" class="row">
-                      <div class="col-md-5 col-sm-4 col-xs-4"><img
+                      <div class="col-md-5 col-sm-4 col-xs-4 no-padding"><img
                           src="<?php echo $image['url']; ?>" alt="img"/></div>
                       <div class="col-md-7 col-sm-8 col-xs-8 text"><h3><a
                             href="<?php the_permalink($post->ID); ?>"><?php
@@ -113,9 +139,9 @@
                   </div>
                   <div class="col-md-3 col-xs-12 no-display">
                     <div id="date-list" class="row">
-                      <div class="col-md-12 col-xs-6 margin-bottom ">
+                      <div class="col-md-12 col-xs-6 margin-bottom no-padding">
                         <div class="row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-2 no-padding">
                             <div class="box-border">
                               <div class="num-box"><?php echo $start_day[0]; ?></div>
                             </div>
@@ -125,9 +151,9 @@
                             </h4></div>
                         </div>
                       </div>
-                      <div class="col-md-12 col-xs-6 margin-bottom">
+                      <div class="col-md-12 col-xs-6 margin-bottom no-padding">
                         <div class="row">
-                          <div class="col-xs-2">
+                          <div class="col-xs-2 no-padding">
                             <div class="box-border">
                               <div class="num-box"><?php echo $end_day[0] ?></div>
                             </div>

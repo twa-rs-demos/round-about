@@ -118,6 +118,10 @@ pre {
   width: 83%;
 }
 
+.caldera_forms_form .description textarea {
+  resize: none;
+}
+
 .caldera_forms_form .description label {
   vertical-align: top;
   margin-top: 5px;
@@ -130,13 +134,13 @@ pre {
 .caldera_forms_form .cancel-button div input {
   background-color: #ccc;
   color: #a8a8a8;
-  width: 94%;
+  width: 100%;
 }
 
 .caldera_forms_form .submit-button div input {
   background-color: #EC4C9A;
   color: #FFFFFF;
-  width: 20%;
+  width: 100%;
 }
 
 .caldera_forms_form .left-label label {
@@ -183,8 +187,8 @@ pre {
 
 .caldera_forms_form .list-items-details .list-item .delete-list-item {
   position: absolute;
-  top: 18%;
-  right: 1%;
+  top: 15%;
+  right: -3%;
 }
 
 .caldera_forms_form .list-items-details .list-item .delete-list-item .delete-list-item-icon {
@@ -3045,15 +3049,15 @@ img {
 }
 
 /*#people #ourLeaderShip .leader-picture:hover {*/
-  /*background-color: #ec4c9a;*/
-  /*cursor: pointer;*/
-  /*display: block;*/
-  /*opacity: 0.5;*/
+/*background-color: #ec4c9a;*/
+/*cursor: pointer;*/
+/*display: block;*/
+/*opacity: 0.5;*/
 /*}*/
 
 /*#people #ourLeaderShip .leader-picture:hover p {*/
-  /*opacity: 1;*/
-  /*color: #fff;*/
+/*opacity: 1;*/
+/*color: #fff;*/
 /*}*/
 
 #people #ourLeaderShip .leader {
@@ -3368,11 +3372,6 @@ img {
 
 #book-market .book-change-top {
   margin-bottom: 4.5rem;
-}
-
-#book-market .bookfair-notice .row {
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 #book-market #event-and-date .pagination-project {
@@ -3729,6 +3728,23 @@ body {
   #header .nav-menu .top-info {
     position: relative;
     overflow: hidden;
+  }
+
+  .caldera_forms_form .label-field label {
+    width: 130px;
+    display: block;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 100;
+  }
+
+  .caldera_forms_form .label-field div {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .caldera_forms_form .full-width div {
+    width: 100%;
   }
 }
 

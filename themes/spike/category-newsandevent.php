@@ -121,50 +121,46 @@
                   <div class="col-md-3 col-xs-12 no-display">
                     <div id="date-list" class="row">
                       <div class="col-md-12 col-xs-6 margin-bottom ">
-                        <div class="row">
-                          <div class="col-xs-2">
-                            <?php if ($start_day[0]) { ?>
-                              <div class="box-border">
-                                <div class="num-box"><?php
-                                  echo $start_day[0];
-                                  ?>
-                                </div>
+                        <div class="col-xs-2 no-padding">
+                          <?php if ($start_day[0]) { ?>
+                            <div class="box-border">
+                              <div class="num-box"><?php
+                                echo $start_day[0];
+                                ?>
                               </div>
-                            <?php } ?>
-                          </div>
-                          <div class="col-xs-10"><h4><?php
-                              if ($start_date[0]) {
-                                echo $start_date[0];
-                              } ?>
-                              <br><?php
-                              if ($start_day_time[0]) {
-                                echo $start_day_time[0];
-                              }
-                              ?>
-                            </h4></div>
+                            </div>
+                          <?php } ?>
                         </div>
+                        <div class="col-xs-10"><h4><?php
+                            if ($start_date[0]) {
+                              echo $start_date[0];
+                            } ?>
+                            <br><?php
+                            if ($start_day_time[0]) {
+                              echo $start_day_time[0];
+                            }
+                            ?>
+                          </h4></div>
                       </div>
                       <div class="col-md-12 col-xs-6 margin-bottom">
-                        <div class="row">
-                          <div class="col-xs-2">
-                            <?php if ($end_day[0]) { ?>
-                              <div class="box-border">
-                                <div class="num-box"><?php
-                                  echo $end_day[0];
-                                  ?>
-                                </div>
+                        <div class="col-xs-2 no-padding">
+                          <?php if ($end_day[0]) { ?>
+                            <div class="box-border">
+                              <div class="num-box"><?php
+                                echo $end_day[0];
+                                ?>
                               </div>
-                            <?php } ?>
-                          </div>
-                          <div class="col-xs-10"><h4><?php
-                              if ($end_date[0]) {
-                                echo $end_date[0];
-                              } ?>
-                              <br><?php if ($end_day_time[0]) {
-                                echo $end_day_time[0];
-                              } ?>
-                            </h4></div>
+                            </div>
+                          <?php } ?>
                         </div>
+                        <div class="col-xs-10"><h4><?php
+                            if ($end_date[0]) {
+                              echo $end_date[0];
+                            } ?>
+                            <br><?php if ($end_day_time[0]) {
+                              echo $end_day_time[0];
+                            } ?>
+                          </h4></div>
                       </div>
                     </div>
                   </div>

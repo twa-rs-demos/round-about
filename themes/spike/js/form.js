@@ -12,9 +12,9 @@ $(function () {
 </div>`;
 
     const newItemsElements = `<div class="list-item row">
-<div class="col-sm-1 form-group"><input type="text" class="quantity form-control"></div>
-<div class="col-sm-5 form-group"><input type="text" class="description form-control"></div>
-<div class="col-sm-5 form-group"><input type="text" class="item-price form-control"></div>
+<div class="col-sm-1 form-group"><input type="text" placeholder="Quantity" class="quantity form-control"></div>
+<div class="col-sm-5 form-group"><input type="text" placeholder="Description" class="description form-control"></div>
+<div class="col-sm-5 form-group"><input type="text" placeholder="Value of High Priced Items" class="item-price form-control"></div>
 <div class="col-sm-1 delete-list-item"><i class="fa fa-times delete-list-item-icon"></i></div>
 </div>`;
 
