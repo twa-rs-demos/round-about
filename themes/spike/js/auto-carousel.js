@@ -63,6 +63,5 @@ $(function () {
 
 $(window).resize(function() {
     var divWidthReal = $('.slider').css('width');
-console.log(divWidthReal);
     $('.slider-panel img').css({'width': divWidthReal});
 });

@@ -3026,16 +3026,12 @@ img {
 #people #ourLeaderShip .leader-picture {
   position: absolute;
   left: 50%;
-  /*right: 9%;*/
-  /*top: 50%;*/
   width: 11rem;
   hieght: 11rem;
-
   transform: translate3d(-50%, -50%, 0);
   top: 0;
   transform: translate3d(-50%, 0, 0);
   opacity: 0;
-  /*width: 40%;*/
   height: 100%;
   padding-top: 0.5rem;
 }
@@ -3048,21 +3044,20 @@ img {
   width: 100%;
 }
 
-#people #ourLeaderShip .leader-picture:hover {
-  background-color: #ec4c9a;
-  cursor: pointer;
-  display: block;
-  opacity: 0.5;
-}
+/*#people #ourLeaderShip .leader-picture:hover {*/
+  /*background-color: #ec4c9a;*/
+  /*cursor: pointer;*/
+  /*display: block;*/
+  /*opacity: 0.5;*/
+/*}*/
 
-#people #ourLeaderShip .leader-picture:hover p {
-  opacity: 1;
-  color: #fff;
-}
+/*#people #ourLeaderShip .leader-picture:hover p {*/
+  /*opacity: 1;*/
+  /*color: #fff;*/
+/*}*/
 
 #people #ourLeaderShip .leader {
   margin-top: 1rem;
-  left: 25%;
 }
 
 #people #ourLeaderShip .leader img {
