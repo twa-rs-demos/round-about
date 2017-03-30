@@ -39,7 +39,7 @@ $(function () {
         var _tds = $("div[name='calendar-day']");
         var _firstDay = new Date(_year, _month - 1, 1);  // 当前月第一天
         for (var i = 0; i < _tds.length; i++) {
-            var _thisDay = new Date(_year, _month-1, i + 1 - _firstDay.getDay());
+            var _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());
             var _thisDayStr = getDateStr(_thisDay);
             _tds[i].innerText = _thisDay.getDate();
             _tds[i].setAttribute('data', _thisDayStr);
@@ -121,18 +121,25 @@ $(function () {
      * 绑定事件
      */
     function addEvent(dom, eType, func) {
-        if (dom.addEventListener) {  // DOM 2.0
+
+        // if (dom) {  // DOM 2.0
+        //     dom.addEventListener(eType, function (e) {
+        //         func(e);
+        //     });
+        // } else if (dom.attachEvent) {  // IE5+
+        //     dom.attachEvent('on' + eType, function (e) {
+        //         func(e);
+        //     });
+        // } else {  // DOM 0
+        //     dom['on' + eType] = function (e) {
+        //         func(e);
+        //     }
+        // }
+
+        if (dom) {  // DOM 2.0
             dom.addEventListener(eType, function (e) {
                 func(e);
             });
-        } else if (dom.attachEvent) {  // IE5+
-            dom.attachEvent('on' + eType, function (e) {
-                func(e);
-            });
-        } else {  // DOM 0
-            dom['on' + eType] = function (e) {
-                func(e);
-            }
         }
     }
 
