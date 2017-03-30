@@ -38,25 +38,28 @@ var jumpInSamePages = [{
 }];
 $(function () {
     'use strict';
-    var menus = __injectedVars.menus.map((menu) => {
-        var subMenus = __injectedVars.subMenus.filter((subMenu) => {
+    var menus = __injectedVars.menus.map(function (menu) {
+        var subMenus = __injectedVars.subMenus.filter(function (subMenu) {
             return subMenu.parent === menu.cat_ID;
         });
-        return Object.assign({}, menu, {
-            subMenus
-        })
+        menu.subMenus = subMenus;
+
+        return menu;
     });
 
     function getjumpage(jumpInSamePage, submenus, parentLink, menus) {
-        submenus.forEach((submenu) => {
+        submenus.forEach(function (submenu) {
             if (submenu.slug === jumpInSamePage.page) {
-                submenu.link = `${parentLink}${jumpInSamePage.jumppositopn}`;
+                // submenu.link = `${parentLink}${jumpInSamePage.jumppositopn}`;
+                console.log('kkkk');
+                submenu.link = parentLink + jumpInSamePage.jumppositopn;
 
                 if (jumpInSamePage.page === 'apply_founding_zh' || jumpInSamePage.page === 'apply_founding_en') {
                     submenu.link = jumpInSamePage.jumppositopn;
                 }
                 if (jumpInSamePage.page === 'donate_link_zh' || jumpInSamePage.page === 'donate_link_en') {
-                    menus.forEach(menu => {
+                    console.log('test');
+                    menus.forEach(function (menu) {
                         if (menu.slug === 'donate_zh' || menu.slug === 'donate_en') {
                             submenu.link = menu.link;
                         }
@@ -66,8 +69,8 @@ $(function () {
         })
     }
 
-    jumpInSamePages.forEach((jumpInSamePage) => {
-        menus.forEach((menu) => {
+    jumpInSamePages.forEach(function (jumpInSamePage) {
+        menus.forEach(function (menu) {
             getjumpage(jumpInSamePage, menu.subMenus, menu.link, menus);
         })
     });
@@ -110,28 +113,28 @@ $(function () {
         }
     });
 
-    $('.first-menu').each((index, ele) => {
-        const menu = $(ele)[0].innerText.trim();
+    $('.first-menu').each(function (index, ele) {
+        var menu = $(ele)[0].innerText.trim();
         if (menu === __injectedVars.currentPage.name || menu === __injectedVars.parentPageName) {
             $(ele).addClass('active');
         }
     });
 
-    $('.dropdown-item').each((index, ele) => {
+    $('.dropdown-item').each(function (index, ele) {
 
         if ($(ele)[0].innerText.trim() === __injectedVars.currentPage.name) {
             $(ele).find('a').addClass('selected-sub');
         }
     });
 
-    $('.nav-brand').each((index, ele) => {
-        const menu = $(ele)[0].innerText.trim();
+    $('.nav-brand').each(function (index, ele) {
+        var menu = $(ele)[0].innerText.trim();
         if (menu === __injectedVars.currentPage.name || menu === __injectedVars.parentPageName) {
             $(ele).addClass('active');
         }
     });
 
-    $('.sub-item').each((index, ele) => {
+    $('.sub-item').each(function (index, ele) {
         if ($(ele)[0].innerText.trim() === __injectedVars.currentPage.name) {
             $(ele).find('a').addClass('selected-sub-menu');
         }
