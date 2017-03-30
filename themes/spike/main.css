@@ -368,6 +368,11 @@ img {
   font-size: 1.6rem;
 }
 
+#news-event #date-list .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #news-event #date-list .margin-bottom {
   margin-bottom: 3rem;
 }
@@ -3086,16 +3091,6 @@ img {
   margin-top: 3.3rem;
   margin-bottom: 11.5rem;
   outline: none;
-}
-
-@media (max-width: 768px) {
-  #news-and-event .no-display {
-    display: none;
-  }
-}
-
-#news-and-event {
-  /*-----------------------news_event_category--------------------------*/
 }
 
 #news-and-event .news-event-title {
