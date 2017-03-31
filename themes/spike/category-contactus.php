@@ -21,13 +21,15 @@
   <div class="touch">
     <div class="container">
       <div class="row">
-        <div class="col-sm-offset-2 col-sm-9 col-xs-12">
+        <div class="col-sm-offset-2 col-sm-9 col-xs-12 round-about-form">
           <div class="contact-us-within-page-form">
             <?php $form = get_post(1877);
             echo do_shortcode($form->post_content);
             ?>
           </div>
-          <div class="hide form-success-info">success</div>
+          <div class="hide form-success-info">
+            <span class="normal-success-info">提交成功</span>
+          </div>
         </div>
       </div>
     </div>

@@ -345,7 +345,7 @@
 
           <div class="modal fade caldera-forms" id="request-pick-up-for-donations-form" tabindex="-1" role="dialog"
                aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog form-modal">
+            <div class="modal-dialog form-modal round-about-form">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
@@ -358,8 +358,8 @@
                   ?>
                 </div>
               </div>
-              <div class="hide form-success-info" id="form-success-info">
-                success
+              <div class="hide form-success-info">
+                <span class="normal-success-info">提交成功</span>
               </div>
             </div>
           </div>
