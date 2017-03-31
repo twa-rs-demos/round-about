@@ -2023,6 +2023,7 @@ img {
 }
 
 #header .nav-menu .menu-list1 .menu-list {
+  /*display: inline;*/
   display: inline-block;
   margin-right: 1.6rem;
   position: relative;
@@ -2071,7 +2072,7 @@ img {
   text-decoration: none;
 }
 
-#header .nav-menu .menu-list1 .dropdown {
+#header .nav-menu .menu-list1  .menu-list .dropdown {
   position: absolute;
   filter: alpha(opacity=80);
   -moz-opacity: 0.8;
@@ -2081,6 +2082,7 @@ img {
   left: 50%;
   transform: translate3d(-41%, 0, 0);
   display: none;
+  top:20px;
 }
 
 #header .nav-menu .menu-list1 .dropdown .triangle-tip-up {
@@ -2286,7 +2288,6 @@ img {
 #legal {
   width: 90%;
   margin: 0 auto;
-  /*privacyPolicy*/
 }
 
 #legal .legal-title {
@@ -2313,7 +2314,6 @@ img {
 #privacy-policy {
   width: 90%;
   margin: 0 auto;
-  /*privacyPolicy*/
 }
 
 #privacy-policy .privacy-policy-title {
@@ -3048,18 +3048,6 @@ img {
   width: 100%;
 }
 
-/*#people #ourLeaderShip .leader-picture:hover {*/
-/*background-color: #ec4c9a;*/
-/*cursor: pointer;*/
-/*display: block;*/
-/*opacity: 0.5;*/
-/*}*/
-
-/*#people #ourLeaderShip .leader-picture:hover p {*/
-/*opacity: 1;*/
-/*color: #fff;*/
-/*}*/
-
 #people #ourLeaderShip .leader {
   margin-top: 1rem;
 }
@@ -3420,7 +3408,7 @@ img {
 #eventDay .content {
   line-height: 15px;
   font-size: 12px;
-  coloe: #575757;
+  color: #575757;
 
 }
 
@@ -3958,6 +3946,7 @@ body {
   height: 100%;
 }
 
+
 #article #jssor_1 {
   position: relative;
   margin: 2rem auto 0;
@@ -3983,6 +3972,10 @@ body {
   display: inline-block;
   width: 40rem;
   height: 20rem;
+  /**zoom: 1;*/
+  /**display: inline-block;*/
+  /**width:40rem;*/
+  /**height:20rem;*/
 }
 
 /*# sourceMappingURL=10272985.entry.css.map*/
