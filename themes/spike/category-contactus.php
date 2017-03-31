@@ -27,7 +27,9 @@
             echo do_shortcode($form->post_content);
             ?>
           </div>
-          <div class="hide form-success-info">success</div>
+          <div class="hide form-success-info">
+            <span class="normal-success-info">提交成功</span>
+          </div>
         </div>
       </div>
     </div>

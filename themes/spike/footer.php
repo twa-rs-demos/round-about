@@ -10,7 +10,9 @@
       echo do_shortcode($form->post_content);
       ?>
     </div>
-    <div class="hide form-success-info"> 提交成功</div>
+    <div class="hide form-success-info">
+      <span class="normal-success-info">提交成功</span>
+    </div>
   </div>
 </div>
 
@@ -77,8 +79,8 @@
                   ?>
                 </div>
               </div>
-              <div class="hide form-success-info" id="form-success-info">
-                success
+              <div class="hide form-success-info">
+                <span class="normal-success-info">提交成功</span>
               </div>
             </div>
           </div>
@@ -106,8 +108,8 @@
                 ?>
               </div>
             </div>
-            <div class="hide form-success-info" id="form-success-info">
-              success
+            <div class="hide form-success-info">
+              <span class="normal-success-info">提交成功</span>
             </div>
           </div>
         </div>

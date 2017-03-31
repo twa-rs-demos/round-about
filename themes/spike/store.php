@@ -116,7 +116,9 @@
             ?>
           </div>
         </div>
-        <div class="hide form-success-info">success</div>
+        <div class="hide form-success-info">
+          <span class="normal-success-info">提交成功</span>
+        </div>
       </div>
     </div>
     <div id="physicalstore" class="row physical-store">
@@ -138,7 +140,8 @@
 
               </div>
               <div class="store-position"><img src="<?php bloginfo('template_url'); ?>/images/store/position.png"
-                                               alt=""/></div>
+                                               alt=""/>
+              </div>
             </div>
           </div>
         </div>

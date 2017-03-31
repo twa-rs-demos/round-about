@@ -34,7 +34,9 @@
                 ?>
               </div>
             </div>
-            <div class="hide form-success-info">success</div>
+            <div class="hide form-success-info">
+              <span class="normal-success-info">提交成功</span>
+            </div>
           </div>
         </div>
         <div class="col-sm-offset-1 col-sm-10 col-xs-offset-0 col-xs-12 volunteer-countries"><h2

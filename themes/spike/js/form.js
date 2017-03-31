@@ -48,7 +48,6 @@ $(function () {
 
     $('.round-about-form').each(function (i, obj) {
         $(obj).submit(function (e) {
-            alert('8888')
             e.preventDefault();
             function explode() {
                 $(obj).find('.form-success-info').toggleClass('hide');
@@ -57,6 +56,9 @@ $(function () {
             explode();
             setTimeout(explode, 3000);
         });
+        $(obj).find('.form-success-info').find('.close-form-icon').click(function () {
+            $(obj).find('.form-success-info').toggleClass('hide');
+        })
     });
 
     $('.caldera_forms_form').submit(function (e) {

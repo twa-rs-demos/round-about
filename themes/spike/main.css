@@ -83,18 +83,18 @@ pre {
   font-weight: 500;
 }
 
-.form-success-info {
-  position: absolute;
-  bottom: 20%;
-  left: 45%;
-  background-color: #dff0d8;
-  width: 200px;
-  height: 150px;
-  text-align: center;
-  line-height: 150px;
-}
+/*.form-success-info {*/
+/*position: absolute;*/
+/*bottom: 20%;*/
+/*left: 45%;*/
+/*background-color: #dff0d8;*/
+/*width: 200px;*/
+/*height: 150px;*/
+/*text-align: center;*/
+/*line-height: 150px;*/
+/*}*/
 
-.become-partner .form-success-info {
+.form-success-info {
   position: absolute;
   bottom: 20%;
   left: 26%;
@@ -104,19 +104,27 @@ pre {
   background-color: #fff;
 }
 
-.become-partner .form-success-info .close-form-icon {
+.form-success-info .close-form-icon {
   position: absolute;
   top: 8%;
   right: 5%;
   color: #a8a8a8;
 }
 
-.become-partner .form-success-info .success-info {
+.form-success-info .success-info {
   position: absolute;
   left: 5%;
   top: 34%;
   line-height: 1.5;
   color: #a8a8a8;
+}
+
+.form-success-info .normal-success-info {
+  text-align: center;
+  line-height: 147px;
+  font-size: 2rem;
+  color: #a8a8a8;
+  display: block;
 }
 
 .alert-success {
