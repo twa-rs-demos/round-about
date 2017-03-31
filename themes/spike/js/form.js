@@ -46,14 +46,21 @@ $(function () {
 $(function () {
     $('.caldera_forms_form [value=Cancel]').attr('data-dismiss', 'modal');
 
+    $('.round-about-form').each(function (i, obj) {
+        $(obj).submit(function (e) {
+            alert('8888')
+            e.preventDefault();
+            function explode() {
+                $(obj).find('.form-success-info').toggleClass('hide');
+            }
+
+            explode();
+            setTimeout(explode, 3000);
+        });
+    });
+
     $('.caldera_forms_form').submit(function (e) {
         e.preventDefault();
-        function explode() {
-            $('.form-success-info').toggleClass('hide');
-        }
-
-        explode();
-        setTimeout(explode, 3000);
         function submit() {
             $(this).toggleClass('hide');
         }

@@ -40,7 +40,7 @@
     <div class="touch">
       <div class="container">
         <div class="row">
-          <div class="col-sm-offset-2 col-sm-9 col-xs-12">
+          <div class="col-sm-offset-2 col-sm-9 col-xs-12 round-about-form">
             <div class="press-within-page-form">
               <?php $form = get_post(1884);
               echo do_shortcode($form->post_content);

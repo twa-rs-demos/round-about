@@ -86,7 +86,8 @@
     </div>
     <div class="row become-partner">
       <div class="col-sm-offset-3 col-sm-6 no-padding">
-        <div><h2 class="middle-title no-padding">成为我们的合作伙伴</h2>
+        <div class="round-about-form">
+          <h2 class="middle-title no-padding">成为我们的合作伙伴</h2>
           <div class="partner-form">
             <?php $form = get_post(1904);
             echo do_shortcode($form->post_content);
@@ -103,4 +104,3 @@
 </div>
 
 <?php get_footer(); ?>
-
