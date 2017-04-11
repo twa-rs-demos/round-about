@@ -7,12 +7,20 @@
 
       var jssor_1_options = {
         $AutoPlay: false,
-        $SlideWidth: 224,
-        $SlideHeight: '100%',
-        $SlideSpacing: 13,
+        $AutoPlaySteps: 4,
+        $SlideDuration: 160,
+        $SlideWidth: 200,
+        $SlideSpacing: 3,
         $Cols: 4,
-        $Loop: 1,
-        $Scale: true
+        $ArrowNavigatorOptions: {
+          $Class: $JssorArrowNavigator$,
+          $Steps: 4
+        },
+        $BulletNavigatorOptions: {
+          $Class: $JssorBulletNavigator$,
+          $SpacingX: 1,
+          $SpacingY: 1
+        }
       };
 
       var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
@@ -20,7 +28,7 @@
       function ScaleSlider() {
         var refSize = $('.picture').width();
         if (refSize) {
-          refSize = Math.min(refSize, 100000);
+          refSize = Math.min(refSize, 10000);
           jssor_1_slider.$ScaleWidth(refSize);
         }
         else {
@@ -100,14 +108,14 @@ if (sizeof($posts) < 4) {
           </div>
 
           <div id="jssor_1" class="drag">
-            <div data-u="slides" class="slides">
+            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:809px;height:150px;overflow:hidden;">
               <?php
               foreach ($posts as $post) {
                 $image_info = get_field('img', $post->ID);
                 ?>
                 <div>
                   <a href="<?php the_permalink($post->ID); ?>">
-                    <img src="<?php echo $image_info['url']; ?>">
+                    <img src="<?php echo $image_info['url']; ?>" data-u="image">
                   </a>
                 </div>
               <?php } ?>
