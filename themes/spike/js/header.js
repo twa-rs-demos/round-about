@@ -51,14 +51,12 @@ $(function () {
         submenus.forEach(function (submenu) {
             if (submenu.slug === jumpInSamePage.page) {
                 // submenu.link = `${parentLink}${jumpInSamePage.jumppositopn}`;
-                console.log('kkkk');
                 submenu.link = parentLink + jumpInSamePage.jumppositopn;
 
                 if (jumpInSamePage.page === 'apply_founding_zh' || jumpInSamePage.page === 'apply_founding_en') {
                     submenu.link = jumpInSamePage.jumppositopn;
                 }
                 if (jumpInSamePage.page === 'donate_link_zh' || jumpInSamePage.page === 'donate_link_en') {
-                    console.log('test');
                     menus.forEach(function (menu) {
                         if (menu.slug === 'donate_zh' || menu.slug === 'donate_en') {
                             submenu.link = menu.link;

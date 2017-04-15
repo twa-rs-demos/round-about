@@ -20,7 +20,8 @@ foreach ($posts_query->posts as $post) :
     }
 endforeach;
 $posts_query->posts = $month_posts;
-$mongth_posts_length = sizeof($month_posts);
+$month_posts_length = sizeof($month_posts);
+$posts_query->max_num_pages = ceil($month_posts_length/8);
 ?>
 
 <div id="medical-assistance" class="row">
@@ -31,12 +32,12 @@ $mongth_posts_length = sizeof($month_posts);
                 <div class="slider col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
                     <ul class="slider-main">
                         <?php
-                        $length = $mongth_posts_length;
+                        $length = $month_posts_length;
                         if ($length > 4) {
                             $length = 4;
                         }
                         while ($length-- > 0) {
-                            $img = get_field("img", $month_posts[3-$length]->ID); ?>
+                            $img = get_field("img", $month_posts[$length]->ID); ?>
 
                             <li class="slider-panel">
                                 <img src="<?php echo $img['url']; ?>">
@@ -46,14 +47,14 @@ $mongth_posts_length = sizeof($month_posts);
                     <div class="slider-extra">
                         <ul class="slider-nav">
                             <?php
-                            $length_li = $mongth_posts_length;
+                            $length_li = $month_posts_length;
                             if ($length_li > 4) {
                                 $length_li = 4;
                             }
-
-                            while ($length_li--) { ?>
-                                <li class="slider-item"></li>
-                            <?php } ?>
+                            if($length_li>1){
+                                while ($length_li--) { ?>
+                                    <li class="slider-item"></li>
+                                <?php }} ?>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +77,9 @@ $mongth_posts_length = sizeof($month_posts);
                 <?php endforeach; ?>
             </div>
             <div class="my-pagination pagination-style row">
-                <?php page_pagination($posts_query); ?>
+                <?php
+                page_pagination($posts_query);
+                ?>
             </div>
         </div>
     </div>
