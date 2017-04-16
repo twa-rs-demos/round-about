@@ -4,12 +4,22 @@ services:
     image: wordpress:4.7.3
     ports:
       - 8080:80
+    links:
+      - mysql:mysql
     environment:
-      - WORDPRESS_DB_NAME=round_about
+      - WORDPRESS_DB_NAME=${db_name}
       - WORDPRESS_DB_USER=${db_user}
       - WORDPRESS_DB_PASSWORD=${db_password}
-      - WORDPRESS_DB_HOST=${db_host}
     volumes:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
       - ./themes/spike:/var/www/html/wp-content/themes/spike
       - ./uploads:/var/www/html/wp-content/uploads
+  mysql:
+    image: mysql:5.7
+    environment:
+      - LANG=C.UTF-8
+      - TERM=dumb
+      - MYSQL_ROOT_PASSWORD=${db_root_password}
+      - MYSQL_DATABASE=${db_name}
+      - MYSQL_PASSWORD=${db_password}
+      - MYSQL_USER=${db_user}
