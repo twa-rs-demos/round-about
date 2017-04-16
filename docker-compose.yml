@@ -3,7 +3,7 @@ services:
   wordpress:
     image: wordpress:4.7.3
     ports:
-      - 8080:80
+      - 80:80
     links:
       - mysql:mysql
     environment:
@@ -14,6 +14,7 @@ services:
       - ./themes/roundabout:/var/www/html/wp-content/themes/roundabout
       - ./themes/spike:/var/www/html/wp-content/themes/spike
       - ./uploads:/var/www/html/wp-content/uploads
+      - ./plugins:/var/www/html/wp-content/plugins
   mysql:
     image: mysql:5.7
     environment:
