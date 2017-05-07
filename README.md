@@ -4,6 +4,7 @@
 新建文件 `.env`，写入 `docker-compose.yml` 所需环境变量，示例如下
 
 ```
+db_name=round_about
 db_host=10.0.0.12
 db_user=wordpress
 db_password=wordpress
