@@ -39,10 +39,6 @@ $parent_page_name = get_cat_name($current_page->category_parent);
 <script src="<?php bloginfo('template_url'); ?>/libs/jquery.tmpl.min.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
 
-<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
-
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 
